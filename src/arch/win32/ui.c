@@ -303,7 +303,7 @@ ui_popup_translation_table_t monitor_trans_item_table[] = {
 
 static HWND main_hwnd;
 
-static int emu_menu;
+//static int emu_menu;
 
 static int pause_pending;
 
@@ -322,37 +322,37 @@ int ui_init(int *argc, char **argv)
 {
     WNDCLASS window_class;
 
-    switch (machine_class) {
-        case VICE_MACHINE_C64:
-        case VICE_MACHINE_C64SC:
-            emu_menu = IDR_MENUC64;
-            break;
-        case VICE_MACHINE_C64DTV:
-            emu_menu = IDR_MENUC64DTV;
-            break;
-        case VICE_MACHINE_C128:
-            emu_menu = IDR_MENUC128;
-            break;
-        case VICE_MACHINE_VIC20:
-            emu_menu = IDR_MENUVIC;
-            break;
-        case VICE_MACHINE_PET:
-            emu_menu = IDR_MENUPET;
-            break;
-        case VICE_MACHINE_PLUS4:
-            emu_menu = IDR_MENUPLUS4;
-            break;
-        case VICE_MACHINE_CBM5x0:
-            emu_menu = IDR_MENUCBM5X0;
-            break;
-        case VICE_MACHINE_CBM6x0:
-            emu_menu = IDR_MENUCBM2;
-            break;
-        default:
-            log_debug("UI: No menu entries for this machine defined!");
-            log_debug("UI: Using C64 type UI menues.");
-            emu_menu = IDR_MENUC64;
-    }
+    //switch (machine_class) {
+    //    case VICE_MACHINE_C64:
+    //    case VICE_MACHINE_C64SC:
+    //        emu_menu = IDR_MENUC64;
+    //        break;
+    //    case VICE_MACHINE_C64DTV:
+    //        emu_menu = IDR_MENUC64DTV;
+    //        break;
+    //    case VICE_MACHINE_C128:
+    //        emu_menu = IDR_MENUC128;
+    //        break;
+    //    case VICE_MACHINE_VIC20:
+    //        emu_menu = IDR_MENUVIC;
+    //        break;
+    //    case VICE_MACHINE_PET:
+    //        emu_menu = IDR_MENUPET;
+    //        break;
+    //    case VICE_MACHINE_PLUS4:
+    //        emu_menu = IDR_MENUPLUS4;
+    //        break;
+    //    case VICE_MACHINE_CBM5x0:
+    //        emu_menu = IDR_MENUCBM5X0;
+    //        break;
+    //    case VICE_MACHINE_CBM6x0:
+    //        emu_menu = IDR_MENUCBM2;
+    //        break;
+    //    default:
+    //        log_debug("UI: No menu entries for this machine defined!");
+    //        log_debug("UI: Using C64 type UI menues.");
+    //        emu_menu = IDR_MENUC64;
+    //}
 
     /* Register the window class.  */
     window_class.style = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
@@ -363,7 +363,7 @@ int ui_init(int *argc, char **argv)
     window_class.hIcon = LoadIcon(winmain_instance, MAKEINTRESOURCE(IDI_ICON1));
     window_class.hCursor = LoadCursor(NULL, IDC_ARROW);
     window_class.hbrBackground = (HBRUSH)CreateSolidBrush(RGB(0, 0, 0) + 1);
-    window_class.lpszMenuName = MAKEINTRESOURCE(emu_menu);
+	window_class.lpszMenuName = NULL; //MAKEINTRESOURCE(emu_menu);
     window_class.lpszClassName = APPLICATION_CLASS;
     RegisterClass(&window_class);
 
@@ -538,7 +538,7 @@ void ui_open_canvas_window(video_canvas_t *canvas)
 {
     HWND hwnd;
     int xpos, ypos;
-    HMENU menu;
+    //HMENU menu;
 
     resources_get_int_sprintf("Window%dXpos", &xpos, number_of_windows);
     resources_get_int_sprintf("Window%dYpos", &ypos, number_of_windows);
@@ -563,14 +563,14 @@ void ui_open_canvas_window(video_canvas_t *canvas)
     window_handles[number_of_windows] = hwnd;
     number_of_windows++;
 
-    statusbar_create(hwnd);
+    //statusbar_create(hwnd);
     canvas->hwnd = hwnd;
 
-    menu = LoadMenu(winmain_instance, MAKEINTRESOURCE(emu_menu));
-    ui_translate_menu_items(menu, menu_translation_table);
-    ui_translate_menu_popups(menu, popup_translation_table);
-    SetMenu(hwnd,menu);
-    uikeyboard_menu_shortcuts(menu);
+    //menu = LoadMenu(winmain_instance, MAKEINTRESOURCE(emu_menu));
+    //ui_translate_menu_items(menu, menu_translation_table);
+    //ui_translate_menu_popups(menu, popup_translation_table);
+    //SetMenu(hwnd,menu);
+    //uikeyboard_menu_shortcuts(menu);
     ShowWindow(hwnd, winmain_cmd_show);
     canvas->client_hwnd = NULL; /* disabled for DDraw interface */
 }
@@ -821,13 +821,13 @@ void ui_update_menus(void)
 
 void ui_update_menu(void)
 {
-    translated_menu = LoadMenu(winmain_instance, MAKEINTRESOURCE(emu_menu));
-    if (menu_translation_table != NULL) {
-        ui_translate_menu_items(translated_menu, menu_translation_table);
-        ui_translate_menu_popups(translated_menu, popup_translation_table);
-        uikeyboard_menu_shortcuts(translated_menu);
-    }
-    ui_show_menu();
+    //translated_menu = LoadMenu(winmain_instance, MAKEINTRESOURCE(emu_menu));
+    //if (menu_translation_table != NULL) {
+    //    ui_translate_menu_items(translated_menu, menu_translation_table);
+    //    ui_translate_menu_popups(translated_menu, popup_translation_table);
+    //    uikeyboard_menu_shortcuts(translated_menu);
+    //}
+    //ui_show_menu();
 }
 
 void ui_show_menu(void)
