@@ -1648,7 +1648,7 @@ static void handle_wm_command(WPARAM wparam, LPARAM lparam, HWND hwnd)
             ui_joystick_swap_extra_joystick();
             break;
         case IDM_AUTOSTART_SETTINGS:
-            ui_autostart_settings_dialog(hwnd);
+            //ui_autostart_settings_dialog(hwnd);
             break;
         case IDM_SOUND_SETTINGS:
             ui_sound_settings_dialog(hwnd);
