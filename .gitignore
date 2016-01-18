@@ -211,3 +211,8 @@ GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
 *.opendb
+/data/x64.exe
+/data/genwinres.exe
+/data/gentranslate.exe
+/data/genmsvcver.exe
+/data/geninfocontrib.exe
