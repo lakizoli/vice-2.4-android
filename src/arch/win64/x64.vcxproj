@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug no DirectX|Win32">
+      <Configuration>Debug no DirectX</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug no DirectX|x64">
+      <Configuration>Debug no DirectX</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release no DirectX|Win32">
+      <Configuration>Release no DirectX</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release no DirectX|x64">
+      <Configuration>Release no DirectX</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CB5264CD-9133-433B-94C8-AA5C2B63F08B}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.24720.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">
+    <OutDir>$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">
+    <OutDir>$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\..\..\..\data/x64.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\win32\msvc;..\win32;..\;..\..\;..\..\drive;..\..\vdrive;..\..\platform;..\..\lib\p64;..\..\monitor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;IDE_COMPILE;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\libs\x64\Debug/x64.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\libs\x64\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\libs\x64\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\libs\x64\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;IDE_COMPILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\win32\msvc;..\win32;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>dxguid.lib;comctl32.lib;winmm.lib;dsound.lib;wsock32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\..\..\..\data/x64.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\..\..\..\data/x64.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\..\data/x64.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\..\..\..\data/x64.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\win32\msvc;..\win32;..\;..\..\;..\..\drive;..\..\vdrive;..\..\platform;..\..\lib\p64;..\..\monitor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;IDE_COMPILE;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>.\libs\x64\Release/x64.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\libs\x64\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\libs\x64\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\libs\x64\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;IDE_COMPILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\win32\msvc;..\win32;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>comctl32.lib;winmm.lib;dsound.lib;dxguid.lib;wsock32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\..\..\..\data/x64.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\..\..\..\data/x64.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\..\data/x64.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\..\..\..\data/x64.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\win32\msvc;..\win32;..\;..\..\;..\..\drive;..\..\vdrive;..\..\platform;..\..\lib\p64;..\..\monitor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;IDE_COMPILE;NODIRECTX;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\libs\x64\Debug no DirectX/x64.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\libs\x64\Debug no DirectX/</AssemblerListingLocation>
+      <ObjectFileName>.\libs\x64\Debug no DirectX/</ObjectFileName>
+      <ProgramDataBaseFileName>.\libs\x64\Debug no DirectX/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;NODIRECTX;IDE_COMPILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\win32\msvc;..\win32;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>comctl32.lib;winmm.lib;wsock32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\..\..\..\data/x64.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\..\..\..\data/x64.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\..\data/x64.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\..\..\..\data/x64.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\win32\msvc;..\win32;..\;..\..\;..\..\drive;..\..\vdrive;..\..\platform;..\..\lib\p64;..\..\monitor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;IDE_COMPILE;NODIRECTX;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>.\libs\x64\Release no DirectX/x64.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\libs\x64\Release no DirectX/</AssemblerListingLocation>
+      <ObjectFileName>.\libs\x64\Release no DirectX/</ObjectFileName>
+      <ProgramDataBaseFileName>.\libs\x64\Release no DirectX/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;NODIRECTX;IDE_COMPILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\win32\msvc;..\win32;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>comctl32.lib;winmm.lib;wsock32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\..\..\..\data/x64.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\..\..\..\data/x64.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\..\data/x64.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\main.c" />
+    <ClCompile Include="..\..\maincpu.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IntrinsicFunctions>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Neither</FavorSizeOrSpeed>
+      <OmitFramePointers Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</OmitFramePointers>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\win32\resc64cat.rc" />
+    <CustomBuild Include="resc64.rc">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">copy /b ..\win32\resc64.rc + ..\win32\res.rc + ..\win32\resacia.rc + ..\win32\resdrivec64.rc + ..\win32\reside64.rc + ..\win32\resreu.rc + ..\win32\resgeoram.rc + ..\win32\resramcart.rc + ..\win32\resplus256k.rc + ..\win32\resplus60k.rc + ..\win32\resc64_256k.rc + ..\win32\resmmc64.rc + ..\win32\resmmcreplay.rc + ..\win32\resretroreplay.rc + ..\win32\resrs232user.rc + ..\win32\ressid.rc + ..\win32\resvicii.rc + ..\win32\resdigimax.rc + ..\win32\resmouse.rc + ..\win32\resmidi.rc + ..\win32\resdqbb.rc + ..\win32\resisepic.rc + ..\win32\reslightpen.rc + ..\win32\ressoundexpander.rc + ..\win32\reseasyflash.rc + ..\win32\resautostart.rc + ..\win32\resmagicvoice.rc + ..\win32\resexpert.rc + ..\win32\resds12c887rtc.rc + ..\win32\restfe.rc ..\win32\resc64cat.rc /b
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">..\..\debug.h;..\win32\resc64.rc;..\win32\res.rc;..\win32\resacia.rc;..\win32\resdrivec64.rc;..\win32\reside64.rc;..\win32\resreu.rc;..\win32\resgeoram.rc;..\win32\resramcart.rc;..\win32\resplus256k.rc;..\win32\resplus60k.rc;..\win32\resc64_256k.rc;..\win32\resmmc64.rc;..\win32\resmmcreplay.rc;..\win32\resretroreplay.rc;..\win32\resrs232user.rc;..\win32\ressid.rc;..\win32\resvicii.rc;..\win32\resdigimax.rc;..\win32\resmouse.rc;..\win32\resmidi.rc;..\win32\resdqbb.rc;..\win32\resisepic.rc;..\win32\reslightpen.rc;..\win32\ressoundexpander.rc;..\win32\reseasyflash.rc;..\win32\resautostart.rc;..\win32\resmagicvoice.rc;..\win32\resexpert.rc;..\win32\resds12c887rtc.rc;..\win32\restfe.rc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">..\win32\resc64cat.rc;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">copy /b ..\win32\resc64.rc + ..\win32\res.rc + ..\win32\resacia.rc + ..\win32\resdrivec64.rc + ..\win32\reside64.rc + ..\win32\resreu.rc + ..\win32\resgeoram.rc + ..\win32\resramcart.rc + ..\win32\resplus256k.rc + ..\win32\resplus60k.rc + ..\win32\resc64_256k.rc + ..\win32\resmmc64.rc + ..\win32\resmmcreplay.rc + ..\win32\resretroreplay.rc + ..\win32\resrs232user.rc + ..\win32\ressid.rc + ..\win32\resvicii.rc + ..\win32\resdigimax.rc + ..\win32\resmouse.rc + ..\win32\resmidi.rc + ..\win32\resdqbb.rc + ..\win32\resisepic.rc + ..\win32\reslightpen.rc + ..\win32\ressoundexpander.rc + ..\win32\reseasyflash.rc + ..\win32\resautostart.rc + ..\win32\resmagicvoice.rc + ..\win32\resexpert.rc + ..\win32\resds12c887rtc.rc + ..\win32\restfe.rc ..\win32\resc64cat.rc /b
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\debug.h;..\win32\resc64.rc;..\win32\res.rc;..\win32\resacia.rc;..\win32\resdrivec64.rc;..\win32\reside64.rc;..\win32\resreu.rc;..\win32\resgeoram.rc;..\win32\resramcart.rc;..\win32\resplus256k.rc;..\win32\resplus60k.rc;..\win32\resc64_256k.rc;..\win32\resmmc64.rc;..\win32\resmmcreplay.rc;..\win32\resretroreplay.rc;..\win32\resrs232user.rc;..\win32\ressid.rc;..\win32\resvicii.rc;..\win32\resdigimax.rc;..\win32\resmouse.rc;..\win32\resmidi.rc;..\win32\resdqbb.rc;..\win32\resisepic.rc;..\win32\reslightpen.rc;..\win32\ressoundexpander.rc;..\win32\reseasyflash.rc;..\win32\resautostart.rc;..\win32\resmagicvoice.rc;..\win32\resexpert.rc;..\win32\resds12c887rtc.rc;..\win32\restfe.rc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\win32\resc64cat.rc;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">copy /b ..\win32\resc64.rc + ..\win32\res.rc + ..\win32\resacia.rc + ..\win32\resdrivec64.rc + ..\win32\reside64.rc + ..\win32\resreu.rc + ..\win32\resgeoram.rc + ..\win32\resramcart.rc + ..\win32\resplus256k.rc + ..\win32\resplus60k.rc + ..\win32\resc64_256k.rc + ..\win32\resmmc64.rc + ..\win32\resmmcreplay.rc + ..\win32\resretroreplay.rc + ..\win32\resrs232user.rc + ..\win32\ressid.rc + ..\win32\resvicii.rc + ..\win32\resdigimax.rc + ..\win32\resmouse.rc + ..\win32\resmidi.rc + ..\win32\resdqbb.rc + ..\win32\resisepic.rc + ..\win32\reslightpen.rc + ..\win32\ressoundexpander.rc + ..\win32\reseasyflash.rc + ..\win32\resautostart.rc + ..\win32\resmagicvoice.rc + ..\win32\resexpert.rc + ..\win32\resds12c887rtc.rc + ..\win32\restfe.rc ..\win32\resc64cat.rc /b
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">..\..\debug.h;..\win32\resc64.rc;..\win32\res.rc;..\win32\resacia.rc;..\win32\resdrivec64.rc;..\win32\reside64.rc;..\win32\resreu.rc;..\win32\resgeoram.rc;..\win32\resramcart.rc;..\win32\resplus256k.rc;..\win32\resplus60k.rc;..\win32\resc64_256k.rc;..\win32\resmmc64.rc;..\win32\resmmcreplay.rc;..\win32\resretroreplay.rc;..\win32\resrs232user.rc;..\win32\ressid.rc;..\win32\resvicii.rc;..\win32\resdigimax.rc;..\win32\resmouse.rc;..\win32\resmidi.rc;..\win32\resdqbb.rc;..\win32\resisepic.rc;..\win32\reslightpen.rc;..\win32\ressoundexpander.rc;..\win32\reseasyflash.rc;..\win32\resautostart.rc;..\win32\resmagicvoice.rc;..\win32\resexpert.rc;..\win32\resds12c887rtc.rc;..\win32\restfe.rc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">..\win32\resc64cat.rc;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">copy /b ..\win32\resc64.rc + ..\win32\res.rc + ..\win32\resacia.rc + ..\win32\resdrivec64.rc + ..\win32\reside64.rc + ..\win32\resreu.rc + ..\win32\resgeoram.rc + ..\win32\resramcart.rc + ..\win32\resplus256k.rc + ..\win32\resplus60k.rc + ..\win32\resc64_256k.rc + ..\win32\resmmc64.rc + ..\win32\resmmcreplay.rc + ..\win32\resretroreplay.rc + ..\win32\resrs232user.rc + ..\win32\ressid.rc + ..\win32\resvicii.rc + ..\win32\resdigimax.rc + ..\win32\resmouse.rc + ..\win32\resmidi.rc + ..\win32\resdqbb.rc + ..\win32\resisepic.rc + ..\win32\reslightpen.rc + ..\win32\ressoundexpander.rc + ..\win32\reseasyflash.rc + ..\win32\resautostart.rc + ..\win32\resmagicvoice.rc + ..\win32\resexpert.rc + ..\win32\resds12c887rtc.rc + ..\win32\restfe.rc ..\win32\resc64cat.rc /b
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\debug.h;..\win32\resc64.rc;..\win32\res.rc;..\win32\resacia.rc;..\win32\resdrivec64.rc;..\win32\reside64.rc;..\win32\resreu.rc;..\win32\resgeoram.rc;..\win32\resramcart.rc;..\win32\resplus256k.rc;..\win32\resplus60k.rc;..\win32\resc64_256k.rc;..\win32\resmmc64.rc;..\win32\resmmcreplay.rc;..\win32\resretroreplay.rc;..\win32\resrs232user.rc;..\win32\ressid.rc;..\win32\resvicii.rc;..\win32\resdigimax.rc;..\win32\resmouse.rc;..\win32\resmidi.rc;..\win32\resdqbb.rc;..\win32\resisepic.rc;..\win32\reslightpen.rc;..\win32\ressoundexpander.rc;..\win32\reseasyflash.rc;..\win32\resautostart.rc;..\win32\resmagicvoice.rc;..\win32\resexpert.rc;..\win32\resds12c887rtc.rc;..\win32\restfe.rc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\win32\resc64cat.rc;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="..\win32\vice.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="arch.vcxproj">
+      <Project>{4a354313-5b3d-4540-ae89-fdfd0d33a4e7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="base.vcxproj">
+      <Project>{167af82a-a87d-4174-a597-3eda33e9ec07}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="c64.vcxproj">
+      <Project>{5f2820df-00ef-4468-a501-1843cc1ec753}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="c64cart.vcxproj">
+      <Project>{03b352eb-a39a-4ab2-b7c3-42415fad8a86}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="c64cartsystem.vcxproj">
+      <Project>{03b352eb-a39a-4ab2-b7c3-42415fad8a87}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="c64commoncart.vcxproj">
+      <Project>{03b352eb-a39a-4ab2-b7c3-42415fad8a88}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="c64exp.vcxproj">
+      <Project>{c3eb8401-15d7-46af-97d7-a6c21e77c1a5}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="core.vcxproj">
+      <Project>{73c850e8-76e5-4eb7-b5af-423ced1b0d96}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="diskimage.vcxproj">
+      <Project>{00327921-e1fa-41e1-8fb5-2f0e0ef94c78}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="drive.vcxproj">
+      <Project>{0ed2e124-5786-4a02-8be5-2df328a1616a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="fileio.vcxproj">
+      <Project>{423885a6-97df-41d3-ac4c-6d5a22671a38}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="fsdevice.vcxproj">
+      <Project>{a40f6fca-4285-4c27-a914-193e0d740ffd}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="gfxoutputdrv.vcxproj">
+      <Project>{8c0c9814-641b-44b6-84cd-25c4c54fb049}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="iec.vcxproj">
+      <Project>{db527d7b-1f04-45a5-85f0-aa9e148dd748}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="iecbus.vcxproj">
+      <Project>{0b4147b5-8047-40d7-9e74-2d40685c0872}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="iecieee.vcxproj">
+      <Project>{72b67f40-ee90-4c08-8bc9-739952bbf802}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="ieee.vcxproj">
+      <Project>{bc6490d8-f308-4f2b-9034-90d5d5de5ca5}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="imagecontents.vcxproj">
+      <Project>{cf04d97f-c99c-4405-b2d7-2d810f8122f9}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="monitor.vcxproj">
+      <Project>{ae88d35b-0284-48f0-b5ec-cb8169e85a2a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="p64.vcxproj">
+      <Project>{0ed2e124-5786-4a02-8be5-2df328a1616b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="parallel.vcxproj">
+      <Project>{ee013ca0-fcb3-477a-b387-afd3c9252989}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="platform.vcxproj">
+      <Project>{f89b75c6-9292-486f-980f-8a6ff81b11d3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="printerdrv.vcxproj">
+      <Project>{0ded6e60-afd5-4d9f-9c20-42882870ccb1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="raster.vcxproj">
+      <Project>{b63da67a-83fc-44f7-a368-5ac4026251a7}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="resid.vcxproj">
+      <Project>{7cf3660f-5a8d-4eec-a2b3-9e34faf267e6}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="residfp.vcxproj">
+      <Project>{3d0b54b6-104b-4716-90ca-8bb4dc375ce2}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="rs232drv.vcxproj">
+      <Project>{cfcfe8eb-9223-4e70-beb0-fa93180d4ca3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="rtc.vcxproj">
+      <Project>{f89b75c6-9292-486f-980f-8a6ff81b11c3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="serial.vcxproj">
+      <Project>{fc8cc524-2b59-4bf7-846c-ec8109c5b615}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="sid.vcxproj">
+      <Project>{76dddc33-cd8e-40b8-8a00-8ce75c12addf}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="sounddrv.vcxproj">
+      <Project>{aec70508-1a9b-4968-87c9-42efea706999}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="tape.vcxproj">
+      <Project>{6ca8c6d2-157c-43d8-9368-5e9c52abc048}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="userport.vcxproj">
+      <Project>{c61a260c-0e95-47ce-be6e-9dd8e4ab666e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="vdrive.vcxproj">
+      <Project>{3f1cb289-b380-43a9-ab8b-4ac48ce6d0a4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="vicii.vcxproj">
+      <Project>{c99abd62-30e6-4aee-82d6-1b5069021c42}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="video.vcxproj">
+      <Project>{7b9d283c-1bed-4fd8-be86-13599332cbdc}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
