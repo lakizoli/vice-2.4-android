@@ -42,7 +42,7 @@
 #include "log.h"
 #include "rawnet.h"
 #include "rawnetarch.h"
-#include "uitfe.h"
+//#include "uitfe.h"
 
 /*
     FIXME: rename all remaining tfe_ stuff to rawnet_

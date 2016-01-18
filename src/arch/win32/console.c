@@ -35,7 +35,6 @@
 #include <windows.h>
 
 #include "console.h"
-#include "fullscrn.h"
 #include "lib.h"
 #include "res.h"
 #include "ui.h"

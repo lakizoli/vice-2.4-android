@@ -47,7 +47,6 @@
 #include "debug.h"
 #include "drive.h"
 #include "drivecpu.h"
-#include "fullscrn.h"
 #include "imagecontents.h"
 #include "interrupt.h"
 #include "intl.h"
@@ -70,25 +69,7 @@
 #include "types.h"
 #include "ui.h"
 #include "uiapi.h"
-#include "uiattach.h"
-#include "uiautostart.h"
-#include "uiperipheral.h"
 #include "uicmdline.h"
-#include "uidatasette.h"
-#include "uievent.h"
-#include "uifliplist.h"
-#include "uihelp.h"
-#include "uijoystick.h"
-#include "uikeyboard.h"
-#include "uilib.h"
-#include "uimediafile.h"
-#include "uinetwork.h"
-#include "uiquicksnapshot.h"
-#include "uiram.h"
-#include "uirs232.h"
-#include "uisnapshot.h"
-#include "uisound.h"
-#include "uispeed.h"
 #include "util.h"
 #include "version.h"
 #include "vice-event.h"
@@ -956,49 +937,49 @@ void ui_register_machine_specific(ui_machine_specific_t func)
 /* Report an error to the user (`printf()' style).  */
 void ui_error(const char *format, ...)
 {
-    char *tmp;
-    TCHAR *st;
-    va_list args;
+    //char *tmp;
+    //TCHAR *st;
+    //va_list args;
 
-    va_start(args, format);
-    tmp = lib_mvsprintf(format, args);
-    va_end(args);
+    //va_start(args, format);
+    //tmp = lib_mvsprintf(format, args);
+    //va_end(args);
 
-    log_debug(tmp);
-    st = system_mbstowcs_alloc(tmp);
-    ui_messagebox(st, translate_text(IDS_VICE_ERROR), MB_OK | MB_ICONSTOP);
-    system_mbstowcs_free(st);
-    vsync_suspend_speed_eval();
-    lib_free(tmp);
+    //log_debug(tmp);
+    //st = system_mbstowcs_alloc(tmp);
+    //ui_messagebox(st, translate_text(IDS_VICE_ERROR), MB_OK | MB_ICONSTOP);
+    //system_mbstowcs_free(st);
+    //vsync_suspend_speed_eval();
+    //lib_free(tmp);
 }
 
 /* Report an error to the user (one string).  */
 void ui_error_string(const char *text)
 {
-    TCHAR *st;
+    //TCHAR *st;
 
-    log_debug(text);
-    st = system_mbstowcs_alloc(text);
-    ui_messagebox(st, translate_text(IDS_VICE_ERROR), MB_OK | MB_ICONSTOP);
-    system_mbstowcs_free(st);
+    //log_debug(text);
+    //st = system_mbstowcs_alloc(text);
+    //ui_messagebox(st, translate_text(IDS_VICE_ERROR), MB_OK | MB_ICONSTOP);
+    //system_mbstowcs_free(st);
 }
 
 /* Report a message to the user (`printf()' style).  */
 void ui_message(const char *format, ...)
 {
-    char *tmp;
-    TCHAR *st;
-    va_list args;
+    //char *tmp;
+    //TCHAR *st;
+    //va_list args;
 
-    va_start(args, format);
-    tmp = lib_mvsprintf(format, args);
-    va_end(args);
+    //va_start(args, format);
+    //tmp = lib_mvsprintf(format, args);
+    //va_end(args);
 
-    st = system_mbstowcs_alloc(tmp);
-    ui_messagebox(st, translate_text(IDS_VICE_INFORMATION), MB_OK | MB_ICONASTERISK);
-    system_mbstowcs_free(st);
-    vsync_suspend_speed_eval();
-    lib_free(tmp);
+    //st = system_mbstowcs_alloc(tmp);
+    //ui_messagebox(st, translate_text(IDS_VICE_INFORMATION), MB_OK | MB_ICONASTERISK);
+    //system_mbstowcs_free(st);
+    //vsync_suspend_speed_eval();
+    //lib_free(tmp);
 }
 
 /* Let the user browse for a filename */
@@ -1022,28 +1003,28 @@ char *ui_get_file(const char *format,...)
 /* Handle the "CPU JAM" case.  */
 ui_jam_action_t ui_jam_dialog(const char *format,...)
 {
-    char *txt, *txt2;
-    TCHAR *st;
-    int ret;
+    //char *txt, *txt2;
+    //TCHAR *st;
+    //int ret;
 
-    va_list ap;
-    va_start(ap, format);
-    txt = lib_mvsprintf(format, ap);
-    va_end(ap);
-    txt2 = lib_msprintf(translate_text(IDS_START_MONITOR), txt);
-    st = system_mbstowcs_alloc(txt2);
-    ret = ui_messagebox(st, translate_text(IDS_VICE_CPU_JAM), MB_YESNOCANCEL);
-    system_mbstowcs_free(st);
-    lib_free(txt2);
-    lib_free(txt);
-    switch (ret) {
-        case IDYES:
-            return UI_JAM_MONITOR;
-        case IDNO:
-            return UI_JAM_HARD_RESET;
-        case IDCANCEL:
-            return UI_JAM_NONE;
-    }
+    //va_list ap;
+    //va_start(ap, format);
+    //txt = lib_mvsprintf(format, ap);
+    //va_end(ap);
+    //txt2 = lib_msprintf(translate_text(IDS_START_MONITOR), txt);
+    //st = system_mbstowcs_alloc(txt2);
+    //ret = ui_messagebox(st, translate_text(IDS_VICE_CPU_JAM), MB_YESNOCANCEL);
+    //system_mbstowcs_free(st);
+    //lib_free(txt2);
+    //lib_free(txt);
+    //switch (ret) {
+    //    case IDYES:
+    //        return UI_JAM_MONITOR;
+    //    case IDNO:
+    //        return UI_JAM_HARD_RESET;
+    //    case IDCANCEL:
+    //        return UI_JAM_NONE;
+    //}
     return UI_JAM_NONE;
 }
 
@@ -1051,10 +1032,11 @@ ui_jam_action_t ui_jam_dialog(const char *format,...)
    dialog.  */
 int ui_extend_image_dialog(void)
 {
-    int ret;
+    //int ret;
 
-    ret = ui_messagebox(translate_text(IDS_EXTEND_TO_40_TRACKS), translate_text(IDS_VICE_QUESTION), MB_YESNO | MB_ICONQUESTION);
-    return ret == IDYES;
+    //ret = ui_messagebox(translate_text(IDS_EXTEND_TO_40_TRACKS), translate_text(IDS_VICE_QUESTION), MB_YESNO | MB_ICONQUESTION);
+    //return ret == IDYES;
+	return 0;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -1521,7 +1503,7 @@ static void handle_wm_initmenupopup(HMENU menu)
 
 static void handle_wm_command(WPARAM wparam, LPARAM lparam, HWND hwnd)
 {
-    TCHAR *st_name;
+    //TCHAR *st_name;
 
     wparam &= 0xffff;
     /* Handle machine specific commands first.  */
@@ -2074,38 +2056,38 @@ static LRESULT CALLBACK window_proc(HWND window, UINT msg, WPARAM wparam, LPARAM
  mode. This should be correct because when fullscreen, that window
  has to be active.
 */
-int ui_messagebox(LPCTSTR lpText, LPCTSTR lpCaption, UINT uType)
-{
-    int ret;
-    HWND hWnd = NULL;
-    
-    if (number_of_windows == 1) {
-        /* we only have one window, so use that one */
-        hWnd = window_handles[0];
-    } else {
-        int window_index;
-        HWND hWndActive = GetActiveWindow();
-
-        for (window_index = 0; window_index < number_of_windows; window_index++) {
-            if (window_handles[window_index] == hWndActive) {
-                hWnd = hWndActive;
-                break;
-            }
-        }
-    }
-
-    //if (hWnd != NULL) {
-    //    SuspendFullscreenModeKeep(hWnd);
-    //}
-
-    ret = MessageBox(hWnd, lpText, lpCaption, uType);
-
-    //if (hWnd != NULL) {
-    //    ResumeFullscreenModeKeep(hWnd);
-    //}
-
-    return ret;
-}
+//int ui_messagebox(LPCTSTR lpText, LPCTSTR lpCaption, UINT uType)
+//{
+//    int ret;
+//    HWND hWnd = NULL;
+//    
+//    if (number_of_windows == 1) {
+//        /* we only have one window, so use that one */
+//        hWnd = window_handles[0];
+//    } else {
+//        int window_index;
+//        HWND hWndActive = GetActiveWindow();
+//
+//        for (window_index = 0; window_index < number_of_windows; window_index++) {
+//            if (window_handles[window_index] == hWndActive) {
+//                hWnd = hWndActive;
+//                break;
+//            }
+//        }
+//    }
+//
+//    //if (hWnd != NULL) {
+//    //    SuspendFullscreenModeKeep(hWnd);
+//    //}
+//
+//    ret = MessageBox(hWnd, lpText, lpCaption, uType);
+//
+//    //if (hWnd != NULL) {
+//    //    ResumeFullscreenModeKeep(hWnd);
+//    //}
+//
+//    return ret;
+//}
 
 void ui_display_volume(int vol)
 {

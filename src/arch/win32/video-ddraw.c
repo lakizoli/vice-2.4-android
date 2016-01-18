@@ -38,7 +38,6 @@
 #include "intl.h"
 #include "lib.h"
 #include "log.h"
-#include "fullscrn.h"
 #include "fullscreen.h"
 #include "palette.h"
 #include "res.h"

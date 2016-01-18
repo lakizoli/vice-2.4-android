@@ -26,7 +26,6 @@
 
 #include "vice.h"
 
-#include "fullscrn.h"
 #include "lib.h"
 #include "log.h"
 #include "resources.h"

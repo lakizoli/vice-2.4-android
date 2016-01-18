@@ -28,7 +28,6 @@
 #include "vice.h"
 
 #include "cmdline.h"
-#include "fullscrn.h"
 #include "lib.h"
 #include "log.h"
 #include "palette.h"
@@ -322,11 +321,11 @@ int video_set_physical_colors(video_canvas_t *c)
 /* Change the size of `s' to `width' * `height' pixels.  */
 void video_canvas_resize(video_canvas_t *canvas, char resize_canvas)
 {
-    int device;
-    int fullscreen_width;
-    int fullscreen_height;
-    int bitdepth;
-    int refreshrate;
+    //int device;
+    //int fullscreen_width;
+    //int fullscreen_height;
+    //int bitdepth;
+    //int refreshrate;
 
     //if (IsFullscreenEnabled()) {
     //    GetCurrentModeParameters(&device, &fullscreen_width, &fullscreen_height, &bitdepth, &refreshrate);
