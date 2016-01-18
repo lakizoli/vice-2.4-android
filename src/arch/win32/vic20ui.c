@@ -632,16 +632,16 @@
 //            break;
 //    }
 //}
-
-int vic20ui_init(void)
-{
-    //ui_register_machine_specific(vic20_ui_specific);
-    //ui_register_menu_toggles(vic20_ui_menu_toggles);
-    //ui_register_translation_tables(vic20ui_menu_translation_table, vic20ui_popup_translation_table);
-
-    return 0;
-}
-
-void vic20ui_shutdown(void)
-{
-}
+//
+//int vic20ui_init(void)
+//{
+//    //ui_register_machine_specific(vic20_ui_specific);
+//    //ui_register_menu_toggles(vic20_ui_menu_toggles);
+//    //ui_register_translation_tables(vic20ui_menu_translation_table, vic20ui_popup_translation_table);
+//
+//    return 0;
+//}
+//
+//void vic20ui_shutdown(void)
+//{
+//}

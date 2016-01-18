@@ -143,7 +143,7 @@ static void cursor(console_private_t *pcp, cursorstate cs);
 
 static void FileOpen(console_private_t *pcp)
 {
-    pcp->fileOutput = ui_console_save_dialog(pcp->hwndConsole);
+    //pcp->fileOutput = ui_console_save_dialog(pcp->hwndConsole);
 }
 
 static void FileClose(console_private_t *pcp)
@@ -1580,23 +1580,23 @@ static console_t *console_open_internal(const char *id, HWND hwndParent, HWND hw
 
         /* no previous active window */
         pcp->hwndPreviousActive = NULL;
-    } else {
-        SuspendFullscreenMode(pcp->hwndParent);
+    //} else {
+    //    SuspendFullscreenMode(pcp->hwndParent);
 
-        pcp->hwndConsole = CreateWindow(CONSOLE_CLASS,
-                                        id,
-                                        WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_SIZEBOX,
-                                        pcp->xWindow,
-                                        pcp->yWindow,
-                                        1,
-                                        1,
-                                        NULL, // @@@@@@ pcp->hwndParent,
-                                        NULL,
-                                        winmain_instance,
-                                        NULL);
+    //    pcp->hwndConsole = CreateWindow(CONSOLE_CLASS,
+    //                                    id,
+    //                                    WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_SIZEBOX,
+    //                                    pcp->xWindow,
+    //                                    pcp->yWindow,
+    //                                    1,
+    //                                    1,
+    //                                    NULL, // @@@@@@ pcp->hwndParent,
+    //                                    NULL,
+    //                                    winmain_instance,
+    //                                    NULL);
 
-        /* get the previous active window, and set myself active */
-        pcp->hwndPreviousActive = SetActiveWindow(pcp->hwndConsole);
+    //    /* get the previous active window, and set myself active */
+    //    pcp->hwndPreviousActive = SetActiveWindow(pcp->hwndConsole);
     }
 
     /* get a DC and select proper font */
@@ -1658,7 +1658,7 @@ int console_close(console_t *log)
     }
 
     if (!pcp->bIsMdiChild) {
-        ResumeFullscreenMode(pcp->hwndParent);
+        //ResumeFullscreenMode(pcp->hwndParent);
     }
 
     return 0;

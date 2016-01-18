@@ -28,82 +28,82 @@
 
 #include "vice.h"
 
-#include <stdio.h>
-#include <windows.h>
-
-#include "cartridge.h"
-#include "c64cart.h"
-#include "intl.h"
-#include "keyboard.h"
-#include "lib.h"
-#include "res.h"
-#include "translate.h"
-#include "ui.h"
-#include "uiapi.h"
-#include "uic64cart.h"
-#include "uicart.h"
-#include "uilib.h"
-
-static const uicart_params_t c64_ui_cartridges[] = {
-    { IDM_CART_ATTACH_CRT, CARTRIDGE_CRT, IDS_ATTACH_CRT_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_CRT },
-    { IDM_CART_ATTACH_8KB, CARTRIDGE_GENERIC_8KB, IDS_ATTACH_RAW_8KB_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
-    { IDM_CART_ATTACH_16KB, CARTRIDGE_GENERIC_16KB, IDS_ATTACH_RAW_16KB_CART_IMG, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
-    { IDM_CART_ATTACH_AR, CARTRIDGE_ACTION_REPLAY, IDS_ATTACH_AR_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
-    { IDM_CART_ATTACH_AR3, CARTRIDGE_ACTION_REPLAY3, IDS_ATTACH_AR3_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
-    { IDM_CART_ATTACH_AR4, CARTRIDGE_ACTION_REPLAY4, IDS_ATTACH_AR4_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
-    { IDM_CART_ATTACH_STARDOS, CARTRIDGE_STARDOS, IDS_ATTACH_STARDOS_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
-    { IDM_CART_ATTACH_AT, CARTRIDGE_ATOMIC_POWER, IDS_ATTACH_ATOMIC_P_CART_IMG, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
-    { IDM_CART_ATTACH_EPYX, CARTRIDGE_EPYX_FASTLOAD, IDS_ATTACH_EPYX_FL_CART_IMG, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
-    { IDM_CART_ATTACH_IEEE488, CARTRIDGE_IEEE488, IDS_ATTACH_IEEE488_CART_IMG, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
-    { IDM_CART_ATTACH_RR, CARTRIDGE_RETRO_REPLAY, IDS_ATTACH_RETRO_R_CART_IMG, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
-    { IDM_CART_ATTACH_MMC_REPLAY, CARTRIDGE_MMC_REPLAY, IDS_ATTACH_MMC_REPLAY_CART_IMG, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
-    { IDM_CART_ATTACH_IDE64, CARTRIDGE_IDE64, IDS_ATTACH_IDE64_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
-    { IDM_CART_ATTACH_SS4, CARTRIDGE_SUPER_SNAPSHOT, IDS_ATTACH_SS4_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
-    { IDM_CART_ATTACH_SS5, CARTRIDGE_SUPER_SNAPSHOT_V5, IDS_ATTACH_SS5_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
-    { IDM_CART_ATTACH_STB, CARTRIDGE_STRUCTURED_BASIC, IDS_ATTACH_STB_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
-    { 0, 0, 0, 0 }
-};
-
-static void uic64cart_attach(WPARAM wparam, HWND hwnd,
-                             const uicart_params_t *cartridges)
-{
-    uicart_attach(wparam, hwnd, cartridges);
-}
-
-void uic64cart_proc(WPARAM wparam, HWND hwnd)
-{
-    switch (wparam & 0xffff) {
-        case IDM_CART_ATTACH_CRT:
-        case IDM_CART_ATTACH_8KB:
-        case IDM_CART_ATTACH_16KB:
-        case IDM_CART_ATTACH_AR:
-        case IDM_CART_ATTACH_AR3:
-        case IDM_CART_ATTACH_AR4:
-        case IDM_CART_ATTACH_STARDOS:
-        case IDM_CART_ATTACH_AT:
-        case IDM_CART_ATTACH_EPYX:
-        case IDM_CART_ATTACH_IEEE488:
-        case IDM_CART_ATTACH_RR:
-        case IDM_CART_ATTACH_MMC_REPLAY:
-        case IDM_CART_ATTACH_IDE64:
-        case IDM_CART_ATTACH_SS4:
-        case IDM_CART_ATTACH_SS5:
-        case IDM_CART_ATTACH_STB:
-            uic64cart_attach(wparam, hwnd, c64_ui_cartridges);
-            break;
-        case IDM_CART_SET_DEFAULT:
-            cartridge_set_default();
-            break;
-        case IDM_CART_DETACH:
-            cartridge_detach_image(-1);
-            break;
-        case IDM_CART_FREEZE:
-            keyboard_clear_keymatrix();
-            cartridge_trigger_freeze();
-            break;
-    }
-}
-
-void uic64cart_init(void)
-{
-}
+//#include <stdio.h>
+//#include <windows.h>
+//
+//#include "cartridge.h"
+//#include "c64cart.h"
+//#include "intl.h"
+//#include "keyboard.h"
+//#include "lib.h"
+//#include "res.h"
+//#include "translate.h"
+//#include "ui.h"
+//#include "uiapi.h"
+//#include "uic64cart.h"
+//#include "uicart.h"
+//#include "uilib.h"
+//
+//static const uicart_params_t c64_ui_cartridges[] = {
+//    { IDM_CART_ATTACH_CRT, CARTRIDGE_CRT, IDS_ATTACH_CRT_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_CRT },
+//    { IDM_CART_ATTACH_8KB, CARTRIDGE_GENERIC_8KB, IDS_ATTACH_RAW_8KB_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
+//    { IDM_CART_ATTACH_16KB, CARTRIDGE_GENERIC_16KB, IDS_ATTACH_RAW_16KB_CART_IMG, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
+//    { IDM_CART_ATTACH_AR, CARTRIDGE_ACTION_REPLAY, IDS_ATTACH_AR_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
+//    { IDM_CART_ATTACH_AR3, CARTRIDGE_ACTION_REPLAY3, IDS_ATTACH_AR3_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
+//    { IDM_CART_ATTACH_AR4, CARTRIDGE_ACTION_REPLAY4, IDS_ATTACH_AR4_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
+//    { IDM_CART_ATTACH_STARDOS, CARTRIDGE_STARDOS, IDS_ATTACH_STARDOS_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
+//    { IDM_CART_ATTACH_AT, CARTRIDGE_ATOMIC_POWER, IDS_ATTACH_ATOMIC_P_CART_IMG, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
+//    { IDM_CART_ATTACH_EPYX, CARTRIDGE_EPYX_FASTLOAD, IDS_ATTACH_EPYX_FL_CART_IMG, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
+//    { IDM_CART_ATTACH_IEEE488, CARTRIDGE_IEEE488, IDS_ATTACH_IEEE488_CART_IMG, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
+//    { IDM_CART_ATTACH_RR, CARTRIDGE_RETRO_REPLAY, IDS_ATTACH_RETRO_R_CART_IMG, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
+//    { IDM_CART_ATTACH_MMC_REPLAY, CARTRIDGE_MMC_REPLAY, IDS_ATTACH_MMC_REPLAY_CART_IMG, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
+//    { IDM_CART_ATTACH_IDE64, CARTRIDGE_IDE64, IDS_ATTACH_IDE64_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
+//    { IDM_CART_ATTACH_SS4, CARTRIDGE_SUPER_SNAPSHOT, IDS_ATTACH_SS4_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
+//    { IDM_CART_ATTACH_SS5, CARTRIDGE_SUPER_SNAPSHOT_V5, IDS_ATTACH_SS5_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
+//    { IDM_CART_ATTACH_STB, CARTRIDGE_STRUCTURED_BASIC, IDS_ATTACH_STB_CART_IMAGE, UILIB_FILTER_ALL | UILIB_FILTER_BIN },
+//    { 0, 0, 0, 0 }
+//};
+//
+//static void uic64cart_attach(WPARAM wparam, HWND hwnd,
+//                             const uicart_params_t *cartridges)
+//{
+//    //uicart_attach(wparam, hwnd, cartridges);
+//}
+//
+//void uic64cart_proc(WPARAM wparam, HWND hwnd)
+//{
+//    switch (wparam & 0xffff) {
+//        case IDM_CART_ATTACH_CRT:
+//        case IDM_CART_ATTACH_8KB:
+//        case IDM_CART_ATTACH_16KB:
+//        case IDM_CART_ATTACH_AR:
+//        case IDM_CART_ATTACH_AR3:
+//        case IDM_CART_ATTACH_AR4:
+//        case IDM_CART_ATTACH_STARDOS:
+//        case IDM_CART_ATTACH_AT:
+//        case IDM_CART_ATTACH_EPYX:
+//        case IDM_CART_ATTACH_IEEE488:
+//        case IDM_CART_ATTACH_RR:
+//        case IDM_CART_ATTACH_MMC_REPLAY:
+//        case IDM_CART_ATTACH_IDE64:
+//        case IDM_CART_ATTACH_SS4:
+//        case IDM_CART_ATTACH_SS5:
+//        case IDM_CART_ATTACH_STB:
+//            uic64cart_attach(wparam, hwnd, c64_ui_cartridges);
+//            break;
+//        case IDM_CART_SET_DEFAULT:
+//            cartridge_set_default();
+//            break;
+//        case IDM_CART_DETACH:
+//            cartridge_detach_image(-1);
+//            break;
+//        case IDM_CART_FREEZE:
+//            keyboard_clear_keymatrix();
+//            cartridge_trigger_freeze();
+//            break;
+//    }
+//}
+//
+//void uic64cart_init(void)
+//{
+//}

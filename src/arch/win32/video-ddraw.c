@@ -97,9 +97,9 @@ video_canvas_t *video_canvas_create_ddraw(video_canvas_t *canvas)
 
     video_canvas_add(canvas);
 
-    if (IsFullscreenEnabled()) {
-        SwitchToFullscreenMode(canvas->hwnd);
-    }
+    //if (IsFullscreenEnabled()) {
+    //    SwitchToFullscreenMode(canvas->hwnd);
+    //}
 
     video_canvas_reset_ddraw(canvas);
     return canvas;

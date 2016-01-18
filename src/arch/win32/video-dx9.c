@@ -93,47 +93,47 @@ int video_device_create_dx9(video_canvas_t *canvas, int fullscreen)
         canvas->d3dpp.PresentationInterval = D3DPRESENT_INTERVAL_DEFAULT;
     }
 
-    if (fullscreen) {
-        int width, height, bitdepth, refreshrate;
-        int keep_aspect_ratio, true_aspect_ratio, aspect_ratio;
-        int shrinked_width, shrinked_height;
-        double canvas_aspect_ratio;
+    //if (fullscreen) {
+    //    int width, height, bitdepth, refreshrate;
+    //    int keep_aspect_ratio, true_aspect_ratio, aspect_ratio;
+    //    int shrinked_width, shrinked_height;
+    //    double canvas_aspect_ratio;
   
-        GetCurrentModeParameters(&device, &width, &height, &bitdepth, &refreshrate);
+    //    GetCurrentModeParameters(&device, &width, &height, &bitdepth, &refreshrate);
 
-        resources_get_int("KeepAspectRatio", &keep_aspect_ratio);
-        if (keep_aspect_ratio == 0) {
-            canvas->dest_rect_ptr = NULL;
-        } else {
-            canvas->dest_rect_ptr = &canvas->dest_rect;
-            resources_get_int("TrueAspectRatio", &true_aspect_ratio);
-            if (true_aspect_ratio) {
-                aspect_ratio = (int)(canvas->geometry->pixel_aspect_ratio * 1000);
-            } else {
-                resources_get_int("AspectRatio", &aspect_ratio);
-            }
-            canvas_aspect_ratio = aspect_ratio / 1000.0 * canvas->draw_buffer->canvas_physical_width / canvas->draw_buffer->canvas_physical_height;
-            canvas_aspect_ratio = aspect_ratio / 1000.0 
-                                    * canvas->draw_buffer->canvas_physical_width / canvas->draw_buffer->canvas_physical_height;
-            if (canvas_aspect_ratio < (double) width / height) {
-                shrinked_width = (int)(height * canvas_aspect_ratio);
-                canvas->dest_rect.top = 0;
-                canvas->dest_rect.bottom = height - 1;
-                canvas->dest_rect.left = (width - shrinked_width) / 2;
-                canvas->dest_rect.right = canvas->dest_rect.left + shrinked_width - 1;
-            } else {
-                shrinked_height = (int)(width / canvas_aspect_ratio);
-                canvas->dest_rect.left = 0;
-                canvas->dest_rect.right = width - 1;
-                canvas->dest_rect.top = (height - shrinked_height) / 2;
-                canvas->dest_rect.bottom = canvas->dest_rect.top + shrinked_height - 1;
-            }
-        }
-        canvas->d3dpp.Windowed = FALSE;
-    } else {
+    //    resources_get_int("KeepAspectRatio", &keep_aspect_ratio);
+    //    if (keep_aspect_ratio == 0) {
+    //        canvas->dest_rect_ptr = NULL;
+    //    } else {
+    //        canvas->dest_rect_ptr = &canvas->dest_rect;
+    //        resources_get_int("TrueAspectRatio", &true_aspect_ratio);
+    //        if (true_aspect_ratio) {
+    //            aspect_ratio = (int)(canvas->geometry->pixel_aspect_ratio * 1000);
+    //        } else {
+    //            resources_get_int("AspectRatio", &aspect_ratio);
+    //        }
+    //        canvas_aspect_ratio = aspect_ratio / 1000.0 * canvas->draw_buffer->canvas_physical_width / canvas->draw_buffer->canvas_physical_height;
+    //        canvas_aspect_ratio = aspect_ratio / 1000.0 
+    //                                * canvas->draw_buffer->canvas_physical_width / canvas->draw_buffer->canvas_physical_height;
+    //        if (canvas_aspect_ratio < (double) width / height) {
+    //            shrinked_width = (int)(height * canvas_aspect_ratio);
+    //            canvas->dest_rect.top = 0;
+    //            canvas->dest_rect.bottom = height - 1;
+    //            canvas->dest_rect.left = (width - shrinked_width) / 2;
+    //            canvas->dest_rect.right = canvas->dest_rect.left + shrinked_width - 1;
+    //        } else {
+    //            shrinked_height = (int)(width / canvas_aspect_ratio);
+    //            canvas->dest_rect.left = 0;
+    //            canvas->dest_rect.right = width - 1;
+    //            canvas->dest_rect.top = (height - shrinked_height) / 2;
+    //            canvas->dest_rect.bottom = canvas->dest_rect.top + shrinked_height - 1;
+    //        }
+    //    }
+    //    canvas->d3dpp.Windowed = FALSE;
+    //} else {
         canvas->dest_rect_ptr = NULL;
         canvas->d3dpp.Windowed = TRUE;
-    }
+    //}
 
     d3dpreffilter = D3DTEXF_LINEAR;
 
@@ -188,19 +188,19 @@ HRESULT video_canvas_reset_dx9(video_canvas_t *canvas)
     
     canvas->d3dsurface = NULL;
 
-    if (canvas->d3dpp.Windowed == 0) {
-        int device, width, height, bitdepth, refreshrate;
+    //if (canvas->d3dpp.Windowed == 0) {
+    //    int device, width, height, bitdepth, refreshrate;
 
-        GetCurrentModeParameters(&device, &width, &height, &bitdepth, &refreshrate);
-        canvas->d3dpp.BackBufferWidth = width;
-        canvas->d3dpp.BackBufferHeight = height;
-    } else {
+    //    GetCurrentModeParameters(&device, &width, &height, &bitdepth, &refreshrate);
+    //    canvas->d3dpp.BackBufferWidth = width;
+    //    canvas->d3dpp.BackBufferHeight = height;
+    //} else {
         RECT wrect;
 
         GetClientRect(canvas->render_hwnd, &wrect);
         canvas->d3dpp.BackBufferWidth = wrect.right - wrect.left;
         canvas->d3dpp.BackBufferHeight = wrect.bottom - wrect.top;
-    }
+    //}
 
     if (dx_primary_surface_rendering) {
         canvas->d3dpp.PresentationInterval = D3DPRESENT_INTERVAL_IMMEDIATE;

@@ -551,124 +551,124 @@ static const int c64_sid_baseaddress[] = { 0xd4, 0xd5, 0xd6, 0xd7, 0xde, 0xdf, -
 
 static void c64_ui_specific(WPARAM wparam, HWND hwnd)
 {
-    uic64cart_proc(wparam, hwnd);
+    //uic64cart_proc(wparam, hwnd);
 
     switch (wparam) {
         case IDM_C64BURSTMOD_SETTINGS:
-            ui_c64burstmod_settings_dialog(hwnd);
+            //ui_c64burstmod_settings_dialog(hwnd);
             break;
         case IDM_C64MODEL_SETTINGS:
-            ui_c64model_settings_dialog(hwnd);
+            //ui_c64model_settings_dialog(hwnd);
             break;
         case IDM_VICII_SETTINGS:
-            ui_vicii_settings_dialog(hwnd);
+            //ui_vicii_settings_dialog(hwnd);
             break;
         case IDM_SID_SETTINGS:
-            ui_sid_settings_dialog(hwnd, c64_sid_baseaddress);
+            //ui_sid_settings_dialog(hwnd, c64_sid_baseaddress);
             break;
         case IDM_REU_SETTINGS:
-            ui_reu_settings_dialog(hwnd);
+            //ui_reu_settings_dialog(hwnd);
             break;
         case IDM_GEORAM_SETTINGS:
-            ui_georam_settings_dialog(hwnd);
+            //ui_georam_settings_dialog(hwnd);
             break;
         case IDM_RAMCART_SETTINGS:
-            ui_ramcart_settings_dialog(hwnd);
+            //ui_ramcart_settings_dialog(hwnd);
             break;
         case IDM_DQBB_SETTINGS:
-            ui_dqbb_settings_dialog(hwnd);
+            //ui_dqbb_settings_dialog(hwnd);
             break;
         case IDM_EXPERT_SETTINGS:
-            ui_expert_settings_dialog(hwnd);
+            //ui_expert_settings_dialog(hwnd);
             break;
         case IDM_ISEPIC_SETTINGS:
-            ui_isepic_settings_dialog(hwnd);
+            //ui_isepic_settings_dialog(hwnd);
             break;
         case IDM_PLUS60K_SETTINGS:
-            ui_plus60k_settings_dialog(hwnd);
+            //ui_plus60k_settings_dialog(hwnd);
             break;
         case IDM_PLUS256K_SETTINGS:
-            ui_plus256k_settings_dialog(hwnd);
+            //ui_plus256k_settings_dialog(hwnd);
             break;
         case IDM_C64_256K_SETTINGS:
-            ui_c64_256k_settings_dialog(hwnd);
+            //ui_c64_256k_settings_dialog(hwnd);
             break;
         case IDM_MIDI_SETTINGS:
-            ui_midi_settings_dialog(hwnd);
+            //ui_midi_settings_dialog(hwnd);
             break;
         case IDM_MMC64_SETTINGS:
-            ui_mmc64_settings_dialog(hwnd);
+            //ui_mmc64_settings_dialog(hwnd);
             break;
         case IDM_MMCREPLAY_SETTINGS:
-            ui_mmcreplay_settings_dialog(hwnd);
+            //ui_mmcreplay_settings_dialog(hwnd);
             break;
         case IDM_RR_SETTINGS:
-            ui_rr_settings_dialog(hwnd);
+            //ui_rr_settings_dialog(hwnd);
             break;
         case IDM_MAGICVOICE_SETTINGS:
-            ui_magicvoice_settings_dialog(hwnd);
+            //ui_magicvoice_settings_dialog(hwnd);
             break;
         case IDM_DIGIMAX_SETTINGS:
-            ui_digimax_settings_dialog(hwnd);
+            //ui_digimax_settings_dialog(hwnd);
             break;
         case IDM_DS12C887RTC_SETTINGS:
-            ui_ds12c887rtc_settings_dialog(hwnd);
+            //ui_ds12c887rtc_settings_dialog(hwnd);
             break;
         case IDM_LIGHTPEN_SETTINGS:
-            ui_lightpen_settings_dialog(hwnd);
+            //ui_lightpen_settings_dialog(hwnd);
             break;
         case IDM_EASYFLASH_SETTINGS:
-            ui_easyflash_settings_dialog(hwnd);
+            //ui_easyflash_settings_dialog(hwnd);
             break;
         case IDM_SFX_SE_SETTINGS:
-            ui_soundexpander_settings_dialog(hwnd);
+            //ui_soundexpander_settings_dialog(hwnd);
             break;
         case IDM_IDE64_SETTINGS:
-            uiide64_settings_dialog(hwnd);
+            //uiide64_settings_dialog(hwnd);
             break;
         case IDM_JOY_SETTINGS:
-            ui_joystick_settings_dialog(hwnd);
+            //ui_joystick_settings_dialog(hwnd);
             break;
         case IDM_EXTRA_JOY_SETTINGS:
-            ui_extra_joystick_settings_dialog(hwnd);
+            //ui_extra_joystick_settings_dialog(hwnd);
             break;
         case IDM_ROM_SETTINGS:
-            uirom_settings_dialog(hwnd, IDD_C64ROM_SETTINGS_DIALOG, IDD_C64DRIVEROM_SETTINGS_DIALOG,
-                                  romset_dialog_resources, uirom_settings,
-                                  c64_main_trans, c64_drive_trans, c64_generic_trans,
-                                  c64_main_left_group, c64_main_middle_group, c64_main_right_group,
-                                  c64_drive_left_group, c64_drive_middle_group, c64_drive_right_group,
-                                  c64_main_res_trans, c64_generic_res_trans);
+            //uirom_settings_dialog(hwnd, IDD_C64ROM_SETTINGS_DIALOG, IDD_C64DRIVEROM_SETTINGS_DIALOG,
+            //                      romset_dialog_resources, uirom_settings,
+            //                      c64_main_trans, c64_drive_trans, c64_generic_trans,
+            //                      c64_main_left_group, c64_main_middle_group, c64_main_right_group,
+            //                      c64_drive_left_group, c64_drive_middle_group, c64_drive_right_group,
+            //                      c64_main_res_trans, c64_generic_res_trans);
             break;
 #ifdef HAVE_TFE
         case IDM_TFE_SETTINGS:
-           ui_tfe_settings_dialog(hwnd);
+           //ui_tfe_settings_dialog(hwnd);
            break;
 #endif
         case IDM_VIDEO_SETTINGS:
-            ui_video_settings_dialog(hwnd, UI_VIDEO_CHIP_VICII, UI_VIDEO_CHIP_NONE);
+            //ui_video_settings_dialog(hwnd, UI_VIDEO_CHIP_VICII, UI_VIDEO_CHIP_NONE);
             break;
         case IDM_DRIVE_SETTINGS:
-            uidrivec64_settings_dialog(hwnd);
+            //uidrivec64_settings_dialog(hwnd);
             break;
         case IDM_ACIA_SETTINGS:
-            ui_acia_settings_dialog(hwnd);
+            //ui_acia_settings_dialog(hwnd);
             break;
         case IDM_RS232USER_SETTINGS:
-            ui_rs232user_settings_dialog(hwnd);
+            //ui_rs232user_settings_dialog(hwnd);
             break;
         case IDM_KEYBOARD_SETTINGS:
-            uikeyboard_settings_dialog(hwnd, &uikeyboard_config);
+            //uikeyboard_settings_dialog(hwnd, &uikeyboard_config);
             break;
         case IDM_MOUSE_SETTINGS:
-            ui_mouse_settings_dialog(hwnd);
+            //ui_mouse_settings_dialog(hwnd);
             break;
     }
 }
 
 int c64ui_init(void)
 {
-    uic64cart_init();
+    //uic64cart_init();
 
     ui_register_machine_specific(c64_ui_specific);
     ui_register_menu_toggles(c64_ui_menu_toggles);

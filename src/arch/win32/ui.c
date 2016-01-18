@@ -409,14 +409,14 @@ int ui_init(int *argc, char **argv)
 void ui_shutdown(void)
 {
     statusbar_delete_brushes();
-    uikeyboard_shutdown();
+    //uikeyboard_shutdown();
 }
 
 /* Initialize the UI after setting all the resource values.  */
 int ui_init_finish(void)
 {
-    ui_accelerator = uikeyboard_create_accelerator_table();
-    ui_fullscreen_init();
+    //ui_accelerator = uikeyboard_create_accelerator_table();
+    //ui_fullscreen_init();
     atexit(ui_exit);
     return 0;
 }
@@ -425,7 +425,7 @@ int ui_init_finalize(void)
 {
     int alwaysontop;
 
-    fullscreen_setup_finished();
+    //fullscreen_setup_finished();
     resources_get_int("AlwaysOnTop", &alwaysontop);
     ui_set_alwaysontop(alwaysontop);
     return 0;
@@ -440,12 +440,12 @@ void ui_exit(void)
         lib_free(hwnd_titles[i]);
     }
 
-    if (ui_accelerator) {
-        DestroyAcceleratorTable(ui_accelerator);
-    }
+    //if (ui_accelerator) {
+    //    DestroyAcceleratorTable(ui_accelerator);
+    //}
 
-    ui_fullscreen_shutdown();
-    uilib_shutdown();
+    //ui_fullscreen_shutdown();
+    //uilib_shutdown();
 }
 
 static void ui_translate_menu_popups(HMENU menu, ui_popup_translation_table_t *trans_table)
@@ -1004,18 +1004,19 @@ void ui_message(const char *format, ...)
 /* Let the user browse for a filename */
 char *ui_get_file(const char *format,...)
 {
-    char *tmp;
-    char *st;
-    va_list args;
+    //char *tmp;
+    //char *st;
+    //va_list args;
 
-    va_start(args, format);
-    tmp = lib_mvsprintf(format, args);
-    va_end(args);
+    //va_start(args, format);
+    //tmp = lib_mvsprintf(format, args);
+    //va_end(args);
 
-    st = uilib_select_file(NULL, tmp, UILIB_FILTER_ALL, UILIB_SELECTOR_TYPE_FILE_LOAD, UILIB_SELECTOR_STYLE_DISK);
-    lib_free(tmp);
+    //st = uilib_select_file(NULL, tmp, UILIB_FILTER_ALL, UILIB_SELECTOR_TYPE_FILE_LOAD, UILIB_SELECTOR_STYLE_DISK);
+    //lib_free(tmp);
 
-    return st;
+    //return st;
+	return NULL;
 }
 
 /* Handle the "CPU JAM" case.  */
@@ -1532,7 +1533,7 @@ static void handle_wm_command(WPARAM wparam, LPARAM lparam, HWND hwnd)
         case IDM_DEVICEMANAGER:
         case IDM_FORMFEED_PRINTERIEC4:
         case IDM_FORMFEED_PRINTERIEC5:
-            uiperipheral_command(hwnd, wparam);
+            //uiperipheral_command(hwnd, wparam);
             break;
         case IDM_EXIT:
             PostMessage(hwnd, WM_CLOSE, wparam, lparam);
@@ -1549,7 +1550,7 @@ static void handle_wm_command(WPARAM wparam, LPARAM lparam, HWND hwnd)
         case IDM_LICENSE:
         case IDM_WARRANTY:
         case IDM_CMDLINE:
-            uihelp_dialog(hwnd, wparam);
+            //uihelp_dialog(hwnd, wparam);
             break;
         case IDM_ATTACH_8:
         case IDM_ATTACH_9:
@@ -1563,7 +1564,7 @@ static void handle_wm_command(WPARAM wparam, LPARAM lparam, HWND hwnd)
         case IDM_ATTACH_TAPE:
         case IDM_DETACH_TAPE:
         case IDM_AUTOSTART:
-            uiattach_command(hwnd, wparam);
+            //uiattach_command(hwnd, wparam);
             break;
         case IDM_FLIP_ADD:
         case IDM_FLIP_REMOVE:
@@ -1571,7 +1572,7 @@ static void handle_wm_command(WPARAM wparam, LPARAM lparam, HWND hwnd)
         case IDM_FLIP_PREVIOUS:
         case IDM_FLIP_LOAD:
         case IDM_FLIP_SAVE:
-            uifliplist_command(hwnd, wparam);
+            //uifliplist_command(hwnd, wparam);
             break;
         case IDM_DATASETTE_SETTINGS:
         case IDM_DATASETTE_CONTROL_STOP:
@@ -1581,24 +1582,24 @@ static void handle_wm_command(WPARAM wparam, LPARAM lparam, HWND hwnd)
         case IDM_DATASETTE_CONTROL_RECORD:
         case IDM_DATASETTE_CONTROL_RESET:
         case IDM_DATASETTE_RESET_COUNTER:
-            uidatasette_command(hwnd, wparam);
+            //uidatasette_command(hwnd, wparam);
             break;
         case IDM_SNAPSHOT_LOAD:
-            ui_snapshot_load(hwnd);
+            //ui_snapshot_load(hwnd);
             break;
         case IDM_SNAPSHOT_SAVE:
-            ui_snapshot_save(hwnd);
+            //ui_snapshot_save(hwnd);
             break;
         case IDM_SAVEQUICK:
-            ui_quicksnapshot_save(hwnd);
+            //ui_quicksnapshot_save(hwnd);
             break;
         case IDM_LOADQUICK:
-            ui_quicksnapshot_load(hwnd);
+            //ui_quicksnapshot_load(hwnd);
             break;
         case IDM_MEDIAFILE:
-            SuspendFullscreenModeKeep(hwnd);
-            ui_mediafile_save_dialog(hwnd);
-            ResumeFullscreenModeKeep(hwnd);
+            //SuspendFullscreenModeKeep(hwnd);
+            //ui_mediafile_save_dialog(hwnd);
+            //ResumeFullscreenModeKeep(hwnd);
             break;
         case IDM_SINGLE_FRAME_ADVANCE:
             pause_pending = 1;
@@ -1635,62 +1636,62 @@ static void handle_wm_command(WPARAM wparam, LPARAM lparam, HWND hwnd)
             drivecpu_trigger_reset(3);
             break;
         case IDM_MAXIMUM_SPEED_CUSTOM:
-            ui_speed_settings_dialog(hwnd);
+            //ui_speed_settings_dialog(hwnd);
             break;
         case IDM_SWAP_JOYSTICK:
-            if (machine_class == VICE_MACHINE_CBM6x0) {
-                ui_joystick_swap_extra_joystick();
-            } else {
-                ui_joystick_swap_joystick();
-            }
+            //if (machine_class == VICE_MACHINE_CBM6x0) {
+            //    ui_joystick_swap_extra_joystick();
+            //} else {
+            //    ui_joystick_swap_joystick();
+            //}
             break;
         case IDM_SWAP_EXTRA_JOYSTICK:
-            ui_joystick_swap_extra_joystick();
+            //ui_joystick_swap_extra_joystick();
             break;
         case IDM_AUTOSTART_SETTINGS:
             //ui_autostart_settings_dialog(hwnd);
             break;
         case IDM_SOUND_SETTINGS:
-            ui_sound_settings_dialog(hwnd);
+            //ui_sound_settings_dialog(hwnd);
             break;
         case IDM_RAM_SETTINGS:
-            ui_ram_settings_dialog(hwnd);
+            //ui_ram_settings_dialog(hwnd);
             break;
         case IDM_TOGGLE_FULLSCREEN:
             vsync_suspend_speed_eval();
-            SwitchFullscreenMode(hwnd);
+            //SwitchFullscreenMode(hwnd);
             break;
         case IDM_SETTINGS_SAVE_FILE:
-            if ((st_name = uilib_select_file(hwnd, translate_text(IDS_SAVE_CONFIG_FILE), UILIB_FILTER_ALL, UILIB_SELECTOR_TYPE_FILE_SAVE, UILIB_SELECTOR_STYLE_DEFAULT)) != NULL) {
-                char *name;
+            //if ((st_name = uilib_select_file(hwnd, translate_text(IDS_SAVE_CONFIG_FILE), UILIB_FILTER_ALL, UILIB_SELECTOR_TYPE_FILE_SAVE, UILIB_SELECTOR_STYLE_DEFAULT)) != NULL) {
+            //    char *name;
 
-                name = system_wcstombs_alloc(st_name);
+            //    name = system_wcstombs_alloc(st_name);
 
-                if (resources_save(st_name) < 0) {
-                    ui_error(translate_text(IDS_CANNOT_SAVE_SETTINGS));
-                } else {
-                    ui_message(translate_text(IDS_SETTINGS_SAVED_SUCCESS));
-                }
-                uifliplist_save_settings();
-                system_wcstombs_free(name);
-                lib_free(st_name);
-            }
+            //    if (resources_save(st_name) < 0) {
+            //        ui_error(translate_text(IDS_CANNOT_SAVE_SETTINGS));
+            //    } else {
+            //        ui_message(translate_text(IDS_SETTINGS_SAVED_SUCCESS));
+            //    }
+            //    //uifliplist_save_settings();
+            //    system_wcstombs_free(name);
+            //    lib_free(st_name);
+            //}
             break;
         case IDM_SETTINGS_LOAD_FILE:
-            if ((st_name = uilib_select_file(hwnd, translate_text(IDS_LOAD_CONFIG_FILE), UILIB_FILTER_ALL, UILIB_SELECTOR_TYPE_FILE_LOAD, UILIB_SELECTOR_STYLE_DEFAULT)) != NULL) {
-                char *name;
+            //if ((st_name = uilib_select_file(hwnd, translate_text(IDS_LOAD_CONFIG_FILE), UILIB_FILTER_ALL, UILIB_SELECTOR_TYPE_FILE_LOAD, UILIB_SELECTOR_STYLE_DEFAULT)) != NULL) {
+            //    char *name;
 
-                name = system_wcstombs_alloc(st_name);
+            //    name = system_wcstombs_alloc(st_name);
 
-                if (resources_load(st_name) < 0) {
-                    ui_error(translate_text(IDS_CANNOT_LOAD_SETTINGS));
-                } else {
-                    ui_message(translate_text(IDS_SETTINGS_LOADED_SUCCESS));
-                }
-                uifliplist_save_settings();
-                system_wcstombs_free(name);
-                lib_free(st_name);
-            }
+            //    if (resources_load(st_name) < 0) {
+            //        ui_error(translate_text(IDS_CANNOT_LOAD_SETTINGS));
+            //    } else {
+            //        ui_message(translate_text(IDS_SETTINGS_LOADED_SUCCESS));
+            //    }
+            //    //uifliplist_save_settings();
+            //    system_wcstombs_free(name);
+            //    lib_free(st_name);
+            //}
             break;
         case IDM_SETTINGS_SAVE:
             if (resources_save(NULL) < 0) {
@@ -1698,7 +1699,7 @@ static void handle_wm_command(WPARAM wparam, LPARAM lparam, HWND hwnd)
             } else {
                 ui_message(translate_text(IDS_SETTINGS_SAVED_SUCCESS));
             }
-            uifliplist_save_settings();
+            //uifliplist_save_settings();
             break;
         case IDM_SETTINGS_LOAD:
             if (resources_load(NULL) < 0) {
@@ -1716,13 +1717,13 @@ static void handle_wm_command(WPARAM wparam, LPARAM lparam, HWND hwnd)
         case IDM_EVENT_TOGGLE_PLAYBACK:
         case IDM_EVENT_SETMILESTONE:
         case IDM_EVENT_RESETMILESTONE:
-            uievent_command(hwnd, wparam);
+            //uievent_command(hwnd, wparam);
             break;
         case IDM_NETWORK_SETTINGS:
-            ui_network_dialog(hwnd);
+            //ui_network_dialog(hwnd);
             break;
         case IDM_RS232_SETTINGS:
-            ui_rs232_settings_dialog(hwnd);
+            //ui_rs232_settings_dialog(hwnd);
             break;
         case IDM_LANG_EN:
         case IDM_LANG_DA:
@@ -1737,14 +1738,14 @@ static void handle_wm_command(WPARAM wparam, LPARAM lparam, HWND hwnd)
         case IDM_LANG_RU:
         case IDM_LANG_SV:
         case IDM_LANG_TR:
-            ui_set_language((unsigned int)wparam);
+            //ui_set_language((unsigned int)wparam);
             break;
         case IDM_SOUND_RECORD_START:
-            ui_sound_record_settings_dialog(hwnd);
+            //ui_sound_record_settings_dialog(hwnd);
             break;
         case IDM_SOUND_RECORD_STOP:
-            resources_set_string("SoundRecordDeviceName", "");
-            ui_display_statustext(translate_text(IDS_SOUND_RECORDING_STOPPED), 1);
+            //resources_set_string("SoundRecordDeviceName", "");
+            //ui_display_statustext(translate_text(IDS_SOUND_RECORDING_STOPPED), 1);
             break;
         default:
             handle_default_command(wparam, lparam, hwnd);
@@ -1793,7 +1794,7 @@ static void ui_wm_close(HWND window)
     resources_get_int("ConfirmOnExit", &confirm_on_exit);
     resources_get_int("SaveResourcesOnExit", &save_on_exit);
 
-    SuspendFullscreenModeKeep(window);
+    //SuspendFullscreenModeKeep(window);
     vsync_suspend_speed_eval();
     if (confirm_on_exit) {
         if (MessageBox(window, translate_text(IDS_REALLY_EXIT), TEXT("VICE"), MB_YESNO | MB_ICONQUESTION | MB_DEFBUTTON2 | MB_TASKMODAL) == IDYES) {
@@ -1804,7 +1805,7 @@ static void ui_wm_close(HWND window)
     }
 
     if (quit) {
-        SuspendFullscreenMode(window);
+        //SuspendFullscreenMode(window);
         if (save_on_exit) {
             if (resources_save(NULL) < 0) {
                 ui_error(translate_text(IDS_CANNOT_SAVE_SETTINGS));
@@ -1812,7 +1813,7 @@ static void ui_wm_close(HWND window)
         }
         DestroyWindow(window);
     } else {
-        ResumeFullscreenModeKeep(window);
+        //ResumeFullscreenModeKeep(window);
     }
 }
 
@@ -2054,9 +2055,10 @@ static LRESULT CALLBACK window_proc(HWND window, UINT msg, WPARAM wparam, LPARAM
             statusbar_notify(window, window_index, wparam, lparam);
             break;
         case WM_NCACTIVATE:
-            if (IsFullscreenEnabled() && fullscreen_get_nesting_level() == 0) {
-                return 0;
-            }
+            //if (IsFullscreenEnabled() && fullscreen_get_nesting_level() == 0) {
+            //    return 0;
+            //}
+			break;
     }
 
     return DefWindowProc(window, msg, wparam, lparam);
@@ -2092,15 +2094,15 @@ int ui_messagebox(LPCTSTR lpText, LPCTSTR lpCaption, UINT uType)
         }
     }
 
-    if (hWnd != NULL) {
-        SuspendFullscreenModeKeep(hWnd);
-    }
+    //if (hWnd != NULL) {
+    //    SuspendFullscreenModeKeep(hWnd);
+    //}
 
     ret = MessageBox(hWnd, lpText, lpCaption, uType);
 
-    if (hWnd != NULL) {
-        ResumeFullscreenModeKeep(hWnd);
-    }
+    //if (hWnd != NULL) {
+    //    ResumeFullscreenModeKeep(hWnd);
+    //}
 
     return ret;
 }

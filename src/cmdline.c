@@ -250,7 +250,7 @@ int cmdline_parse(int *argc, char **argv)
 
 void cmdline_show_help(void *userparam)
 {
-    ui_cmdline_show_help(num_options, options, userparam);
+    //ui_cmdline_show_help(num_options, options, userparam);
 }
 
 char *cmdline_options_get_name(int counter)

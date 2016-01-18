@@ -109,5 +109,6 @@ void vsyncarch_postsync(void)
 
 int vsyncarch_vbl_sync_enabled(void)
 {
-    return ui_vblank_sync_enabled();
+    //return ui_vblank_sync_enabled();
+	return 0; //default
 }

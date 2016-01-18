@@ -27,63 +27,63 @@
 
 #include "vice.h"
 
-#include <windows.h>
-#include <tchar.h>
-
-#include "intl.h"
-#include "lib.h"
-#include "res.h"
-#include "translate.h"
-#include "uievent.h"
-#include "uilib.h"
-#include "vice-event.h"
-
-void uievent_command(HWND hwnd, WPARAM wparam)
-{
-    char *fname;
-
-    switch (wparam & 0xffff) {
-        case IDM_EVENT_DIRECTORY:
-            fname = uilib_select_file(hwnd,
-                                      translate_text(IDS_SELECT_START_SNAP_EVENT),
-                                      UILIB_FILTER_ALL | UILIB_FILTER_SNAPSHOT,
-                                      UILIB_SELECTOR_TYPE_FILE_SAVE,
-                                      UILIB_SELECTOR_STYLE_EVENT_START);
-            lib_free(fname);
-            fname = uilib_select_file(hwnd,
-                                      translate_text(IDS_SELECT_END_SNAP_EVENT),
-                                      UILIB_FILTER_ALL | UILIB_FILTER_SNAPSHOT,
-                                      UILIB_SELECTOR_TYPE_FILE_SAVE,
-                                      UILIB_SELECTOR_STYLE_EVENT_END);
-            lib_free(fname);
-            break;
-        case IDM_EVENT_TOGGLE_RECORD:
-            {
-                int recording_new = (event_record_active() ? 0 : 1);
-
-                if (recording_new) {
-                    event_record_start();
-                } else {
-                    event_record_stop();
-                }
-            }
-            break;
-        case IDM_EVENT_TOGGLE_PLAYBACK:
-            {
-                int playback_new = (event_playback_active() ? 0 : 1);
-
-                if (playback_new) {
-                    event_playback_start();
-                } else {
-                    event_playback_stop();
-                }
-            }
-            break;
-        case IDM_EVENT_SETMILESTONE:
-            event_record_set_milestone();
-            break;
-        case IDM_EVENT_RESETMILESTONE:
-            event_record_reset_milestone();
-            break;
-    }
-}
+//#include <windows.h>
+//#include <tchar.h>
+//
+//#include "intl.h"
+//#include "lib.h"
+//#include "res.h"
+//#include "translate.h"
+//#include "uievent.h"
+//#include "uilib.h"
+//#include "vice-event.h"
+//
+//void uievent_command(HWND hwnd, WPARAM wparam)
+//{
+//    char *fname;
+//
+//    switch (wparam & 0xffff) {
+//        case IDM_EVENT_DIRECTORY:
+//            fname = uilib_select_file(hwnd,
+//                                      translate_text(IDS_SELECT_START_SNAP_EVENT),
+//                                      UILIB_FILTER_ALL | UILIB_FILTER_SNAPSHOT,
+//                                      UILIB_SELECTOR_TYPE_FILE_SAVE,
+//                                      UILIB_SELECTOR_STYLE_EVENT_START);
+//            lib_free(fname);
+//            fname = uilib_select_file(hwnd,
+//                                      translate_text(IDS_SELECT_END_SNAP_EVENT),
+//                                      UILIB_FILTER_ALL | UILIB_FILTER_SNAPSHOT,
+//                                      UILIB_SELECTOR_TYPE_FILE_SAVE,
+//                                      UILIB_SELECTOR_STYLE_EVENT_END);
+//            lib_free(fname);
+//            break;
+//        case IDM_EVENT_TOGGLE_RECORD:
+//            {
+//                int recording_new = (event_record_active() ? 0 : 1);
+//
+//                if (recording_new) {
+//                    event_record_start();
+//                } else {
+//                    event_record_stop();
+//                }
+//            }
+//            break;
+//        case IDM_EVENT_TOGGLE_PLAYBACK:
+//            {
+//                int playback_new = (event_playback_active() ? 0 : 1);
+//
+//                if (playback_new) {
+//                    event_playback_start();
+//                } else {
+//                    event_playback_stop();
+//                }
+//            }
+//            break;
+//        case IDM_EVENT_SETMILESTONE:
+//            event_record_set_milestone();
+//            break;
+//        case IDM_EVENT_RESETMILESTONE:
+//            event_record_reset_milestone();
+//            break;
+//    }
+//}

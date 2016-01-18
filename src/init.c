@@ -93,10 +93,10 @@ int init_resources(void)
         init_resource_fail("romset");
         return -1;
     }
-    if (ui_resources_init() < 0) {
-        init_resource_fail("UI");
-        return -1;
-    }
+    //if (ui_resources_init() < 0) {
+    //    init_resource_fail("UI");
+    //    return -1;
+    //}
     if (fliplist_resources_init() < 0) {
         init_resource_fail("flip list");
         return -1;
@@ -179,10 +179,10 @@ int init_cmdline_options(void)
         init_cmdline_options_fail("system file locator");
         return -1;
     }
-    if (!video_disabled_mode && ui_cmdline_options_init() < 0) {
-        init_cmdline_options_fail("UI");
-        return -1;
-    }
+    //if (!video_disabled_mode && ui_cmdline_options_init() < 0) {
+    //    init_cmdline_options_fail("UI");
+    //    return -1;
+    //}
     if (machine_class != VICE_MACHINE_VSID) {
         if (autostart_cmdline_options_init() < 0) {
             init_resource_fail("autostart");

@@ -281,7 +281,7 @@ void machine_shutdown(void)
     machine_resources_shutdown();
     sysfile_resources_shutdown();
     zfile_shutdown();
-    ui_resources_shutdown();
+    //ui_resources_shutdown();
     log_resources_shutdown();
     fliplist_resources_shutdown();
     romset_resources_shutdown();

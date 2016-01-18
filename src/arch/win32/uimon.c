@@ -2572,7 +2572,7 @@ void uimon_window_close(void)
     DestroyWindow(hwndMonitor);
     hwndMonitor = hwndMdiClient = NULL;
 
-    ResumeFullscreenMode(hwndParent);
+    //ResumeFullscreenMode(hwndParent);
 
 #else // #ifdef UIMON_EXPERIMENTAL
     console_close(console_log_local);
@@ -2594,7 +2594,7 @@ console_t *uimon_window_open(void)
 
     hwndParent = GetActiveWindow();
 
-    SuspendFullscreenMode(hwndParent);
+    //SuspendFullscreenMode(hwndParent);
 
     uimon_init();
 

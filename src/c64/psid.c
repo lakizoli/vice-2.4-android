@@ -440,24 +440,24 @@ void psid_init_tune(void)
         log_message(vlog, "Using %s interrupt", irq_str);
         log_message(vlog, "Playing tune %d out of %d (default=%d)", start_song, psid->songs, psid->start_song);
     } else {
-        if (machine_class == VICE_MACHINE_VSID) {
-            char * driver_info_text;
-            driver_info_text = lib_msprintf("Driver=$%04X, Image=$%04X-$%04X, Init=$%04X, Play=$%04X", reloc_addr, psid->load_addr,
-                                            psid->load_addr + psid->data_size - 1, psid->init_addr, psid->play_addr);
-            vsid_ui_setdrv(driver_info_text);
-            lib_free(driver_info_text);
-        }
-        vsid_ui_display_name((char *)(psid->name));
-        vsid_ui_display_author((char *)(psid->author));
-        vsid_ui_display_copyright((char *)(psid->copyright));
+        //if (machine_class == VICE_MACHINE_VSID) {
+        //    char * driver_info_text;
+        //    driver_info_text = lib_msprintf("Driver=$%04X, Image=$%04X-$%04X, Init=$%04X, Play=$%04X", reloc_addr, psid->load_addr,
+        //                                    psid->load_addr + psid->data_size - 1, psid->init_addr, psid->play_addr);
+        //    vsid_ui_setdrv(driver_info_text);
+        //    lib_free(driver_info_text);
+        //}
+        //vsid_ui_display_name((char *)(psid->name));
+        //vsid_ui_display_author((char *)(psid->author));
+        //vsid_ui_display_copyright((char *)(psid->copyright));
 
-        vsid_ui_display_sync(sync);
-        vsid_ui_display_sid_model(sid_model);
-        vsid_ui_display_irqtype(irq_str);
-        vsid_ui_display_tune_nr(start_song);
-        vsid_ui_set_default_tune(psid->start_song);
-        vsid_ui_display_nr_of_tunes(psid->songs);
-        vsid_ui_display_time(0);
+        //vsid_ui_display_sync(sync);
+        //vsid_ui_display_sid_model(sid_model);
+        //vsid_ui_display_irqtype(irq_str);
+        //vsid_ui_display_tune_nr(start_song);
+        //vsid_ui_set_default_tune(psid->start_song);
+        //vsid_ui_display_nr_of_tunes(psid->songs);
+        //vsid_ui_display_time(0);
     }
 
     /* Store parameters for PSID player. */

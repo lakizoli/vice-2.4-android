@@ -108,7 +108,7 @@ static int set_dx9_disable(int val, void *param)
             video_canvas_resize(video_canvases[i], 1);
         }
         
-        fullscreen_getmodes();
+        //fullscreen_getmodes();
     }
 
     return 0;
@@ -328,11 +328,11 @@ void video_canvas_resize(video_canvas_t *canvas, char resize_canvas)
     int bitdepth;
     int refreshrate;
 
-    if (IsFullscreenEnabled()) {
-        GetCurrentModeParameters(&device, &fullscreen_width, &fullscreen_height, &bitdepth, &refreshrate);
-    } else {
+    //if (IsFullscreenEnabled()) {
+    //    GetCurrentModeParameters(&device, &fullscreen_width, &fullscreen_height, &bitdepth, &refreshrate);
+    //} else {
         ui_resize_canvas_window(canvas);
-    }
+    //}
 
     if (video_dx9_enabled()) {
         video_canvas_reset_dx9(canvas);
