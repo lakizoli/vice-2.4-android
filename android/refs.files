@@ -1,0 +1,130 @@
+./arch.vcxproj:    <ProjectReference Include="base.vcxproj">
+./arch.vcxproj:    </ProjectReference>
+./arch.vcxproj:    <ProjectReference Include="geninfocontrib.vcxproj">
+./arch.vcxproj:    </ProjectReference>
+./arch.vcxproj:    <ProjectReference Include="genmsvcver.vcxproj">
+./arch.vcxproj:    </ProjectReference>
+./arch.vcxproj:    <ProjectReference Include="gentranslate.vcxproj">
+./arch.vcxproj:    </ProjectReference>
+./arch.vcxproj:    <ProjectReference Include="genwinres.vcxproj">
+./arch.vcxproj:    </ProjectReference>
+./base.vcxproj:    <ProjectReference Include="gentranslate.vcxproj">
+./base.vcxproj:    </ProjectReference>
+./c64.vcxproj:    <ProjectReference Include="base.vcxproj">
+./c64.vcxproj:    </ProjectReference>
+./c64cart.vcxproj:    <ProjectReference Include="base.vcxproj">
+./c64cart.vcxproj:    </ProjectReference>
+./c64cartsystem.vcxproj:    <ProjectReference Include="base.vcxproj">
+./c64cartsystem.vcxproj:    </ProjectReference>
+./c64commoncart.vcxproj:    <ProjectReference Include="base.vcxproj">
+./c64commoncart.vcxproj:    </ProjectReference>
+./c64exp.vcxproj:    <ProjectReference Include="base.vcxproj">
+./c64exp.vcxproj:    </ProjectReference>
+./drive.vcxproj:    <ProjectReference Include="base.vcxproj">
+./drive.vcxproj:    </ProjectReference>
+./fsdevice.vcxproj:    <ProjectReference Include="base.vcxproj">
+./fsdevice.vcxproj:    </ProjectReference>
+./gfxoutputdrv.vcxproj:    <ProjectReference Include="base.vcxproj">
+./gfxoutputdrv.vcxproj:    </ProjectReference>
+./iec.vcxproj:    <ProjectReference Include="base.vcxproj">
+./iec.vcxproj:    </ProjectReference>
+./iecbus.vcxproj:    <ProjectReference Include="base.vcxproj">
+./iecbus.vcxproj:    </ProjectReference>
+./iecieee.vcxproj:    <ProjectReference Include="base.vcxproj">
+./iecieee.vcxproj:    </ProjectReference>
+./ieee.vcxproj:    <ProjectReference Include="base.vcxproj">
+./ieee.vcxproj:    </ProjectReference>
+./monitor.vcxproj:    <ProjectReference Include="base.vcxproj">
+./monitor.vcxproj:    </ProjectReference>
+./platform.vcxproj:    <ProjectReference Include="base.vcxproj">
+./platform.vcxproj:    </ProjectReference>
+./printerdrv.vcxproj:    <ProjectReference Include="base.vcxproj">
+./printerdrv.vcxproj:    </ProjectReference>
+./raster.vcxproj:    <ProjectReference Include="base.vcxproj">
+./raster.vcxproj:    </ProjectReference>
+./rs232drv.vcxproj:    <ProjectReference Include="base.vcxproj">
+./rs232drv.vcxproj:    </ProjectReference>
+./rtc.vcxproj:    <ProjectReference Include="base.vcxproj">
+./rtc.vcxproj:    </ProjectReference>
+./serial.vcxproj:    <ProjectReference Include="base.vcxproj">
+./serial.vcxproj:    </ProjectReference>
+./sid.vcxproj:    <ProjectReference Include="base.vcxproj">
+./sid.vcxproj:    </ProjectReference>
+./userport.vcxproj:    <ProjectReference Include="base.vcxproj">
+./userport.vcxproj:    </ProjectReference>
+./vicii.vcxproj:    <ProjectReference Include="base.vcxproj">
+./vicii.vcxproj:    </ProjectReference>
+./video.vcxproj:    <ProjectReference Include="base.vcxproj">
+./video.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="arch.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="base.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="c64.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="c64cart.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="c64cartsystem.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="c64commoncart.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="c64exp.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="core.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="diskimage.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="drive.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="fileio.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="fsdevice.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="gfxoutputdrv.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="iec.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="iecbus.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="iecieee.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="ieee.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="imagecontents.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="monitor.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="p64.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="parallel.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="platform.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="printerdrv.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="raster.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="resid.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="residfp.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="rs232drv.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="rtc.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="serial.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="sid.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="sounddrv.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="tape.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="userport.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="vdrive.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="vicii.vcxproj">
+./x64.vcxproj:    </ProjectReference>
+./x64.vcxproj:    <ProjectReference Include="video.vcxproj">
+./x64.vcxproj:    </ProjectReference>
