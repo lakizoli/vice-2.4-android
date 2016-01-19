@@ -1,0 +1,767 @@
+arch.vcxproj:    <ClCompile>
+arch.vcxproj:    </ClCompile>
+arch.vcxproj:    <ClCompile>
+arch.vcxproj:    </ClCompile>
+arch.vcxproj:    <ClCompile>
+arch.vcxproj:    </ClCompile>
+arch.vcxproj:    <ClCompile>
+arch.vcxproj:    </ClCompile>
+arch.vcxproj:    <ClCompile Include="..\win32\archdep.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\blockdev.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\c64ui.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\catweaselmkiii.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\console.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\dinput_handle.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\dirent.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\dynlib.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\gifdrv.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\hardsid.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\intl.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\joy.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\kbd.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\lightpendrv.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\mididrv.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\mousedrv.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\parsid.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\rawnetarch.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\rs232.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\rs232dev.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\rs232net.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\signals.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\statusbar.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\system.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\ui.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\uimon.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\video-ddraw.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\video-dx9.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\video.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\vsyncarch.c" />
+arch.vcxproj:    <ClCompile Include="..\win32\winmain.c" />
+base.vcxproj:    <ClCompile>
+base.vcxproj:    </ClCompile>
+base.vcxproj:    <ClCompile>
+base.vcxproj:    </ClCompile>
+base.vcxproj:    <ClCompile>
+base.vcxproj:    </ClCompile>
+base.vcxproj:    <ClCompile>
+base.vcxproj:    </ClCompile>
+base.vcxproj:    <ClCompile Include="..\..\alarm.c" />
+base.vcxproj:    <ClCompile Include="..\..\attach.c" />
+base.vcxproj:    <ClCompile Include="..\..\autostart-prg.c" />
+base.vcxproj:    <ClCompile Include="..\..\autostart.c" />
+base.vcxproj:    <ClCompile Include="..\..\cbmdos.c" />
+base.vcxproj:    <ClCompile Include="..\..\cbmimage.c" />
+base.vcxproj:    <ClCompile Include="..\..\charset.c" />
+base.vcxproj:    <ClCompile Include="..\..\clipboard.c" />
+base.vcxproj:    <ClCompile Include="..\..\clkguard.c" />
+base.vcxproj:    <ClCompile Include="..\..\cmdline.c" />
+base.vcxproj:    <ClCompile Include="..\..\color.c" />
+base.vcxproj:    <ClCompile Include="..\..\crc32.c" />
+base.vcxproj:    <ClCompile Include="..\..\datasette.c" />
+base.vcxproj:    <ClCompile Include="..\..\debug.c" />
+base.vcxproj:    <ClCompile Include="..\..\dma.c" />
+base.vcxproj:    <ClCompile Include="..\..\event.c" />
+base.vcxproj:    <ClCompile Include="..\..\findpath.c" />
+base.vcxproj:    <ClCompile Include="..\..\fliplist.c" />
+base.vcxproj:    <ClCompile Include="..\..\gcr.c" />
+base.vcxproj:    <ClCompile Include="..\..\info.c" />
+base.vcxproj:    <ClCompile Include="..\..\init.c" />
+base.vcxproj:    <ClCompile Include="..\..\initcmdline.c" />
+base.vcxproj:    <ClCompile Include="..\..\interrupt.c" />
+base.vcxproj:    <ClCompile Include="..\..\ioutil.c" />
+base.vcxproj:    <ClCompile Include="..\..\joystick.c" />
+base.vcxproj:    <ClCompile Include="..\..\kbdbuf.c" />
+base.vcxproj:    <ClCompile Include="..\..\keyboard.c" />
+base.vcxproj:    <ClCompile Include="..\..\lib.c" />
+base.vcxproj:    <ClCompile Include="..\..\lightpen.c" />
+base.vcxproj:    <ClCompile Include="..\..\log.c" />
+base.vcxproj:    <ClCompile Include="..\..\machine-bus.c" />
+base.vcxproj:    <ClCompile Include="..\..\machine.c" />
+base.vcxproj:    <ClCompile Include="..\..\midi.c" />
+base.vcxproj:    <ClCompile Include="..\..\mouse.c" />
+base.vcxproj:    <ClCompile Include="..\..\network.c" />
+base.vcxproj:    <ClCompile Include="..\..\opencbmlib.c" />
+base.vcxproj:    <ClCompile Include="..\..\palette.c" />
+base.vcxproj:    <ClCompile Include="..\..\ram.c" />
+base.vcxproj:    <ClCompile Include="..\..\rawfile.c" />
+base.vcxproj:    <ClCompile Include="..\..\rawnet.c" />
+base.vcxproj:    <ClCompile Include="..\..\resources.c" />
+base.vcxproj:    <ClCompile Include="..\..\romset.c" />
+base.vcxproj:    <ClCompile Include="..\..\screenshot.c" />
+base.vcxproj:    <ClCompile Include="..\..\snapshot.c" />
+base.vcxproj:    <ClCompile Include="..\..\socket.c" />
+base.vcxproj:    <ClCompile Include="..\..\sound.c" />
+base.vcxproj:    <ClCompile Include="..\..\sysfile.c" />
+base.vcxproj:    <ClCompile Include="..\..\translate.c" />
+base.vcxproj:    <ClCompile Include="..\..\traps.c" />
+base.vcxproj:    <ClCompile Include="..\..\util.c" />
+base.vcxproj:    <ClCompile Include="..\..\vsync.c" />
+base.vcxproj:    <ClCompile Include="..\..\zfile.c" />
+base.vcxproj:    <ClCompile Include="..\..\zipcode.c" />
+c64.vcxproj:    <ClCompile>
+c64.vcxproj:    </ClCompile>
+c64.vcxproj:    <ClCompile>
+c64.vcxproj:    </ClCompile>
+c64.vcxproj:    <ClCompile>
+c64.vcxproj:    </ClCompile>
+c64.vcxproj:    <ClCompile>
+c64.vcxproj:    </ClCompile>
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64-cmdline-options.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64-resources.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64-snapshot.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64bus.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64cia1.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64cia2.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64datasette.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64drive.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64export.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64fastiec.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64gluelogic.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64iec.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64io.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64keyboard.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64mem.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64meminit.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64memlimit.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64memrom.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64memsnapshot.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64model.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64parallel.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64pla.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64printer.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64rom.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64romset.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64rsuser.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64sound.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64video.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\c64_256k.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\patchrom.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\plus256k.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\plus60k.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\psid.c" />
+c64.vcxproj:    <ClCompile Include="..\..\c64\reloc65.c" />
+c64cart.vcxproj:    <ClCompile>
+c64cart.vcxproj:    </ClCompile>
+c64cart.vcxproj:    <ClCompile>
+c64cart.vcxproj:    </ClCompile>
+c64cart.vcxproj:    <ClCompile>
+c64cart.vcxproj:    </ClCompile>
+c64cart.vcxproj:    <ClCompile>
+c64cart.vcxproj:    </ClCompile>
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\actionreplay.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\actionreplay2.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\actionreplay3.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\actionreplay4.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\atomicpower.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\c64-generic.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\c64-midi.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\c64tpi.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\capture.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\comal80.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\delaep256.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\delaep64.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\delaep7x8.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\diashowmaker.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\dinamic.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\dqbb.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\easyflash.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\epyxfastload.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\exos.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\expert.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\final.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\final3.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\finalplus.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\formel64.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\freezeframe.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\freezemachine.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\funplay.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\gamekiller.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\gs.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\ide64.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\isepic.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\kcs.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\kingsoft.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\mach5.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\magicdesk.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\magicformel.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\magicvoice.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\mikroass.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\mmc64.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\mmcreplay.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\ocean.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\pagefox.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\prophet64.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\ramcart.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\retroreplay.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\reu.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\rexep256.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\rexutility.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\ross.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\silverrock128.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\simonsbasic.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\snapshot64.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\stardos.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\stb.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\superexplode5.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\supergames.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\supersnapshot.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\supersnapshot4.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\warpspeed.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\westermann.c" />
+c64cart.vcxproj:    <ClCompile Include="..\..\c64\cart\zaxxon.c" />
+c64cartsystem.vcxproj:    <ClCompile>
+c64cartsystem.vcxproj:    </ClCompile>
+c64cartsystem.vcxproj:    <ClCompile>
+c64cartsystem.vcxproj:    </ClCompile>
+c64cartsystem.vcxproj:    <ClCompile>
+c64cartsystem.vcxproj:    </ClCompile>
+c64cartsystem.vcxproj:    <ClCompile>
+c64cartsystem.vcxproj:    </ClCompile>
+c64cartsystem.vcxproj:    <ClCompile Include="..\..\c64\cart\c64cart.c" />
+c64cartsystem.vcxproj:    <ClCompile Include="..\..\c64\cart\c64carthooks.c" />
+c64cartsystem.vcxproj:    <ClCompile Include="..\..\c64\cart\c64cartmem.c" />
+c64cartsystem.vcxproj:    <ClCompile Include="..\..\c64\cart\crt.c" />
+c64commoncart.vcxproj:    <ClCompile>
+c64commoncart.vcxproj:    </ClCompile>
+c64commoncart.vcxproj:    <ClCompile>
+c64commoncart.vcxproj:    </ClCompile>
+c64commoncart.vcxproj:    <ClCompile>
+c64commoncart.vcxproj:    </ClCompile>
+c64commoncart.vcxproj:    <ClCompile>
+c64commoncart.vcxproj:    </ClCompile>
+c64commoncart.vcxproj:    <ClCompile Include="..\..\c64\cart\c64acia1.c" />
+c64commoncart.vcxproj:    <ClCompile Include="..\..\c64\cart\digimax.c" />
+c64commoncart.vcxproj:    <ClCompile Include="..\..\c64\cart\ds12c887rtc.c" />
+c64commoncart.vcxproj:    <ClCompile Include="..\..\c64\cart\georam.c" />
+c64commoncart.vcxproj:    <ClCompile Include="..\..\c64\cart\sfx_soundexpander.c" />
+c64commoncart.vcxproj:    <ClCompile Include="..\..\c64\cart\sfx_soundsampler.c" />
+c64commoncart.vcxproj:    <ClCompile Include="..\..\c64\cart\tfe.c" />
+c64exp.vcxproj:    <ClCompile>
+c64exp.vcxproj:    </ClCompile>
+c64exp.vcxproj:    <ClCompile>
+c64exp.vcxproj:    </ClCompile>
+c64exp.vcxproj:    <ClCompile>
+c64exp.vcxproj:    </ClCompile>
+c64exp.vcxproj:    <ClCompile>
+c64exp.vcxproj:    </ClCompile>
+c64exp.vcxproj:    <ClCompile Include="..\..\drive\iec\c64exp\c64exp-cmdline-options.c" />
+c64exp.vcxproj:    <ClCompile Include="..\..\drive\iec\c64exp\c64exp-resources.c" />
+c64exp.vcxproj:    <ClCompile Include="..\..\drive\iec\c64exp\dolphindos3.c" />
+c64exp.vcxproj:    <ClCompile Include="..\..\drive\iec\c64exp\iec-c64exp.c" />
+c64exp.vcxproj:    <ClCompile Include="..\..\drive\iec\c64exp\profdos.c" />
+c64exp.vcxproj:    <ClCompile Include="..\..\drive\iec\c64exp\supercard.c" />
+core.vcxproj:    <ClCompile>
+core.vcxproj:    </ClCompile>
+core.vcxproj:    <ClCompile>
+core.vcxproj:    </ClCompile>
+core.vcxproj:    <ClCompile>
+core.vcxproj:    </ClCompile>
+core.vcxproj:    <ClCompile>
+core.vcxproj:    </ClCompile>
+core.vcxproj:    <ClCompile Include="..\..\core\ata.c" />
+core.vcxproj:    <ClCompile Include="..\..\core\ciacore.c" />
+core.vcxproj:    <ClCompile Include="..\..\core\ciatimer.c" />
+core.vcxproj:    <ClCompile Include="..\..\core\cs8900.c" />
+core.vcxproj:    <ClCompile Include="..\..\core\flash040core.c" />
+core.vcxproj:    <ClCompile Include="..\..\core\fmopl.c" />
+core.vcxproj:    <ClCompile Include="..\..\core\mc6821core.c" />
+core.vcxproj:    <ClCompile Include="..\..\core\riotcore.c" />
+core.vcxproj:    <ClCompile Include="..\..\core\ser-eeprom.c" />
+core.vcxproj:    <ClCompile Include="..\..\core\spi-sdcard.c" />
+core.vcxproj:    <ClCompile Include="..\..\core\t6721.c" />
+core.vcxproj:    <ClCompile Include="..\..\core\tpicore.c" />
+core.vcxproj:    <ClCompile Include="..\..\core\viacore.c" />
+diskimage.vcxproj:    <ClCompile>
+diskimage.vcxproj:    </ClCompile>
+diskimage.vcxproj:    <ClCompile>
+diskimage.vcxproj:    </ClCompile>
+diskimage.vcxproj:    <ClCompile>
+diskimage.vcxproj:    </ClCompile>
+diskimage.vcxproj:    <ClCompile>
+diskimage.vcxproj:    </ClCompile>
+diskimage.vcxproj:    <ClCompile Include="..\..\diskimage\diskimage.c" />
+diskimage.vcxproj:    <ClCompile Include="..\..\diskimage\fsimage-check.c" />
+diskimage.vcxproj:    <ClCompile Include="..\..\diskimage\fsimage-create.c" />
+diskimage.vcxproj:    <ClCompile Include="..\..\diskimage\fsimage-dxx.c" />
+diskimage.vcxproj:    <ClCompile Include="..\..\diskimage\fsimage-gcr.c" />
+diskimage.vcxproj:    <ClCompile Include="..\..\diskimage\fsimage-p64.c" />
+diskimage.vcxproj:    <ClCompile Include="..\..\diskimage\fsimage-probe.c" />
+diskimage.vcxproj:    <ClCompile Include="..\..\diskimage\fsimage.c" />
+diskimage.vcxproj:    <ClCompile Include="..\..\diskimage\rawimage.c" />
+diskimage.vcxproj:    <ClCompile Include="..\..\diskimage\realimage.c" />
+drive.vcxproj:    <ClCompile>
+drive.vcxproj:    </ClCompile>
+drive.vcxproj:    <ClCompile>
+drive.vcxproj:    </ClCompile>
+drive.vcxproj:    <ClCompile>
+drive.vcxproj:    </ClCompile>
+drive.vcxproj:    <ClCompile>
+drive.vcxproj:    </ClCompile>
+drive.vcxproj:    <ClCompile Include="..\..\drive\drive-check.c" />
+drive.vcxproj:    <ClCompile Include="..\..\drive\drive-cmdline-options.c" />
+drive.vcxproj:    <ClCompile Include="..\..\drive\drive-overflow.c" />
+drive.vcxproj:    <ClCompile Include="..\..\drive\drive-resources.c" />
+drive.vcxproj:    <ClCompile Include="..\..\drive\drive-snapshot.c" />
+drive.vcxproj:    <ClCompile Include="..\..\drive\drive-sound.c" />
+drive.vcxproj:    <ClCompile Include="..\..\drive\drive-writeprotect.c" />
+drive.vcxproj:    <ClCompile Include="..\..\drive\drive.c" />
+drive.vcxproj:    <ClCompile Include="..\..\drive\drivecpu.c" />
+drive.vcxproj:    <ClCompile Include="..\..\drive\drivecpu65c02.c" />
+drive.vcxproj:    <ClCompile Include="..\..\drive\driveimage.c" />
+drive.vcxproj:    <ClCompile Include="..\..\drive\drivemem.c" />
+drive.vcxproj:    <ClCompile Include="..\..\drive\driverom.c" />
+drive.vcxproj:    <ClCompile Include="..\..\drive\drivesync.c" />
+drive.vcxproj:    <ClCompile Include="..\..\drive\rotation.c" />
+fileio.vcxproj:    <ClCompile>
+fileio.vcxproj:    </ClCompile>
+fileio.vcxproj:    <ClCompile>
+fileio.vcxproj:    </ClCompile>
+fileio.vcxproj:    <ClCompile>
+fileio.vcxproj:    </ClCompile>
+fileio.vcxproj:    <ClCompile>
+fileio.vcxproj:    </ClCompile>
+fileio.vcxproj:    <ClCompile Include="..\..\fileio\cbmfile.c" />
+fileio.vcxproj:    <ClCompile Include="..\..\fileio\fileio.c" />
+fileio.vcxproj:    <ClCompile Include="..\..\fileio\p00.c" />
+fsdevice.vcxproj:    <ClCompile>
+fsdevice.vcxproj:    </ClCompile>
+fsdevice.vcxproj:    <ClCompile>
+fsdevice.vcxproj:    </ClCompile>
+fsdevice.vcxproj:    <ClCompile>
+fsdevice.vcxproj:    </ClCompile>
+fsdevice.vcxproj:    <ClCompile>
+fsdevice.vcxproj:    </ClCompile>
+fsdevice.vcxproj:    <ClCompile Include="..\..\fsdevice\fsdevice-close.c" />
+fsdevice.vcxproj:    <ClCompile Include="..\..\fsdevice\fsdevice-cmdline-options.c" />
+fsdevice.vcxproj:    <ClCompile Include="..\..\fsdevice\fsdevice-flush.c" />
+fsdevice.vcxproj:    <ClCompile Include="..\..\fsdevice\fsdevice-open.c" />
+fsdevice.vcxproj:    <ClCompile Include="..\..\fsdevice\fsdevice-read.c" />
+fsdevice.vcxproj:    <ClCompile Include="..\..\fsdevice\fsdevice-resources.c" />
+fsdevice.vcxproj:    <ClCompile Include="..\..\fsdevice\fsdevice-write.c" />
+fsdevice.vcxproj:    <ClCompile Include="..\..\fsdevice\fsdevice.c" />
+geninfocontrib.vcxproj:    <ClCompile>
+geninfocontrib.vcxproj:    </ClCompile>
+geninfocontrib.vcxproj:    <ClCompile>
+geninfocontrib.vcxproj:    </ClCompile>
+geninfocontrib.vcxproj:    <ClCompile>
+geninfocontrib.vcxproj:    </ClCompile>
+geninfocontrib.vcxproj:    <ClCompile>
+geninfocontrib.vcxproj:    </ClCompile>
+geninfocontrib.vcxproj:    <ClCompile Include="..\win32\utils\geninfocontrib.c" />
+genmsvcver.vcxproj:    <ClCompile>
+genmsvcver.vcxproj:    </ClCompile>
+genmsvcver.vcxproj:    <ClCompile>
+genmsvcver.vcxproj:    </ClCompile>
+genmsvcver.vcxproj:    <ClCompile>
+genmsvcver.vcxproj:    </ClCompile>
+genmsvcver.vcxproj:    <ClCompile>
+genmsvcver.vcxproj:    </ClCompile>
+genmsvcver.vcxproj:    <ClCompile Include="..\win32\utils\genmsvcver.c" />
+gentranslate.vcxproj:    <ClCompile>
+gentranslate.vcxproj:    </ClCompile>
+gentranslate.vcxproj:    <ClCompile>
+gentranslate.vcxproj:    </ClCompile>
+gentranslate.vcxproj:    <ClCompile>
+gentranslate.vcxproj:    </ClCompile>
+gentranslate.vcxproj:    <ClCompile>
+gentranslate.vcxproj:    </ClCompile>
+gentranslate.vcxproj:    <ClCompile Include="..\win32\utils\gentranslate.c" />
+genwinres.vcxproj:    <ClCompile>
+genwinres.vcxproj:    </ClCompile>
+genwinres.vcxproj:    <ClCompile>
+genwinres.vcxproj:    </ClCompile>
+genwinres.vcxproj:    <ClCompile>
+genwinres.vcxproj:    </ClCompile>
+genwinres.vcxproj:    <ClCompile>
+genwinres.vcxproj:    </ClCompile>
+genwinres.vcxproj:    <ClCompile Include="..\win32\utils\genwinres.c" />
+gfxoutputdrv.vcxproj:    <ClCompile>
+gfxoutputdrv.vcxproj:    </ClCompile>
+gfxoutputdrv.vcxproj:    <ClCompile>
+gfxoutputdrv.vcxproj:    </ClCompile>
+gfxoutputdrv.vcxproj:    <ClCompile>
+gfxoutputdrv.vcxproj:    </ClCompile>
+gfxoutputdrv.vcxproj:    <ClCompile>
+gfxoutputdrv.vcxproj:    </ClCompile>
+gfxoutputdrv.vcxproj:    <ClCompile Include="..\..\gfxoutputdrv\bmpdrv.c" />
+gfxoutputdrv.vcxproj:    <ClCompile Include="..\..\gfxoutputdrv\doodledrv.c" />
+gfxoutputdrv.vcxproj:    <ClCompile Include="..\..\gfxoutputdrv\ffmpegdrv.c" />
+gfxoutputdrv.vcxproj:    <ClCompile Include="..\..\gfxoutputdrv\ffmpeglib.c" />
+gfxoutputdrv.vcxproj:    <ClCompile Include="..\..\gfxoutputdrv\gfxoutput.c" />
+gfxoutputdrv.vcxproj:    <ClCompile Include="..\..\gfxoutputdrv\iffdrv.c" />
+gfxoutputdrv.vcxproj:    <ClCompile Include="..\..\gfxoutputdrv\pcxdrv.c" />
+gfxoutputdrv.vcxproj:    <ClCompile Include="..\..\gfxoutputdrv\ppmdrv.c" />
+iec.vcxproj:    <ClCompile>
+iec.vcxproj:    </ClCompile>
+iec.vcxproj:    <ClCompile>
+iec.vcxproj:    </ClCompile>
+iec.vcxproj:    <ClCompile>
+iec.vcxproj:    </ClCompile>
+iec.vcxproj:    <ClCompile>
+iec.vcxproj:    </ClCompile>
+iec.vcxproj:    <ClCompile Include="..\..\drive\iec\cia1571d.c" />
+iec.vcxproj:    <ClCompile Include="..\..\drive\iec\cia1581d.c" />
+iec.vcxproj:    <ClCompile Include="..\..\drive\iec\fdd.c" />
+iec.vcxproj:    <ClCompile Include="..\..\drive\iec\glue1571.c" />
+iec.vcxproj:    <ClCompile Include="..\..\drive\iec\iec-cmdline-options.c" />
+iec.vcxproj:    <ClCompile Include="..\..\drive\iec\iec-resources.c" />
+iec.vcxproj:    <ClCompile Include="..\..\drive\iec\iec.c" />
+iec.vcxproj:    <ClCompile Include="..\..\drive\iec\iecrom.c" />
+iec.vcxproj:    <ClCompile Include="..\..\drive\iec\memiec.c" />
+iec.vcxproj:    <ClCompile Include="..\..\drive\iec\pc8477.c" />
+iec.vcxproj:    <ClCompile Include="..\..\drive\iec\via1d1541.c" />
+iec.vcxproj:    <ClCompile Include="..\..\drive\iec\via4000.c" />
+iec.vcxproj:    <ClCompile Include="..\..\drive\iec\wd1770.c" />
+iecbus.vcxproj:    <ClCompile>
+iecbus.vcxproj:    </ClCompile>
+iecbus.vcxproj:    <ClCompile>
+iecbus.vcxproj:    </ClCompile>
+iecbus.vcxproj:    <ClCompile>
+iecbus.vcxproj:    </ClCompile>
+iecbus.vcxproj:    <ClCompile>
+iecbus.vcxproj:    </ClCompile>
+iecbus.vcxproj:    <ClCompile Include="..\..\iecbus\iecbus.c" />
+iecieee.vcxproj:    <ClCompile>
+iecieee.vcxproj:    </ClCompile>
+iecieee.vcxproj:    <ClCompile>
+iecieee.vcxproj:    </ClCompile>
+iecieee.vcxproj:    <ClCompile>
+iecieee.vcxproj:    </ClCompile>
+iecieee.vcxproj:    <ClCompile>
+iecieee.vcxproj:    </ClCompile>
+iecieee.vcxproj:    <ClCompile Include="..\..\drive\iecieee\iecieee.c" />
+iecieee.vcxproj:    <ClCompile Include="..\..\drive\iecieee\via2d.c" />
+ieee.vcxproj:    <ClCompile>
+ieee.vcxproj:    </ClCompile>
+ieee.vcxproj:    <ClCompile>
+ieee.vcxproj:    </ClCompile>
+ieee.vcxproj:    <ClCompile>
+ieee.vcxproj:    </ClCompile>
+ieee.vcxproj:    <ClCompile>
+ieee.vcxproj:    </ClCompile>
+ieee.vcxproj:    <ClCompile Include="..\..\drive\ieee\fdc.c" />
+ieee.vcxproj:    <ClCompile Include="..\..\drive\ieee\ieee-cmdline-options.c" />
+ieee.vcxproj:    <ClCompile Include="..\..\drive\ieee\ieee-resources.c" />
+ieee.vcxproj:    <ClCompile Include="..\..\drive\ieee\ieee.c" />
+ieee.vcxproj:    <ClCompile Include="..\..\drive\ieee\ieeerom.c" />
+ieee.vcxproj:    <ClCompile Include="..\..\drive\ieee\memieee.c" />
+ieee.vcxproj:    <ClCompile Include="..\..\drive\ieee\riot1d.c" />
+ieee.vcxproj:    <ClCompile Include="..\..\drive\ieee\riot2d.c" />
+ieee.vcxproj:    <ClCompile Include="..\..\drive\ieee\via1d2031.c" />
+imagecontents.vcxproj:    <ClCompile>
+imagecontents.vcxproj:    </ClCompile>
+imagecontents.vcxproj:    <ClCompile>
+imagecontents.vcxproj:    </ClCompile>
+imagecontents.vcxproj:    <ClCompile>
+imagecontents.vcxproj:    </ClCompile>
+imagecontents.vcxproj:    <ClCompile>
+imagecontents.vcxproj:    </ClCompile>
+imagecontents.vcxproj:    <ClCompile Include="..\..\imagecontents\diskcontents-block.c" />
+imagecontents.vcxproj:    <ClCompile Include="..\..\imagecontents\diskcontents-iec.c" />
+imagecontents.vcxproj:    <ClCompile Include="..\..\imagecontents\diskcontents.c" />
+imagecontents.vcxproj:    <ClCompile Include="..\..\imagecontents\imagecontents.c" />
+imagecontents.vcxproj:    <ClCompile Include="..\..\imagecontents\tapecontents.c" />
+monitor.vcxproj:    <ClCompile>
+monitor.vcxproj:    </ClCompile>
+monitor.vcxproj:    <ClCompile>
+monitor.vcxproj:    </ClCompile>
+monitor.vcxproj:    <ClCompile>
+monitor.vcxproj:    </ClCompile>
+monitor.vcxproj:    <ClCompile>
+monitor.vcxproj:    </ClCompile>
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\asm6502.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\asm6502dtv.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\asm6809.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\asmR65C02.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\asmz80.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\monitor.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\monitor_network.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_assemble6502.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_assemble6809.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_assembleR65C02.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_assemblez80.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_breakpoint.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_command.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_disassemble.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_drive.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_file.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_lex.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_memory.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_parse.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_register6502.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_register6502dtv.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_register6809.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_registerR65C02.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_registerz80.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_ui.c" />
+monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_util.c" />
+p64.vcxproj:    <ClCompile>
+p64.vcxproj:    </ClCompile>
+p64.vcxproj:    <ClCompile>
+p64.vcxproj:    </ClCompile>
+p64.vcxproj:    <ClCompile>
+p64.vcxproj:    </ClCompile>
+p64.vcxproj:    <ClCompile>
+p64.vcxproj:    </ClCompile>
+p64.vcxproj:    <ClCompile Include="..\..\lib\p64\p64.c" />
+parallel.vcxproj:    <ClCompile>
+parallel.vcxproj:    </ClCompile>
+parallel.vcxproj:    <ClCompile>
+parallel.vcxproj:    </ClCompile>
+parallel.vcxproj:    <ClCompile>
+parallel.vcxproj:    </ClCompile>
+parallel.vcxproj:    <ClCompile>
+parallel.vcxproj:    </ClCompile>
+parallel.vcxproj:    <ClCompile Include="..\..\parallel\parallel-trap.c" />
+parallel.vcxproj:    <ClCompile Include="..\..\parallel\parallel.c" />
+platform.vcxproj:    <ClCompile>
+platform.vcxproj:    </ClCompile>
+platform.vcxproj:    <ClCompile>
+platform.vcxproj:    </ClCompile>
+platform.vcxproj:    <ClCompile>
+platform.vcxproj:    </ClCompile>
+platform.vcxproj:    <ClCompile>
+platform.vcxproj:    </ClCompile>
+platform.vcxproj:    <ClCompile Include="..\..\platform\platform.c" />
+platform.vcxproj:    <ClCompile Include="..\..\platform\platform_windows_runtime_os.c" />
+platform.vcxproj:    <ClCompile Include="..\..\platform\platform_x86_runtime_cpu.c" />
+printerdrv.vcxproj:    <ClCompile>
+printerdrv.vcxproj:    </ClCompile>
+printerdrv.vcxproj:    <ClCompile>
+printerdrv.vcxproj:    </ClCompile>
+printerdrv.vcxproj:    <ClCompile>
+printerdrv.vcxproj:    </ClCompile>
+printerdrv.vcxproj:    <ClCompile>
+printerdrv.vcxproj:    </ClCompile>
+printerdrv.vcxproj:    <ClCompile Include="..\..\printerdrv\driver-select.c" />
+printerdrv.vcxproj:    <ClCompile Include="..\..\printerdrv\drv-ascii.c" />
+printerdrv.vcxproj:    <ClCompile Include="..\..\printerdrv\drv-mps803.c" />
+printerdrv.vcxproj:    <ClCompile Include="..\..\printerdrv\drv-nl10.c" />
+printerdrv.vcxproj:    <ClCompile Include="..\..\printerdrv\drv-raw.c" />
+printerdrv.vcxproj:    <ClCompile Include="..\..\printerdrv\interface-serial.c" />
+printerdrv.vcxproj:    <ClCompile Include="..\..\printerdrv\interface-userport.c" />
+printerdrv.vcxproj:    <ClCompile Include="..\..\printerdrv\output-graphics.c" />
+printerdrv.vcxproj:    <ClCompile Include="..\..\printerdrv\output-select.c" />
+printerdrv.vcxproj:    <ClCompile Include="..\..\printerdrv\output-text.c" />
+printerdrv.vcxproj:    <ClCompile Include="..\..\printerdrv\printer-serial.c" />
+printerdrv.vcxproj:    <ClCompile Include="..\..\printerdrv\printer-userport.c" />
+printerdrv.vcxproj:    <ClCompile Include="..\..\printerdrv\printer.c" />
+raster.vcxproj:    <ClCompile>
+raster.vcxproj:    </ClCompile>
+raster.vcxproj:    <ClCompile>
+raster.vcxproj:    </ClCompile>
+raster.vcxproj:    <ClCompile>
+raster.vcxproj:    </ClCompile>
+raster.vcxproj:    <ClCompile>
+raster.vcxproj:    </ClCompile>
+raster.vcxproj:    <ClCompile Include="..\..\raster\raster-cache.c" />
+raster.vcxproj:    <ClCompile Include="..\..\raster\raster-canvas.c" />
+raster.vcxproj:    <ClCompile Include="..\..\raster\raster-changes.c" />
+raster.vcxproj:    <ClCompile Include="..\..\raster\raster-cmdline-options.c" />
+raster.vcxproj:    <ClCompile Include="..\..\raster\raster-line-changes-sprite.c" />
+raster.vcxproj:    <ClCompile Include="..\..\raster\raster-line-changes.c" />
+raster.vcxproj:    <ClCompile Include="..\..\raster\raster-line.c" />
+raster.vcxproj:    <ClCompile Include="..\..\raster\raster-modes.c" />
+raster.vcxproj:    <ClCompile Include="..\..\raster\raster-resources.c" />
+raster.vcxproj:    <ClCompile Include="..\..\raster\raster-sprite-cache.c" />
+raster.vcxproj:    <ClCompile Include="..\..\raster\raster-sprite-status.c" />
+raster.vcxproj:    <ClCompile Include="..\..\raster\raster-sprite.c" />
+raster.vcxproj:    <ClCompile Include="..\..\raster\raster.c" />
+resid.vcxproj:    <ClCompile>
+resid.vcxproj:    </ClCompile>
+resid.vcxproj:    <ClCompile>
+resid.vcxproj:    </ClCompile>
+resid.vcxproj:    <ClCompile>
+resid.vcxproj:    </ClCompile>
+resid.vcxproj:    <ClCompile>
+resid.vcxproj:    </ClCompile>
+residfp.vcxproj:    <ClCompile>
+residfp.vcxproj:    </ClCompile>
+residfp.vcxproj:    <ClCompile>
+residfp.vcxproj:    </ClCompile>
+residfp.vcxproj:    <ClCompile>
+residfp.vcxproj:    </ClCompile>
+residfp.vcxproj:    <ClCompile>
+residfp.vcxproj:    </ClCompile>
+rs232drv.vcxproj:    <ClCompile>
+rs232drv.vcxproj:    </ClCompile>
+rs232drv.vcxproj:    <ClCompile>
+rs232drv.vcxproj:    </ClCompile>
+rs232drv.vcxproj:    <ClCompile>
+rs232drv.vcxproj:    </ClCompile>
+rs232drv.vcxproj:    <ClCompile>
+rs232drv.vcxproj:    </ClCompile>
+rs232drv.vcxproj:    <ClCompile Include="..\..\rs232drv\rs232drv.c" />
+rs232drv.vcxproj:    <ClCompile Include="..\..\rs232drv\rsuser.c" />
+rtc.vcxproj:    <ClCompile>
+rtc.vcxproj:    </ClCompile>
+rtc.vcxproj:    <ClCompile>
+rtc.vcxproj:    </ClCompile>
+rtc.vcxproj:    <ClCompile>
+rtc.vcxproj:    </ClCompile>
+rtc.vcxproj:    <ClCompile>
+rtc.vcxproj:    </ClCompile>
+rtc.vcxproj:    <ClCompile Include="..\..\rtc\bq4830y.c" />
+rtc.vcxproj:    <ClCompile Include="..\..\rtc\ds1202_1302.c" />
+rtc.vcxproj:    <ClCompile Include="..\..\rtc\ds1216e.c" />
+rtc.vcxproj:    <ClCompile Include="..\..\rtc\ds12c887.c" />
+rtc.vcxproj:    <ClCompile Include="..\..\rtc\rtc-58321a.c" />
+rtc.vcxproj:    <ClCompile Include="..\..\rtc\rtc.c" />
+serial.vcxproj:    <ClCompile>
+serial.vcxproj:    </ClCompile>
+serial.vcxproj:    <ClCompile>
+serial.vcxproj:    </ClCompile>
+serial.vcxproj:    <ClCompile>
+serial.vcxproj:    </ClCompile>
+serial.vcxproj:    <ClCompile>
+serial.vcxproj:    </ClCompile>
+serial.vcxproj:    <ClCompile Include="..\..\serial\fsdrive.c" />
+serial.vcxproj:    <ClCompile Include="..\..\serial\realdevice.c" />
+serial.vcxproj:    <ClCompile Include="..\..\serial\serial-device.c" />
+serial.vcxproj:    <ClCompile Include="..\..\serial\serial-iec-bus.c" />
+serial.vcxproj:    <ClCompile Include="..\..\serial\serial-iec-device.c" />
+serial.vcxproj:    <ClCompile Include="..\..\serial\serial-iec-lib.c" />
+serial.vcxproj:    <ClCompile Include="..\..\serial\serial-iec.c" />
+serial.vcxproj:    <ClCompile Include="..\..\serial\serial-realdevice.c" />
+serial.vcxproj:    <ClCompile Include="..\..\serial\serial-trap.c" />
+serial.vcxproj:    <ClCompile Include="..\..\serial\serial.c" />
+sid.vcxproj:    <ClCompile>
+sid.vcxproj:    </ClCompile>
+sid.vcxproj:    <ClCompile>
+sid.vcxproj:    </ClCompile>
+sid.vcxproj:    <ClCompile>
+sid.vcxproj:    </ClCompile>
+sid.vcxproj:    <ClCompile>
+sid.vcxproj:    </ClCompile>
+sid.vcxproj:    <ClCompile Include="..\..\sid\fastsid.c" />
+sid.vcxproj:    <ClCompile Include="..\..\sid\sid-cmdline-options.c" />
+sid.vcxproj:    <ClCompile Include="..\..\sid\sid-resources.c" />
+sid.vcxproj:    <ClCompile Include="..\..\sid\sid-snapshot.c" />
+sid.vcxproj:    <ClCompile Include="..\..\sid\sid.c" />
+sounddrv.vcxproj:    <ClCompile>
+sounddrv.vcxproj:    </ClCompile>
+sounddrv.vcxproj:    <ClCompile>
+sounddrv.vcxproj:    </ClCompile>
+sounddrv.vcxproj:    <ClCompile>
+sounddrv.vcxproj:    </ClCompile>
+sounddrv.vcxproj:    <ClCompile>
+sounddrv.vcxproj:    </ClCompile>
+sounddrv.vcxproj:    <ClCompile Include="..\..\sounddrv\soundaiff.c" />
+sounddrv.vcxproj:    <ClCompile Include="..\..\sounddrv\sounddummy.c" />
+sounddrv.vcxproj:    <ClCompile Include="..\..\sounddrv\sounddump.c" />
+sounddrv.vcxproj:    <ClCompile Include="..\..\sounddrv\sounddx.c" />
+sounddrv.vcxproj:    <ClCompile Include="..\..\sounddrv\soundfs.c" />
+sounddrv.vcxproj:    <ClCompile Include="..\..\sounddrv\soundiff.c" />
+sounddrv.vcxproj:    <ClCompile Include="..\..\sounddrv\soundmovie.c" />
+sounddrv.vcxproj:    <ClCompile Include="..\..\sounddrv\soundvoc.c" />
+sounddrv.vcxproj:    <ClCompile Include="..\..\sounddrv\soundwav.c" />
+sounddrv.vcxproj:    <ClCompile Include="..\..\sounddrv\soundwmm.c" />
+tape.vcxproj:    <ClCompile>
+tape.vcxproj:    </ClCompile>
+tape.vcxproj:    <ClCompile>
+tape.vcxproj:    </ClCompile>
+tape.vcxproj:    <ClCompile>
+tape.vcxproj:    </ClCompile>
+tape.vcxproj:    <ClCompile>
+tape.vcxproj:    </ClCompile>
+tape.vcxproj:    <ClCompile Include="..\..\tape\t64.c" />
+tape.vcxproj:    <ClCompile Include="..\..\tape\tap.c" />
+tape.vcxproj:    <ClCompile Include="..\..\tape\tape-internal.c" />
+tape.vcxproj:    <ClCompile Include="..\..\tape\tape-snapshot.c" />
+tape.vcxproj:    <ClCompile Include="..\..\tape\tape.c" />
+tape.vcxproj:    <ClCompile Include="..\..\tape\tapeimage.c" />
+userport.vcxproj:    <ClCompile>
+userport.vcxproj:    </ClCompile>
+userport.vcxproj:    <ClCompile>
+userport.vcxproj:    </ClCompile>
+userport.vcxproj:    <ClCompile>
+userport.vcxproj:    </ClCompile>
+userport.vcxproj:    <ClCompile>
+userport.vcxproj:    </ClCompile>
+userport.vcxproj:    <ClCompile Include="..\..\userport\userport_dac.c" />
+userport.vcxproj:    <ClCompile Include="..\..\userport\userport_digimax.c" />
+userport.vcxproj:    <ClCompile Include="..\..\userport\userport_joystick.c" />
+userport.vcxproj:    <ClCompile Include="..\..\userport\userport_rtc.c" />
+vdrive.vcxproj:    <ClCompile>
+vdrive.vcxproj:    </ClCompile>
+vdrive.vcxproj:    <ClCompile>
+vdrive.vcxproj:    </ClCompile>
+vdrive.vcxproj:    <ClCompile>
+vdrive.vcxproj:    </ClCompile>
+vdrive.vcxproj:    <ClCompile>
+vdrive.vcxproj:    </ClCompile>
+vdrive.vcxproj:    <ClCompile Include="..\..\vdrive\vdrive-bam.c" />
+vdrive.vcxproj:    <ClCompile Include="..\..\vdrive\vdrive-command.c" />
+vdrive.vcxproj:    <ClCompile Include="..\..\vdrive\vdrive-dir.c" />
+vdrive.vcxproj:    <ClCompile Include="..\..\vdrive\vdrive-iec.c" />
+vdrive.vcxproj:    <ClCompile Include="..\..\vdrive\vdrive-internal.c" />
+vdrive.vcxproj:    <ClCompile Include="..\..\vdrive\vdrive-rel.c" />
+vdrive.vcxproj:    <ClCompile Include="..\..\vdrive\vdrive-snapshot.c" />
+vdrive.vcxproj:    <ClCompile Include="..\..\vdrive\vdrive.c" />
+vicii.vcxproj:    <ClCompile>
+vicii.vcxproj:    </ClCompile>
+vicii.vcxproj:    <ClCompile>
+vicii.vcxproj:    </ClCompile>
+vicii.vcxproj:    <ClCompile>
+vicii.vcxproj:    </ClCompile>
+vicii.vcxproj:    <ClCompile>
+vicii.vcxproj:    </ClCompile>
+vicii.vcxproj:    <ClCompile Include="..\..\vicii\vicii-badline.c" />
+vicii.vcxproj:    <ClCompile Include="..\..\vicii\vicii-clock-stretch.c" />
+vicii.vcxproj:    <ClCompile Include="..\..\vicii\vicii-cmdline-options.c" />
+vicii.vcxproj:    <ClCompile Include="..\..\vicii\vicii-color.c" />
+vicii.vcxproj:    <ClCompile Include="..\..\vicii\vicii-draw.c" />
+vicii.vcxproj:    <ClCompile Include="..\..\vicii\vicii-fetch.c" />
+vicii.vcxproj:    <ClCompile Include="..\..\vicii\vicii-irq.c" />
+vicii.vcxproj:    <ClCompile Include="..\..\vicii\vicii-mem.c" />
+vicii.vcxproj:    <ClCompile Include="..\..\vicii\vicii-phi1.c" />
+vicii.vcxproj:    <ClCompile Include="..\..\vicii\vicii-resources.c" />
+vicii.vcxproj:    <ClCompile Include="..\..\vicii\vicii-snapshot.c" />
+vicii.vcxproj:    <ClCompile Include="..\..\vicii\vicii-sprites.c" />
+vicii.vcxproj:    <ClCompile Include="..\..\vicii\vicii-stubs.c" />
+vicii.vcxproj:    <ClCompile Include="..\..\vicii\vicii-timing.c" />
+vicii.vcxproj:    <ClCompile Include="..\..\vicii\vicii.c" />
+video.vcxproj:    <ClCompile>
+video.vcxproj:    </ClCompile>
+video.vcxproj:    <ClCompile>
+video.vcxproj:    </ClCompile>
+video.vcxproj:    <ClCompile>
+video.vcxproj:    </ClCompile>
+video.vcxproj:    <ClCompile>
+video.vcxproj:    </ClCompile>
+video.vcxproj:    <ClCompile Include="..\..\video\render1x1.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\render1x1ntsc.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\render1x1pal.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\render1x2.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\render1x2crt.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\render2x2.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\render2x2crt.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\render2x2ntsc.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\render2x2pal.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\render2x4.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\render2x4crt.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\renderscale2x.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\renderyuv.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\video-canvas.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\video-cmdline-options.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\video-color.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\video-render-1x2.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\video-render-2x2.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\video-render-crt.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\video-render-pal.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\video-render.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\video-resources.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\video-sound.c" />
+video.vcxproj:    <ClCompile Include="..\..\video\video-viewport.c" />
+x64.vcxproj:    <ClCompile>
+x64.vcxproj:    </ClCompile>
+x64.vcxproj:    <ClCompile>
+x64.vcxproj:    </ClCompile>
+x64.vcxproj:    <ClCompile>
+x64.vcxproj:    </ClCompile>
+x64.vcxproj:    <ClCompile>
+x64.vcxproj:    </ClCompile>
+x64.vcxproj:    <ClCompile Include="..\..\main.c" />
+x64.vcxproj:    <ClCompile Include="..\..\maincpu.c">
+x64.vcxproj:    </ClCompile>
