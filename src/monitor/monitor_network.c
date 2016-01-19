@@ -41,7 +41,7 @@
 #include "montypes.h"
 #include "resources.h"
 #include "translate.h"
-#include "ui.h"
+//#include "ui.h"
 #include "uiapi.h"
 #include "util.h"
 #include "vicesocket.h"

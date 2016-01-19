@@ -10,11 +10,16 @@ include $(TOP_PATH)/../src/c64/cart/Android.mk
 include $(TOP_PATH)/../src/core/Android.mk
 include $(TOP_PATH)/../src/drive/Android.mk
 include $(TOP_PATH)/../src/drive/iec/c64exp/Android.mk
+include $(TOP_PATH)/../src/drive/iec/Android.mk
 include $(TOP_PATH)/../src/diskimage/Android.mk
 include $(TOP_PATH)/../src/fileio/Android.mk
 include $(TOP_PATH)/../src/fsdevice/Android.mk
+include $(TOP_PATH)/../src/gfxoutputdrv/Android.mk
+include $(TOP_PATH)/../src/iecbus/Android.mk
 include $(TOP_PATH)/../src/lib/p64/Android.mk
+include $(TOP_PATH)/../src/monitor/Android.mk
 include $(TOP_PATH)/../src/parallel/Android.mk
+include $(TOP_PATH)/../src/platform/Android.mk
 include $(TOP_PATH)/../src/tape/Android.mk
 include $(TOP_PATH)/../src/vdrive/Android.mk
 
@@ -40,7 +45,7 @@ LOCAL_CPP_EXTENSION := .cpp
 #LOCAL_SRC_FILES +=
 
 LOCAL_SHARED_LIBRARIES :=
-LOCAL_STATIC_LIBRARIES := base c64 c64cart c64exp core diskimage drive fileio fsdevice p64 parallel tape vdrive
+LOCAL_STATIC_LIBRARIES := base c64 c64cart c64exp core diskimage drive fileio fsdevice gfxoutputdrv iec iecbus monitor p64 parallel platform tape vdrive
 
 include $(BUILD_SHARED_LIBRARY)
 

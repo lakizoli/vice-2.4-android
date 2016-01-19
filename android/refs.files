@@ -10,18 +10,6 @@
 ./arch.vcxproj:    </ProjectReference>
 ./base.vcxproj:    <ProjectReference Include="gentranslate.vcxproj">
 ./base.vcxproj:    </ProjectReference>
-./gfxoutputdrv.vcxproj:    <ProjectReference Include="base.vcxproj">
-./gfxoutputdrv.vcxproj:    </ProjectReference>
-./iec.vcxproj:    <ProjectReference Include="base.vcxproj">
-./iec.vcxproj:    </ProjectReference>
-./iecbus.vcxproj:    <ProjectReference Include="base.vcxproj">
-./iecbus.vcxproj:    </ProjectReference>
-./iecieee.vcxproj:    <ProjectReference Include="base.vcxproj">
-./iecieee.vcxproj:    </ProjectReference>
-./ieee.vcxproj:    <ProjectReference Include="base.vcxproj">
-./ieee.vcxproj:    </ProjectReference>
-./monitor.vcxproj:    <ProjectReference Include="base.vcxproj">
-./monitor.vcxproj:    </ProjectReference>
 ./platform.vcxproj:    <ProjectReference Include="base.vcxproj">
 ./platform.vcxproj:    </ProjectReference>
 ./printerdrv.vcxproj:    <ProjectReference Include="base.vcxproj">

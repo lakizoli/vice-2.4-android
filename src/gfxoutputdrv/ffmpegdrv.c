@@ -744,8 +744,16 @@ static int ffmpegdrv_close(screenshot_t *screenshot)
 }
 
 #if FFMPEG_ALIGNMENT_HACK
-__declspec(naked) static int ffmpeg_avcodec_encode_video(AVCodecContext* c, uint8_t* video_outbuf, int video_outbuf_size, const AVFrame* picture)
+#ifdef __ANDROID__
+//...
+#else //__ANDROID__
+__declspec(naked)
+#endif //__ANDROID__
+static int ffmpeg_avcodec_encode_video(AVCodecContext* c, uint8_t* video_outbuf, int video_outbuf_size, const AVFrame* picture)
 {
+#ifdef __ANDROID__
+//...
+#else //__ANDROID__
     _asm {
         /*
          * Create a standard stack frame.
@@ -759,17 +767,22 @@ __declspec(naked) static int ffmpeg_avcodec_encode_video(AVCodecContext* c, uint
         /* adjust stack to 16 byte boundary */
         and esp,~0x0f
     }
+#endif //__ANDROID__
 
     /* execute the command */
 
     (*ffmpeglib.p_avcodec_encode_video)(c, video_outbuf, video_outbuf_size, picture);
 
+#ifdef __ANDROID__
+//...
+#else //__ANDROID__
     _asm {
         /* undo the stack frame, restoring ESP and EBP */
         mov esp,ebp
         pop ebp
         ret
     }
+#endif //__ANDROID__
 }
 #endif
 

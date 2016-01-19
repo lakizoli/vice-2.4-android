@@ -73,79 +73,6 @@ genwinres.vcxproj:    </ClCompile>
 genwinres.vcxproj:    <ClCompile>
 genwinres.vcxproj:    </ClCompile>
 genwinres.vcxproj:    <ClCompile Include="..\win32\utils\genwinres.c" />
-gfxoutputdrv.vcxproj:    <ClCompile>
-gfxoutputdrv.vcxproj:    </ClCompile>
-gfxoutputdrv.vcxproj:    <ClCompile>
-gfxoutputdrv.vcxproj:    </ClCompile>
-gfxoutputdrv.vcxproj:    <ClCompile>
-gfxoutputdrv.vcxproj:    </ClCompile>
-gfxoutputdrv.vcxproj:    <ClCompile>
-gfxoutputdrv.vcxproj:    </ClCompile>
-gfxoutputdrv.vcxproj:    <ClCompile Include="..\..\gfxoutputdrv\bmpdrv.c" />
-gfxoutputdrv.vcxproj:    <ClCompile Include="..\..\gfxoutputdrv\doodledrv.c" />
-gfxoutputdrv.vcxproj:    <ClCompile Include="..\..\gfxoutputdrv\ffmpegdrv.c" />
-gfxoutputdrv.vcxproj:    <ClCompile Include="..\..\gfxoutputdrv\ffmpeglib.c" />
-gfxoutputdrv.vcxproj:    <ClCompile Include="..\..\gfxoutputdrv\gfxoutput.c" />
-gfxoutputdrv.vcxproj:    <ClCompile Include="..\..\gfxoutputdrv\iffdrv.c" />
-gfxoutputdrv.vcxproj:    <ClCompile Include="..\..\gfxoutputdrv\pcxdrv.c" />
-gfxoutputdrv.vcxproj:    <ClCompile Include="..\..\gfxoutputdrv\ppmdrv.c" />
-iec.vcxproj:    <ClCompile>
-iec.vcxproj:    </ClCompile>
-iec.vcxproj:    <ClCompile>
-iec.vcxproj:    </ClCompile>
-iec.vcxproj:    <ClCompile>
-iec.vcxproj:    </ClCompile>
-iec.vcxproj:    <ClCompile>
-iec.vcxproj:    </ClCompile>
-iec.vcxproj:    <ClCompile Include="..\..\drive\iec\cia1571d.c" />
-iec.vcxproj:    <ClCompile Include="..\..\drive\iec\cia1581d.c" />
-iec.vcxproj:    <ClCompile Include="..\..\drive\iec\fdd.c" />
-iec.vcxproj:    <ClCompile Include="..\..\drive\iec\glue1571.c" />
-iec.vcxproj:    <ClCompile Include="..\..\drive\iec\iec-cmdline-options.c" />
-iec.vcxproj:    <ClCompile Include="..\..\drive\iec\iec-resources.c" />
-iec.vcxproj:    <ClCompile Include="..\..\drive\iec\iec.c" />
-iec.vcxproj:    <ClCompile Include="..\..\drive\iec\iecrom.c" />
-iec.vcxproj:    <ClCompile Include="..\..\drive\iec\memiec.c" />
-iec.vcxproj:    <ClCompile Include="..\..\drive\iec\pc8477.c" />
-iec.vcxproj:    <ClCompile Include="..\..\drive\iec\via1d1541.c" />
-iec.vcxproj:    <ClCompile Include="..\..\drive\iec\via4000.c" />
-iec.vcxproj:    <ClCompile Include="..\..\drive\iec\wd1770.c" />
-iecbus.vcxproj:    <ClCompile>
-iecbus.vcxproj:    </ClCompile>
-iecbus.vcxproj:    <ClCompile>
-iecbus.vcxproj:    </ClCompile>
-iecbus.vcxproj:    <ClCompile>
-iecbus.vcxproj:    </ClCompile>
-iecbus.vcxproj:    <ClCompile>
-iecbus.vcxproj:    </ClCompile>
-iecbus.vcxproj:    <ClCompile Include="..\..\iecbus\iecbus.c" />
-iecieee.vcxproj:    <ClCompile>
-iecieee.vcxproj:    </ClCompile>
-iecieee.vcxproj:    <ClCompile>
-iecieee.vcxproj:    </ClCompile>
-iecieee.vcxproj:    <ClCompile>
-iecieee.vcxproj:    </ClCompile>
-iecieee.vcxproj:    <ClCompile>
-iecieee.vcxproj:    </ClCompile>
-iecieee.vcxproj:    <ClCompile Include="..\..\drive\iecieee\iecieee.c" />
-iecieee.vcxproj:    <ClCompile Include="..\..\drive\iecieee\via2d.c" />
-ieee.vcxproj:    <ClCompile>
-ieee.vcxproj:    </ClCompile>
-ieee.vcxproj:    <ClCompile>
-ieee.vcxproj:    </ClCompile>
-ieee.vcxproj:    <ClCompile>
-ieee.vcxproj:    </ClCompile>
-ieee.vcxproj:    <ClCompile>
-ieee.vcxproj:    </ClCompile>
-ieee.vcxproj:    <ClCompile Include="..\..\drive\ieee\fdc.c" />
-ieee.vcxproj:    <ClCompile Include="..\..\drive\ieee\ieee-cmdline-options.c" />
-ieee.vcxproj:    <ClCompile Include="..\..\drive\ieee\ieee-resources.c" />
-ieee.vcxproj:    <ClCompile Include="..\..\drive\ieee\ieee.c" />
-ieee.vcxproj:    <ClCompile Include="..\..\drive\ieee\ieeerom.c" />
-ieee.vcxproj:    <ClCompile Include="..\..\drive\ieee\memieee.c" />
-ieee.vcxproj:    <ClCompile Include="..\..\drive\ieee\riot1d.c" />
-ieee.vcxproj:    <ClCompile Include="..\..\drive\ieee\riot2d.c" />
-ieee.vcxproj:    <ClCompile Include="..\..\drive\ieee\via1d2031.c" />
 imagecontents.vcxproj:    <ClCompile>
 imagecontents.vcxproj:    </ClCompile>
 imagecontents.vcxproj:    <ClCompile>
@@ -159,51 +86,6 @@ imagecontents.vcxproj:    <ClCompile Include="..\..\imagecontents\diskcontents-i
 imagecontents.vcxproj:    <ClCompile Include="..\..\imagecontents\diskcontents.c" />
 imagecontents.vcxproj:    <ClCompile Include="..\..\imagecontents\imagecontents.c" />
 imagecontents.vcxproj:    <ClCompile Include="..\..\imagecontents\tapecontents.c" />
-monitor.vcxproj:    <ClCompile>
-monitor.vcxproj:    </ClCompile>
-monitor.vcxproj:    <ClCompile>
-monitor.vcxproj:    </ClCompile>
-monitor.vcxproj:    <ClCompile>
-monitor.vcxproj:    </ClCompile>
-monitor.vcxproj:    <ClCompile>
-monitor.vcxproj:    </ClCompile>
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\asm6502.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\asm6502dtv.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\asm6809.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\asmR65C02.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\asmz80.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\monitor.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\monitor_network.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_assemble6502.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_assemble6809.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_assembleR65C02.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_assemblez80.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_breakpoint.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_command.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_disassemble.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_drive.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_file.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_lex.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_memory.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_parse.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_register6502.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_register6502dtv.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_register6809.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_registerR65C02.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_registerz80.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_ui.c" />
-monitor.vcxproj:    <ClCompile Include="..\..\monitor\mon_util.c" />
-platform.vcxproj:    <ClCompile>
-platform.vcxproj:    </ClCompile>
-platform.vcxproj:    <ClCompile>
-platform.vcxproj:    </ClCompile>
-platform.vcxproj:    <ClCompile>
-platform.vcxproj:    </ClCompile>
-platform.vcxproj:    <ClCompile>
-platform.vcxproj:    </ClCompile>
-platform.vcxproj:    <ClCompile Include="..\..\platform\platform.c" />
-platform.vcxproj:    <ClCompile Include="..\..\platform\platform_windows_runtime_os.c" />
-platform.vcxproj:    <ClCompile Include="..\..\platform\platform_x86_runtime_cpu.c" />
 printerdrv.vcxproj:    <ClCompile>
 printerdrv.vcxproj:    </ClCompile>
 printerdrv.vcxproj:    <ClCompile>
