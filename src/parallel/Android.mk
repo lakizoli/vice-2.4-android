@@ -12,7 +12,6 @@ LOCAL_C_INCLUDES := 			\
 	../src/arch/win32/msvc		\
 	../src/arch/win32			\
 	../src						\
-	../src/vdrive				\
 	../src/drive				\
 	../src/lib/p64
 
@@ -27,6 +26,6 @@ LOCAL_SRC_FILES +=			\
 
 LOCAL_SHARED_LIBRARIES :=
 LOCAL_STATIC_LIBRARIES :=
-LOCAL_EXPORT_LDLIBS := -lz -ldl
+LOCAL_EXPORT_LDLIBS :=
 
 include $(BUILD_STATIC_LIBRARY)

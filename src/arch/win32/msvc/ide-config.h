@@ -10,7 +10,9 @@
 # define vsnprintf _vsnprintf
 #endif
 
+#if defined _MSC_VER
 #pragma warning(disable:4996)
+#endif
 
 #define HAVE_ALLOCA             1
 #define RETSIGTYPE              void
@@ -40,10 +42,18 @@
 #define HAVE_LIMITS_H           1
 #define HAVE_COMMCTRL_H         1
 #define HAVE_SHLOBJ_H           1
-#define HAVE_DIRECT_H           1
+#ifdef __ANDROID__
+#	undef HAVE_DIRECT_H
+#else
+#	define HAVE_DIRECT_H        1
+#endif
 #define HAVE_DIRENT_H           1
 #define HAVE_ERRNO_H            1
-#define HAVE_IO_H               1
+#ifdef __ANDROID__
+#	undef HAVE_IO_H
+#else
+#	define HAVE_IO_H            1
+#endif
 #define HAVE_PROCESS_H          1
 #define HAVE_SYS_TYPES_H        1
 #define HAVE_SYS_STAT_H         1
@@ -66,7 +76,11 @@
 #define HAS_TRANSLATION         1
 #define HAVE_HTONL              1
 #define HAVE_HTONS              1
-#define HAVE_NETWORK            1
+#ifdef __ANDROID__
+#	undef HAVE_NETWORK
+#else
+#	define HAVE_NETWORK            1
+#endif
 #define HAVE_GETCWD             1
 
 #ifndef NODIRECTX
@@ -90,7 +104,9 @@
 
 #define _ANONYMOUS_UNION
 
-#define S_ISDIR(m)              ((m) & _S_IFDIR)
+#ifndef __ANDROID__
+#	define S_ISDIR(m)              ((m) & _S_IFDIR)
+#endif
 
 #define MSVC_RC                 1
 
@@ -106,11 +122,16 @@
 #define uint64_t_C(c)    (c ## ui64)
 /* end: for FFMPEG: common.h */
 
-#ifdef WINIA64
-#define PLATFORM "win64 ia64 msvc"
-#define PLATFORM_OS "win64"
-#define PLATFORM_CPU "ia64"
-#define PLATFORM_COMPILER "msvc"
+#ifdef __ANDROID__
+#	define PLATFORM "android armv7a armv8a x86 x64 gcc"
+#	define PLATFORM_OS "android"
+#	define PLATFORM_CPU "armv7a"
+#	define PLATFORM_COMPILER "gcc"
+#elif defined(WINIA64)
+#	define PLATFORM "win64 ia64 msvc"
+#	define PLATFORM_OS "win64"
+#	define PLATFORM_CPU "ia64"
+#	define PLATFORM_COMPILER "msvc"
 #else
 #  ifdef _WIN64
 #    define PLATFORM "win64 x64 msvc"

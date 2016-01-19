@@ -10,20 +10,6 @@
 ./arch.vcxproj:    </ProjectReference>
 ./base.vcxproj:    <ProjectReference Include="gentranslate.vcxproj">
 ./base.vcxproj:    </ProjectReference>
-./c64.vcxproj:    <ProjectReference Include="base.vcxproj">
-./c64.vcxproj:    </ProjectReference>
-./c64cart.vcxproj:    <ProjectReference Include="base.vcxproj">
-./c64cart.vcxproj:    </ProjectReference>
-./c64cartsystem.vcxproj:    <ProjectReference Include="base.vcxproj">
-./c64cartsystem.vcxproj:    </ProjectReference>
-./c64commoncart.vcxproj:    <ProjectReference Include="base.vcxproj">
-./c64commoncart.vcxproj:    </ProjectReference>
-./c64exp.vcxproj:    <ProjectReference Include="base.vcxproj">
-./c64exp.vcxproj:    </ProjectReference>
-./drive.vcxproj:    <ProjectReference Include="base.vcxproj">
-./drive.vcxproj:    </ProjectReference>
-./fsdevice.vcxproj:    <ProjectReference Include="base.vcxproj">
-./fsdevice.vcxproj:    </ProjectReference>
 ./gfxoutputdrv.vcxproj:    <ProjectReference Include="base.vcxproj">
 ./gfxoutputdrv.vcxproj:    </ProjectReference>
 ./iec.vcxproj:    <ProjectReference Include="base.vcxproj">

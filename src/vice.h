@@ -150,7 +150,7 @@ int yyparse (void);
 #undef vfork
 #endif
 
-#if (defined(__BEOS__) && defined(WORDS_BIGENDIAN)) || defined(__OS2__) || defined(__WATCOMC__)
+#if (defined(__BEOS__) && defined(WORDS_BIGENDIAN)) || defined(__OS2__) || defined(__WATCOMC__) || defined(__ANDROID__)
 #ifndef __cplusplus
 #undef inline
 #define inline
