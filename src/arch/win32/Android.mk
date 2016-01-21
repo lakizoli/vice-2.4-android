@@ -3,7 +3,6 @@
 #############################
 
 LOCAL_PATH := $(abspath $(call my-dir))
-$(warning $(LOCAL_PATH))
 
 include $(CLEAR_VARS)
 
