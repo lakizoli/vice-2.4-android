@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/bash
 
 # Rename windows specific platform headers
 mv ../src/arch/win32/msvc/inttypes.h ../src/arch/win32/msvc/__inttypes.h
