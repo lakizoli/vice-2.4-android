@@ -8,30 +8,30 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE    := arch
 
-LOCAL_C_INCLUDES := 				\
-	../src/arch/win32/msvc			\
-	../src/arch/win32/msvc/wpcap	\
-	../src/arch/win32				\
-	../src							\
-	../src/platform             	\
-	../src/drive                	\
-	../src/vdrive               	\
-	../src/userport             	\
-	../src/c64                  	\
-	../src/c64/cart             	\
-	../src/c64dtv               	\
-	../src/c128                 	\
-	../src/vic20                	\
-	../src/pet                  	\
-	../src/cbm2                 	\
-	../src/raster               	\
-	../src/monitor              	\
-	../src/lib/p64              	\
-	../src/lib/libffmpeg        	\
-	../src/plus4                	\
-	../src/rs232drv             	\
-	../src/sid                  	\
-	../src/imagecontents
+LOCAL_C_INCLUDES := 									\
+	$(C64_LIB_BASE_PATH)../src/arch/win32/msvc			\
+	$(C64_LIB_BASE_PATH)../src/arch/win32/msvc/wpcap	\
+	$(C64_LIB_BASE_PATH)../src/arch/win32				\
+	$(C64_LIB_BASE_PATH)../src							\
+	$(C64_LIB_BASE_PATH)../src/platform             	\
+	$(C64_LIB_BASE_PATH)../src/drive                	\
+	$(C64_LIB_BASE_PATH)../src/vdrive               	\
+	$(C64_LIB_BASE_PATH)../src/userport             	\
+	$(C64_LIB_BASE_PATH)../src/c64                  	\
+	$(C64_LIB_BASE_PATH)../src/c64/cart             	\
+	$(C64_LIB_BASE_PATH)../src/c64dtv               	\
+	$(C64_LIB_BASE_PATH)../src/c128                 	\
+	$(C64_LIB_BASE_PATH)../src/vic20                	\
+	$(C64_LIB_BASE_PATH)../src/pet                  	\
+	$(C64_LIB_BASE_PATH)../src/cbm2                 	\
+	$(C64_LIB_BASE_PATH)../src/raster               	\
+	$(C64_LIB_BASE_PATH)../src/monitor              	\
+	$(C64_LIB_BASE_PATH)../src/lib/p64              	\
+	$(C64_LIB_BASE_PATH)../src/lib/libffmpeg        	\
+	$(C64_LIB_BASE_PATH)../src/plus4                	\
+	$(C64_LIB_BASE_PATH)../src/rs232drv             	\
+	$(C64_LIB_BASE_PATH)../src/sid                  	\
+	$(C64_LIB_BASE_PATH)../src/imagecontents
 
 ifeq ($(TARGET_ARCH),x86) #gcc 4.8 need this because of a configuration bug in NDK (https://code.google.com/p/android/issues/detail?id=73843)
 	LOCAL_CFLAGS += -DUSE_SSE4=0 -mtune=atom -m32 -mno-sse4.1 -mno-sse4.2 -mno-popcnt -mno-movbe

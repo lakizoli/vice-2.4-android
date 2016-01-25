@@ -8,18 +8,18 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE    := base
 
-LOCAL_C_INCLUDES := 		\
-	../src/arch/win32/msvc	\
-	../src/arch/win32		\
-	../src/drive 			\
-	../src/userport			\
-	../src/monitor			\
-	../src/lib/p64			\
-	../src/vdrive			\
-	../src/rs232drv			\
-	../src/imagecontents	\
-	../src/rtc				\
-	../src/platform
+LOCAL_C_INCLUDES := 							\
+	$(C64_LIB_BASE_PATH)../src/arch/win32/msvc	\
+	$(C64_LIB_BASE_PATH)../src/arch/win32		\
+	$(C64_LIB_BASE_PATH)../src/drive 			\
+	$(C64_LIB_BASE_PATH)../src/userport			\
+	$(C64_LIB_BASE_PATH)../src/monitor			\
+	$(C64_LIB_BASE_PATH)../src/lib/p64			\
+	$(C64_LIB_BASE_PATH)../src/vdrive			\
+	$(C64_LIB_BASE_PATH)../src/rs232drv			\
+	$(C64_LIB_BASE_PATH)../src/imagecontents	\
+	$(C64_LIB_BASE_PATH)../src/rtc				\
+	$(C64_LIB_BASE_PATH)../src/platform
 
 ifeq ($(TARGET_ARCH),x86) #gcc 4.8 need this because of a configuration bug in NDK (https://code.google.com/p/android/issues/detail?id=73843)
 	LOCAL_CFLAGS += -DUSE_SSE4=0 -mtune=atom -m32 -mno-sse4.1 -mno-sse4.2 -mno-popcnt -mno-movbe
