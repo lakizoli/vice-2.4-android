@@ -32,7 +32,7 @@ include $(TOP_PATH)/../src/sid/Android.mk
 include $(TOP_PATH)/../src/tape/Android.mk
 include $(TOP_PATH)/../src/userport/Android.mk
 include $(TOP_PATH)/../src/vdrive/Android.mk
-#include $(TOP_PATH)/../src/vicii/Android.mk
+include $(TOP_PATH)/../src/vicii/Android.mk
 include $(TOP_PATH)/../src/video/Android.mk
 
 # libc64emu.so
@@ -85,9 +85,10 @@ LOCAL_STATIC_LIBRARIES := 		\
 	sid                         \
 	tape                        \
 	userport                    \
+	vicii						\
 	vdrive
 	
-# Egyelore kiszedett libek: arch platform raster sounddrv vicii video
+# Egyelore kiszedett libek: arch platform raster sounddrv video
 
 include $(BUILD_SHARED_LIBRARY)
 
