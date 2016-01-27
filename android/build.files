@@ -1,39 +1,3 @@
-geninfocontrib.vcxproj:    <ClCompile>
-geninfocontrib.vcxproj:    </ClCompile>
-geninfocontrib.vcxproj:    <ClCompile>
-geninfocontrib.vcxproj:    </ClCompile>
-geninfocontrib.vcxproj:    <ClCompile>
-geninfocontrib.vcxproj:    </ClCompile>
-geninfocontrib.vcxproj:    <ClCompile>
-geninfocontrib.vcxproj:    </ClCompile>
-geninfocontrib.vcxproj:    <ClCompile Include="..\win32\utils\geninfocontrib.c" />
-genmsvcver.vcxproj:    <ClCompile>
-genmsvcver.vcxproj:    </ClCompile>
-genmsvcver.vcxproj:    <ClCompile>
-genmsvcver.vcxproj:    </ClCompile>
-genmsvcver.vcxproj:    <ClCompile>
-genmsvcver.vcxproj:    </ClCompile>
-genmsvcver.vcxproj:    <ClCompile>
-genmsvcver.vcxproj:    </ClCompile>
-genmsvcver.vcxproj:    <ClCompile Include="..\win32\utils\genmsvcver.c" />
-gentranslate.vcxproj:    <ClCompile>
-gentranslate.vcxproj:    </ClCompile>
-gentranslate.vcxproj:    <ClCompile>
-gentranslate.vcxproj:    </ClCompile>
-gentranslate.vcxproj:    <ClCompile>
-gentranslate.vcxproj:    </ClCompile>
-gentranslate.vcxproj:    <ClCompile>
-gentranslate.vcxproj:    </ClCompile>
-gentranslate.vcxproj:    <ClCompile Include="..\win32\utils\gentranslate.c" />
-genwinres.vcxproj:    <ClCompile>
-genwinres.vcxproj:    </ClCompile>
-genwinres.vcxproj:    <ClCompile>
-genwinres.vcxproj:    </ClCompile>
-genwinres.vcxproj:    <ClCompile>
-genwinres.vcxproj:    </ClCompile>
-genwinres.vcxproj:    <ClCompile>
-genwinres.vcxproj:    </ClCompile>
-genwinres.vcxproj:    <ClCompile Include="..\win32\utils\genwinres.c" />
 resid.vcxproj:    <ClCompile>
 resid.vcxproj:    </ClCompile>
 resid.vcxproj:    <ClCompile>

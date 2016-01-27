@@ -1,14 +1,3 @@
-./arch.vcxproj:    <ProjectReference Include="geninfocontrib.vcxproj">
-./arch.vcxproj:    </ProjectReference>
-./arch.vcxproj:    <ProjectReference Include="genmsvcver.vcxproj">
-./arch.vcxproj:    </ProjectReference>
-./arch.vcxproj:    <ProjectReference Include="gentranslate.vcxproj">
-./arch.vcxproj:    </ProjectReference>
-./arch.vcxproj:    <ProjectReference Include="genwinres.vcxproj">
-./arch.vcxproj:    </ProjectReference>
-./base.vcxproj:    <ProjectReference Include="gentranslate.vcxproj">
-./base.vcxproj:    </ProjectReference>
-
 ./x64.vcxproj:    <ProjectReference Include="resid.vcxproj">
 ./x64.vcxproj:    </ProjectReference>
 ./x64.vcxproj:    <ProjectReference Include="residfp.vcxproj">
