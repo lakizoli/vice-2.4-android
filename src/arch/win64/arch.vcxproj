@@ -331,10 +331,6 @@
       <Project>{167af82a-a87d-4174-a597-3eda33e9ec07}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="gentranslate.vcxproj">
-      <Project>{477a61e3-67be-4faf-a516-d6d40a82a7a7}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
     <ProjectReference Include="genwinres.vcxproj">
       <Project>{7129bf37-174a-4d72-994e-9c2327fe9d61}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

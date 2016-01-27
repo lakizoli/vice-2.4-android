@@ -300,36 +300,6 @@
     <ClCompile Include="..\..\zfile.c" />
     <ClCompile Include="..\..\zipcode.c" />
   </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="..\..\translate.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">Generating translate.h and translate_table.h</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">..\..\..\data\gentranslate ..\..\translate.txt ..\..\translate.h ..\..\translate_table.h
-</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">..\..\translate.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">%(RootDir)%(Directory)translate_table.h;%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating translate.h and translate_table.h</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\data\gentranslate ..\..\translate.txt ..\..\translate.h ..\..\translate_table.h
-</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\translate.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(RootDir)%(Directory)translate.h;%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">Generating translate.h and translate_table.h</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">..\..\..\data\gentranslate ..\..\translate.txt ..\..\translate.h ..\..\translate_table.h
-</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">..\..\translate.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">%(RootDir)%(Directory)translate_table.h;%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating translate.h and translate_table.h</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\data\gentranslate ..\..\translate.txt ..\..\translate.h ..\..\translate_table.h
-</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\translate.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RootDir)%(Directory)translate_table.h;%(Outputs)</Outputs>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="gentranslate.vcxproj">
-      <Project>{477a61e3-67be-4faf-a516-d6d40a82a7a7}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

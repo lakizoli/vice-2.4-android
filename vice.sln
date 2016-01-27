@@ -26,8 +26,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fileio", "src\arch\win64\fi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fsdevice", "src\arch\win64\fsdevice.vcxproj", "{A40F6FCA-4285-4C27-A914-193E0D740FFD}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gentranslate", "src\arch\win64\gentranslate.vcxproj", "{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "genwinres", "src\arch\win64\genwinres.vcxproj", "{7129BF37-174A-4D72-994E-9C2327FE9D61}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gfxoutputdrv", "src\arch\win64\gfxoutputdrv.vcxproj", "{8C0C9814-641B-44B6-84CD-25C4C54FB049}"
@@ -388,37 +386,6 @@ Global
 		{A40F6FCA-4285-4C27-A914-193E0D740FFD}.Release|Win32.ActiveCfg = Release|x64
 		{A40F6FCA-4285-4C27-A914-193E0D740FFD}.Release|x64.ActiveCfg = Release|x64
 		{A40F6FCA-4285-4C27-A914-193E0D740FFD}.Release|x64.Build.0 = Release|x64
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Debug no DirectX|Itanium.ActiveCfg = Debug no DirectX|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Debug no DirectX|Itanium.Build.0 = Debug no DirectX|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Debug no DirectX|Mixed Platforms.ActiveCfg = Debug no DirectX|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Debug no DirectX|Mixed Platforms.Build.0 = Debug no DirectX|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Debug no DirectX|Win32.ActiveCfg = Debug no DirectX|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Debug no DirectX|Win32.Build.0 = Debug no DirectX|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Debug no DirectX|x64.ActiveCfg = Debug no DirectX|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Debug|Itanium.ActiveCfg = Release|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Debug|Itanium.Build.0 = Release|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Debug|Mixed Platforms.Build.0 = Debug|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Debug|Win32.ActiveCfg = Debug|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Debug|Win32.Build.0 = Debug|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Debug|x64.ActiveCfg = Debug|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Debug|x64.Build.0 = Debug|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Release no DirectX|Itanium.ActiveCfg = Release no DirectX|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Release no DirectX|Itanium.Build.0 = Release no DirectX|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Release no DirectX|Mixed Platforms.ActiveCfg = Release no DirectX|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Release no DirectX|Mixed Platforms.Build.0 = Release no DirectX|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Release no DirectX|Win32.ActiveCfg = Release no DirectX|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Release no DirectX|Win32.Build.0 = Release no DirectX|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Release no DirectX|x64.ActiveCfg = Release no DirectX|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Release no DirectX|x64.Build.0 = Release no DirectX|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Release|Itanium.ActiveCfg = Release|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Release|Itanium.Build.0 = Release|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Release|Mixed Platforms.ActiveCfg = Release|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Release|Mixed Platforms.Build.0 = Release|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Release|Win32.ActiveCfg = Release|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Release|Win32.Build.0 = Release|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Release|x64.ActiveCfg = Release|Win32
-		{477A61E3-67BE-4FAF-A516-D6D40A82A7A7}.Release|x64.Build.0 = Release|Win32
 		{7129BF37-174A-4D72-994E-9C2327FE9D61}.Debug no DirectX|Itanium.ActiveCfg = Debug no DirectX|Win32
 		{7129BF37-174A-4D72-994E-9C2327FE9D61}.Debug no DirectX|Itanium.Build.0 = Debug no DirectX|Win32
 		{7129BF37-174A-4D72-994E-9C2327FE9D61}.Debug no DirectX|Mixed Platforms.ActiveCfg = Debug no DirectX|Win32
