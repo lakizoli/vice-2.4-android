@@ -26,13 +26,6 @@
 
 #include "vice.h"
 
-#include <stdio.h>
-#include <stdarg.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-#include <windows.h>
-
 #include "archdep.h"
 #include "cmdline.h"
 #include "intl.h"

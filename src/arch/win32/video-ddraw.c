@@ -27,11 +27,15 @@
 
 #include "vice.h"
 
+#ifdef __ANDROID__
+//TODO: ...
+#else //__ANDROID__
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-#include <windows.h>
+#	include <windows.h>
 #include <mmsystem.h>
 
 #include "cmdline.h"
@@ -318,3 +322,5 @@ void fullscreen_capability(cap_fullscreen_t *cap_fullscreen)
 {
     cap_fullscreen->device_num = 0;
 }
+
+#endif //__ANDROID__

@@ -27,8 +27,12 @@
 
 #include "vice.h"
 
+#ifdef __ANDROID__
+//TODO: ...
+#else //__ANDROID__
+
 #define WIN32_LEAN_AND_MEAN
-#include <windows.h>
+#	include <windows.h>
 #include <windowsx.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -94,3 +98,5 @@ void main_exit(void)
 
     machine_shutdown();
 }
+
+#endif //__ANDROID__

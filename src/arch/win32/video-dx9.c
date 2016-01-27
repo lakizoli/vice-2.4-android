@@ -26,6 +26,10 @@
 
 #include "vice.h"
 
+#ifdef __ANDROID__
+//TODO: ...
+#else //__ANDROID__
+
 #include "lib.h"
 #include "log.h"
 #include "resources.h"
@@ -366,3 +370,5 @@ void video_canvas_update_dx9(HWND hwnd, HDC hdc, int xclient, int yclient, int w
 }
 
 #endif
+
+#endif //__ANDROID__

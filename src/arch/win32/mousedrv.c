@@ -25,31 +25,7 @@
  */
 
 #include "vice.h"
-
-#include <windows.h>
-
-#ifdef HAVE_DINPUT
-#include "dinput_handle.h"
-#endif
-
-#include <stdio.h>
-
-#include "log.h"
-#include "mouse.h"
 #include "mousedrv.h"
-#include "types.h"
-#include "ui.h"
-#include "vsyncapi.h"
-
-int _mouse_x, _mouse_y;
-unsigned long _mouse_timestamp = 0;
-
-#ifdef HAVE_DINPUT
-static int mouse_acquired = 0;
-static LPDIRECTINPUTDEVICE di_mouse = NULL;
-#endif
-
-/* ------------------------------------------------------------------------- */
 
 void mousedrv_mouse_changed(void)
 {
@@ -66,120 +42,29 @@ int mousedrv_cmdline_options_init(void)
     return 0;
 }
 
-/* ------------------------------------------------------------------------- */
-
 void mouse_update_mouse(void)
 {
-#ifdef HAVE_DINPUT
-    DIMOUSESTATE state;
-    HRESULT result;
-
-    if (di_mouse == NULL || !mouse_acquired) {
-        return;
-    }
-
-    for (result = IDirectInputDevice_GetDeviceState(di_mouse, sizeof(state), &state); result != DI_OK; result = IDirectInputDevice_GetDeviceState(di_mouse, sizeof(state), &state)) {
-        if (result != DIERR_INPUTLOST) {
-            return;
-        }
-        result = IDirectInputDevice_Acquire(di_mouse);
-        if (result != DI_OK) {
-            return;
-        }
-    }
-
-    _mouse_x += state.lX * 4;
-    _mouse_y -= state.lY * 4;
-
-    mouse_button_left((int)(state.rgbButtons[0] & 0x80));
-    mouse_button_right((int)(state.rgbButtons[1] & 0x80));
-    mouse_button_middle((int)(state.rgbButtons[2] & 0x80));
-    /* FIXME: back/forward buttons as up/down? Or state.lZ increase/decrease?
-    mouse_button_up((int)(state.rgbButtons[3] & 0x80));
-    mouse_button_down((int)(state.rgbButtons[4] & 0x80));
-    */
-    _mouse_timestamp = vsyncarch_gettime();
-#endif
 }
 
 void mousedrv_init(void)
 {
-#ifdef HAVE_DINPUT
-#ifdef HAVE_DINPUT_LIB
-    LPCDIDATAFORMAT mouse_data_format_ptr = &c_dfDIMouse;
-#else
-    DIOBJECTDATAFORMAT mouse_objects[] = {
-        { &GUID_XAxis, 0, DIDFT_OPTIONAL | DIDFT_AXIS | DIDFT_ANYINSTANCE, 0 },
-        { &GUID_YAxis, 4, DIDFT_OPTIONAL | DIDFT_AXIS | DIDFT_ANYINSTANCE, 0 },
-        { &GUID_ZAxis, 8, DIDFT_OPTIONAL | DIDFT_AXIS | DIDFT_ANYINSTANCE, 0 },
-        { &GUID_Button, 12, DIDFT_OPTIONAL | DIDFT_BUTTON | DIDFT_ANYINSTANCE, 0 },
-        { &GUID_Button, 13, DIDFT_OPTIONAL | DIDFT_BUTTON | DIDFT_ANYINSTANCE, 0 },
-        { &GUID_Button, 14, DIDFT_OPTIONAL | DIDFT_BUTTON | DIDFT_ANYINSTANCE, 0 },
-        { &GUID_Button, 15, DIDFT_OPTIONAL | DIDFT_BUTTON | DIDFT_ANYINSTANCE, 0 }
-    };
-
-    const DIDATAFORMAT mouse_data_format = {
-        sizeof(DIDATAFORMAT),
-        sizeof(DIOBJECTDATAFORMAT),
-        DIDF_RELAXIS,
-        sizeof(DIMOUSESTATE),
-        sizeof(mouse_objects) / sizeof(*mouse_objects),
-        mouse_objects
-    };
-    LPCDIDATAFORMAT mouse_data_format_ptr = &mouse_data_format;
-#endif
-
-    LPDIRECTINPUT di = get_directinput_handle();
-
-    if (di == NULL) {
-        return;
-    }
-
-    if (IDirectInput_CreateDevice(di, (GUID *)&GUID_SysMouse, &di_mouse, NULL) == S_OK) {
-        if (IDirectInputDevice_SetDataFormat(di_mouse, mouse_data_format_ptr) !=S_OK) {
-            IDirectInput_Release(di_mouse);
-            log_debug("Can't set Mouse DataFormat");
-            di_mouse = NULL;
-        }
-    }
-#endif
 }
 
 void mouse_update_mouse_acquire(void)
 {
-#ifdef HAVE_DINPUT
-    if (di_mouse == NULL) {
-        return;
-    }
-    if (_mouse_enabled) {
-        if (ui_active) {
-            IDirectInputDevice_SetCooperativeLevel(di_mouse, ui_active_window, DISCL_EXCLUSIVE | DISCL_FOREGROUND);
-            IDirectInputDevice_Acquire(di_mouse);
-            mouse_acquired = 1;
-        } else {
-            IDirectInputDevice_Unacquire(di_mouse);
-            mouse_acquired = 0;
-        }
-    } else {
-        if (mouse_acquired) {
-            IDirectInputDevice_Unacquire(di_mouse);
-            mouse_acquired = 0;
-        }
-    }
-#endif
 }
 
 int mousedrv_get_x(void)
 {
-    return _mouse_x >> 1;
+	return 0;
 }
 
 int mousedrv_get_y(void)
 {
-    return _mouse_y >> 1;
+	return 0;
 }
 
 unsigned long mousedrv_get_timestamp(void)
 {
-    return _mouse_timestamp;
+    return 0;
 }

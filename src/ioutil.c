@@ -31,7 +31,7 @@
 #ifdef HAVE_DIRECT_H
 #include <direct.h>
 #endif
-#if defined(HAVE_DIRENT_H) || defined(AMIGA_AROS)
+#if defined(HAVE_DIRENT_H) || defined(AMIGA_AROS) || __ANDROID__
 #include <dirent.h>
 #endif
 #ifdef HAVE_ERRNO_H

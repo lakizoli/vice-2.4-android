@@ -30,7 +30,11 @@
 #ifndef VICE_MIDIDRV_H
 #define VICE_MIDIDRV_H
 
-#include "types.h"
+#ifdef __ANDROID__
+#	include <unistd.h>
+#else //__ANDROID__
+#	include <stdint.h>
+#endif //__ANDROID__
 
 extern void mididrv_init(void);
 
@@ -44,8 +48,8 @@ extern void mididrv_out_close(void);
 
 /* MIDI device I/O */
 /* return: -1 if error, 1 if a byte was read to *b, 0 if no new bytes */
-extern int mididrv_in(BYTE *b);
-extern void mididrv_out(BYTE b);
+extern int mididrv_in(uint8_t *b);
+extern void mididrv_out(uint8_t b);
 
 extern int mididrv_resources_init(void);
 extern void mididrv_resources_shutdown(void);

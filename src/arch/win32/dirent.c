@@ -29,7 +29,9 @@
 
 #include "vice.h"
 
-#include <windows.h>
+#ifndef __ANDROID__
+
+#	include <windows.h>
 #include <tchar.h>
 #include <stdlib.h>
 
@@ -91,3 +93,5 @@ void closedir(DIR *dir)
     lib_free(dir->filter);
     lib_free(dir);
 }
+
+#endif //__ANDROID__

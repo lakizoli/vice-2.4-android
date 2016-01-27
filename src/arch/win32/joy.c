@@ -27,6 +27,10 @@
 
 #include "vice.h"
 
+#ifdef __ANDROID__
+//TODO: ...
+#else //__ANDROID__
+
 #include "cmdline.h"
 #include "resources.h"
 
@@ -34,7 +38,7 @@
 #include "dinput_handle.h"
 #endif
 
-#include <windows.h>
+#	include <windows.h>
 
 #include <assert.h>
 
@@ -1228,3 +1232,5 @@ char joystick_uses_direct_input(void)
     return 0;
 #endif
 }
+
+#endif //__ANDROID__

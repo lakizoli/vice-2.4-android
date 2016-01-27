@@ -25,8 +25,6 @@
  */
 
 
-#include <windows.h>
-
 #include "vice.h"
 
 #include "vsync.h"

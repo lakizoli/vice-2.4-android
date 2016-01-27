@@ -25,7 +25,12 @@
  */
 
 #include "vice.h"
-#include <windows.h>
+
+#ifdef __ANDROID__
+//TODO: ...
+#else //__ANDROID__
+
+#	include <windows.h>
 #include <windowsx.h>
 #include <tchar.h>
 #ifdef HAVE_COMMCTRL_H
@@ -561,3 +566,5 @@ void statusbar_display_volume(int vol)
         SendMessage(slider_hwnd[i], TBM_SETPOS, 1, 100 - vol);
     }
 }
+
+#endif //__ANDROID__

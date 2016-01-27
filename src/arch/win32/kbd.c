@@ -28,7 +28,11 @@
 
 #include "vice.h"
 
-#include <windows.h>
+#ifdef __ANDROID__
+//TODO: ...
+#else //__ANDROID__
+
+#	include <windows.h>
 #include <tchar.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -162,3 +166,5 @@ void kbd_initialize_numpad_joykeys(int* joykeys)
     joykeys[7] = K_KP8;
     joykeys[8] = K_KP9;
 }
+
+#endif //__ANDROID__
