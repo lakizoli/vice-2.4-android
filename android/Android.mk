@@ -27,7 +27,7 @@ include $(TOP_PATH)/../src/rs232drv/Android.mk
 include $(TOP_PATH)/../src/rtc/Android.mk
 include $(TOP_PATH)/../src/serial/Android.mk
 include $(TOP_PATH)/../src/sid/Android.mk
-#include $(TOP_PATH)/../src/sounddrv/Android.mk
+include $(TOP_PATH)/../src/sounddrv/Android.mk
 include $(TOP_PATH)/../src/tape/Android.mk
 include $(TOP_PATH)/../src/userport/Android.mk
 include $(TOP_PATH)/../src/vdrive/Android.mk
@@ -81,12 +81,13 @@ LOCAL_STATIC_LIBRARIES := 		\
 	rtc                         \
 	serial                      \
 	sid                         \
+	sounddrv					\
 	tape                        \
 	userport                    \
 	vicii						\
 	vdrive
 	
-# Egyelore kiszedett libek: arch raster sounddrv video
+# Egyelore kiszedett libek: arch raster video
 
 include $(BUILD_SHARED_LIBRARY)
 

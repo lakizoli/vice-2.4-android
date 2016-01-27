@@ -84,12 +84,16 @@
 #define HAVE_GETCWD             1
 
 #ifndef NODIRECTX
-#define HAVE_DINPUT             1
-#define USE_DXSOUND             1
-#define HAVE_DSOUND_LIB         1
-#ifndef WINIA64
-#define HAVE_GUIDLIB            1
-#endif
+#	ifdef __ANDROID__
+//...
+#	else //__ANDROID__
+#		define HAVE_DINPUT      1
+#		define USE_DXSOUND      1
+#		define HAVE_DSOUND_LIB  1
+#	endif //__ANDROID__
+#	ifndef WINIA64
+#		define HAVE_GUIDLIB     1
+#	endif
 #endif
 
 #if !defined(_M_AMD64) && !defined(WINIA64)
