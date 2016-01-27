@@ -279,30 +279,6 @@
     <ClCompile Include="..\win32\winmain.c" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\win32\res.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">Generating res.h</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">..\..\..\data\genwinres ..\win32\res.h ..\win32\menuid.h ..\win32\stringid.h ..\win32\res.txt ..\win32\resdialogs.txt ..\win32\resmenu.txt ..\win32\resstrings.txt
-</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">..\win32\res.txt;..\win32\resdialogs.txt;..\win32\resmenu.txt;..\win32\resstrings.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">%(RootDir)%(Directory)..\win32\res.h;%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating res.h</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\data\genwinres ..\win32\res.h ..\win32\menuid.h ..\win32\stringid.h ..\win32\res.txt ..\win32\resdialogs.txt ..\win32\resmenu.txt ..\win32\resstrings.txt
-</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\win32\res.txt;..\win32\resdialogs.txt;..\win32\resmenu.txt;..\win32\resstrings.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(RootDir)%(Directory)..\win32\res.h;%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">Generating res.h</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">..\..\..\data\genwinres ..\win32\res.h ..\win32\menuid.h ..\win32\stringid.h ..\win32\res.txt ..\win32\resdialogs.txt ..\win32\resmenu.txt ..\win32\resstrings.txt
-</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">..\win32\res.txt;..\win32\resdialogs.txt;..\win32\resmenu.txt;..\win32\resstrings.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">%(RootDir)%(Directory)..\win32\res.h;%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating res.h</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\data\genwinres ..\win32\res.h ..\win32\menuid.h ..\win32\stringid.h ..\win32\res.txt ..\win32\resdialogs.txt ..\win32\resmenu.txt ..\win32\resstrings.txt
-</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\win32\res.txt;..\win32\resdialogs.txt;..\win32\resmenu.txt;..\win32\resstrings.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RootDir)%(Directory)..\win32\res.h;%(Outputs)</Outputs>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
     <CustomBuild Include="win64_id.bat">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">Generating win64_id.bat</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">copy win64_x64.bat win64_id.bat
@@ -329,10 +305,6 @@
   <ItemGroup>
     <ProjectReference Include="base.vcxproj">
       <Project>{167af82a-a87d-4174-a597-3eda33e9ec07}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="genwinres.vcxproj">
-      <Project>{7129bf37-174a-4d72-994e-9c2327fe9d61}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
