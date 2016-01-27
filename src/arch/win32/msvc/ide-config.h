@@ -21,8 +21,13 @@
 #define HAVE_RESID_DTV          1
 #define HAS_JOYSTICK            1
 #define HAVE_MOUSE              1
-#define HAVE_CATWEASELMKIII     1
-#define HAVE_HARDSID            1
+#ifdef __ANDROID__
+#	undef HAVE_CATWEASELMKIII
+#	undef HAVE_HARDSID
+#else //__ANDROID__
+#	define HAVE_CATWEASELMKIII  1
+#	define HAVE_HARDSID         1
+#endif //__ANDROID__
 #define HAVE_RS232              1
 #define HAVE_DYNLIB_SUPPORT     1
 

@@ -24,25 +24,27 @@
  *
  */
 
-#include <windows.h>
-
 #include "dynlib.h"
+
+#include <stdio.h>
 
 void *vice_dynlib_open(const char *name)
 {
-    return LoadLibrary(name);
+    //return LoadLibrary(name);
+	return NULL;
 }
 
 void *vice_dynlib_symbol(void *handle,const char *name)
 {
-    return GetProcAddress((HMODULE)handle, name);
+    //return GetProcAddress((HMODULE)handle, name);
+	return NULL;
 }
 
 int vice_dynlib_close(void *handle)
 {
-    if (FreeLibrary(handle)) {
-        return 0;
-    } else {
+    //if (FreeLibrary(handle)) {
+    //    return 0;
+    //} else {
         return -1;
-    }
+    //}
 }

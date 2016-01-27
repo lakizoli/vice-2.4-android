@@ -27,9 +27,6 @@
 
 #include "vice.h"
 
-#include <windows.h>
-#include <prsht.h>
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -39,10 +36,6 @@
 
 
 void system_init_dialog(HWND hwnd)
-{
-}
-
-void system_psh_settings(PROPSHEETHEADER* ppsh)
 {
 }
 

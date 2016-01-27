@@ -31,12 +31,6 @@
 #include <assert.h>
 #include <stdio.h>
 #include <string.h>
-#include <windows.h>
-#include <windowsx.h>
-#include <tchar.h>
-#ifdef HAVE_COMMCTRL_H
-#include <commctrl.h>
-#endif
 #include <limits.h>
 
 #include "attach.h"
@@ -937,20 +931,20 @@ void ui_register_machine_specific(ui_machine_specific_t func)
 /* Report an error to the user (`printf()' style).  */
 void ui_error(const char *format, ...)
 {
-    //char *tmp;
+    char *tmp;
     //TCHAR *st;
-    //va_list args;
+    va_list args;
 
-    //va_start(args, format);
-    //tmp = lib_mvsprintf(format, args);
-    //va_end(args);
+    va_start(args, format);
+    tmp = lib_mvsprintf(format, args);
+    va_end(args);
 
-    //log_debug(tmp);
+    log_debug(tmp);
     //st = system_mbstowcs_alloc(tmp);
     //ui_messagebox(st, translate_text(IDS_VICE_ERROR), MB_OK | MB_ICONSTOP);
     //system_mbstowcs_free(st);
     //vsync_suspend_speed_eval();
-    //lib_free(tmp);
+    lib_free(tmp);
 }
 
 /* Report an error to the user (one string).  */
@@ -958,7 +952,7 @@ void ui_error_string(const char *text)
 {
     //TCHAR *st;
 
-    //log_debug(text);
+    log_debug(text);
     //st = system_mbstowcs_alloc(text);
     //ui_messagebox(st, translate_text(IDS_VICE_ERROR), MB_OK | MB_ICONSTOP);
     //system_mbstowcs_free(st);
@@ -967,19 +961,19 @@ void ui_error_string(const char *text)
 /* Report a message to the user (`printf()' style).  */
 void ui_message(const char *format, ...)
 {
-    //char *tmp;
+    char *tmp;
     //TCHAR *st;
-    //va_list args;
+    va_list args;
 
-    //va_start(args, format);
-    //tmp = lib_mvsprintf(format, args);
-    //va_end(args);
+    va_start(args, format);
+    tmp = lib_mvsprintf(format, args);
+    va_end(args);
 
     //st = system_mbstowcs_alloc(tmp);
     //ui_messagebox(st, translate_text(IDS_VICE_INFORMATION), MB_OK | MB_ICONASTERISK);
     //system_mbstowcs_free(st);
     //vsync_suspend_speed_eval();
-    //lib_free(tmp);
+    lib_free(tmp);
 }
 
 /* Let the user browse for a filename */

@@ -37,9 +37,9 @@
 #include <stdio.h>
 
 #if __GNUC__>2 || (__GNUC__==2 && __GNUC_MINOR__>=91) || defined _MSC_VER || defined __WATCOMC__
-#include <windows.h>
-#include <mmsystem.h>
-#include <string.h>
+#	include <windows.h>
+#	include <mmsystem.h>
+#	include <string.h>
 #endif
 
 #include "lib.h"

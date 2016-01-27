@@ -41,8 +41,8 @@
 #endif
 
 #if __GNUC__>2 || (__GNUC__==2 && __GNUC_MINOR__>=95)
-#include <windows.h>
-#include <mmsystem.h>
+#	include <windows.h>
+#	include <mmsystem.h>
 #endif
 
 #if defined(WATCOM_COMPILE) || defined(__WATCOMC__)

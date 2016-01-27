@@ -210,37 +210,37 @@ char *uimon_in(const char *prompt)
 {
     char *p = NULL;
 
-    while (!p && !pchCommandLine) {
-        /* as long as we don't have any return value... */
-
-#ifdef HAVE_NETWORK
-        if (monitor_is_remote()) {
-            monitor_network_transmit(prompt, strlen(prompt));
-
-            p = monitor_network_get_command_line();
-            if (p == NULL) {
-                mon_set_command(NULL, "x", NULL);
-            }
-        }
-        else {
-#endif
-            /* make sure to flush the output buffer */
-            mon_buffer_flush();
-
-            /* get input from the user */
-            p = uimon_get_in(&pchCommandLine, prompt);
-#ifdef HAVE_NETWORK
-        }
-#endif
-    }
-
-    if (pchCommandLine) {
-        /* we have an "artificially" generated command line */
-
-        lib_free(p);
-        p = lib_stralloc(pchCommandLine);
-        pchCommandLine = NULL;
-    }
+//    while (!p && !pchCommandLine) {
+//        /* as long as we don't have any return value... */
+//
+//#ifdef HAVE_NETWORK
+//        if (monitor_is_remote()) {
+//            monitor_network_transmit(prompt, strlen(prompt));
+//
+//            p = monitor_network_get_command_line();
+//            if (p == NULL) {
+//                mon_set_command(NULL, "x", NULL);
+//            }
+//        }
+//        else {
+//#endif
+//            /* make sure to flush the output buffer */
+//            mon_buffer_flush();
+//
+//            /* get input from the user */
+//            p = uimon_get_in(&pchCommandLine, prompt);
+//#ifdef HAVE_NETWORK
+//        }
+//#endif
+//    }
+//
+//    if (pchCommandLine) {
+//        /* we have an "artificially" generated command line */
+//
+//        lib_free(p);
+//        p = lib_stralloc(pchCommandLine);
+//        pchCommandLine = NULL;
+//    }
 
     /* return the command (the one or other way...) */
     return p;
