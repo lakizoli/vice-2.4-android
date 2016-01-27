@@ -21,7 +21,6 @@ include $(TOP_PATH)/../src/imagecontents/Android.mk
 include $(TOP_PATH)/../src/lib/p64/Android.mk
 include $(TOP_PATH)/../src/monitor/Android.mk
 include $(TOP_PATH)/../src/parallel/Android.mk
-#include $(TOP_PATH)/../src/platform/Android.mk
 include $(TOP_PATH)/../src/printerdrv/Android.mk
 #include $(TOP_PATH)/../src/raster/Android.mk
 include $(TOP_PATH)/../src/rs232drv/Android.mk
@@ -46,7 +45,6 @@ LOCAL_C_INCLUDES :=		 					\
 	$(TOP_PATH)/../src						\
 	$(TOP_PATH)/../src/drive                \
 	$(TOP_PATH)/../src/vdrive               \
-	$(TOP_PATH)/../src/platform             \
 	$(TOP_PATH)/../src/lib/p64              \
 	$(TOP_PATH)/../src/monitor
 
@@ -88,7 +86,7 @@ LOCAL_STATIC_LIBRARIES := 		\
 	vicii						\
 	vdrive
 	
-# Egyelore kiszedett libek: arch platform raster sounddrv video
+# Egyelore kiszedett libek: arch raster sounddrv video
 
 include $(BUILD_SHARED_LIBRARY)
 

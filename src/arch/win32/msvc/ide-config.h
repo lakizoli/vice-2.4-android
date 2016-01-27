@@ -125,7 +125,7 @@
 #ifdef __ANDROID__
 #	define PLATFORM "android armv7a armv8a x86 x64 gcc"
 #	define PLATFORM_OS "android"
-#	define PLATFORM_CPU "armv7a"
+#	define PLATFORM_CPU "armv7a, armv8a, x86, x64"
 #	define PLATFORM_COMPILER "gcc"
 #elif defined(WINIA64)
 #	define PLATFORM "win64 ia64 msvc"

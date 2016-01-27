@@ -413,10 +413,6 @@
       <Project>{ee013ca0-fcb3-477a-b387-afd3c9252989}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="platform.vcxproj">
-      <Project>{f89b75c6-9292-486f-980f-8a6ff81b11d3}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
     <ProjectReference Include="printerdrv.vcxproj">
       <Project>{0ded6e60-afd5-4d9f-9c20-42882870ccb1}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

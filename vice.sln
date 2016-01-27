@@ -44,8 +44,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "p64", "src\arch\win64\p64.v
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "parallel", "src\arch\win64\parallel.vcxproj", "{EE013CA0-FCB3-477A-B387-AFD3C9252989}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "platform", "src\arch\win64\platform.vcxproj", "{F89B75C6-9292-486F-980F-8A6FF81B11D3}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "printerdrv", "src\arch\win64\printerdrv.vcxproj", "{0DED6E60-AFD5-4D9F-9C20-42882870CCB1}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "raster", "src\arch\win64\raster.vcxproj", "{B63DA67A-83FC-44F7-A368-5AC4026251A7}"
@@ -600,30 +598,6 @@ Global
 		{EE013CA0-FCB3-477A-B387-AFD3C9252989}.Release|Win32.ActiveCfg = Release|x64
 		{EE013CA0-FCB3-477A-B387-AFD3C9252989}.Release|x64.ActiveCfg = Release|x64
 		{EE013CA0-FCB3-477A-B387-AFD3C9252989}.Release|x64.Build.0 = Release|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Debug no DirectX|Itanium.ActiveCfg = Debug no DirectX|Win32
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Debug no DirectX|Mixed Platforms.ActiveCfg = Debug no DirectX|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Debug no DirectX|Mixed Platforms.Build.0 = Debug no DirectX|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Debug no DirectX|Win32.ActiveCfg = Debug no DirectX|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Debug no DirectX|x64.ActiveCfg = Debug no DirectX|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Debug no DirectX|x64.Build.0 = Debug no DirectX|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Debug|Itanium.ActiveCfg = Debug|Win32
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Debug|Mixed Platforms.ActiveCfg = Debug|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Debug|Mixed Platforms.Build.0 = Debug|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Debug|Win32.ActiveCfg = Debug|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Debug|x64.ActiveCfg = Debug|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Debug|x64.Build.0 = Debug|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Release no DirectX|Itanium.ActiveCfg = Release no DirectX|Win32
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Release no DirectX|Mixed Platforms.ActiveCfg = Release no DirectX|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Release no DirectX|Mixed Platforms.Build.0 = Release no DirectX|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Release no DirectX|Win32.ActiveCfg = Release no DirectX|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Release no DirectX|x64.ActiveCfg = Release no DirectX|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Release no DirectX|x64.Build.0 = Release no DirectX|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Release|Itanium.ActiveCfg = Release|Win32
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Release|Mixed Platforms.ActiveCfg = Release|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Release|Mixed Platforms.Build.0 = Release|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Release|Win32.ActiveCfg = Release|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Release|x64.ActiveCfg = Release|x64
-		{F89B75C6-9292-486F-980F-8A6FF81B11D3}.Release|x64.Build.0 = Release|x64
 		{0DED6E60-AFD5-4D9F-9C20-42882870CCB1}.Debug no DirectX|Itanium.ActiveCfg = Debug no DirectX|Win32
 		{0DED6E60-AFD5-4D9F-9C20-42882870CCB1}.Debug no DirectX|Mixed Platforms.ActiveCfg = Debug no DirectX|x64
 		{0DED6E60-AFD5-4D9F-9C20-42882870CCB1}.Debug no DirectX|Mixed Platforms.Build.0 = Debug no DirectX|x64

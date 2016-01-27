@@ -48,7 +48,6 @@
 #include "log.h"
 #include "machine.h"
 #include "maincpu.h"
-#include "platform.h"
 #include "resources.h"
 #include "sound.h"
 #include "translate.h"

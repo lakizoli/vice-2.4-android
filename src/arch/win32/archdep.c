@@ -79,7 +79,6 @@
 #include "lib.h"
 #include "log.h"
 #include "machine.h"
-#include "platform.h"
 #include "system.h"
 #include "util.h"
 
@@ -702,24 +701,4 @@ int archdep_rtc_get_centisecond(void)
 
     GetSystemTime(&t);
     return (int)(t.wMilliseconds / 10);
-}
-
-char *archdep_get_runtime_os(void)
-{
-#ifdef WINMIPS
-    return "MIPS NT";
-#else
-    return platform_get_windows_runtime_os();
-#endif
-}
-
-char *archdep_get_runtime_cpu(void)
-{
-#if defined(__i386__) || defined(__i486__) || defined(__i586__) || defined(__i686__) || defined(__amd64__) || defined(__x86_64__)
-    return platform_get_x86_runtime_cpu();
-#else
-    /* TODO: add runtime cpu detection code */
-    /* arm/mips/alpha/ppc/ia64/sh */
-    return "Unknown CPU";
-#endif
 }
