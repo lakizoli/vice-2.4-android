@@ -244,7 +244,7 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\resid-fp\convolve-sse.cc">
+    <CustomBuild Include="..\..\resid-fp\convolve-sse.cpp">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"residfp\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /D "_DEBUG" /Fp"libs\residfp\Debug no DirectX/residfp.pch"  /Fo"libs\residfp\Debug no DirectX/" /Fd"libs\residfp\Debug no DirectX/" /FD /TP /c "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\residfp\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
@@ -258,7 +258,7 @@
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\resid-fp\Release/%(Filename).obj;%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Include="..\..\resid-fp\convolve.cc">
+    <CustomBuild Include="..\..\resid-fp\convolve.cpp">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"residfp\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /D "_DEBUG" /Fp"libs\residfp\Debug no DirectX/residfp.pch"  /Fo"libs\residfp\Debug no DirectX/" /Fd"libs\residfp\Debug no DirectX/" /FD /TP /c "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\residfp\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
@@ -272,7 +272,7 @@
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\resid-fp\Release/%(Filename).obj;%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Include="..\..\resid-fp\envelope.cc">
+    <CustomBuild Include="..\..\resid-fp\envelope.cpp">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"residfp\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /D "_DEBUG" /Fp"libs\residfp\Debug no DirectX/residfp.pch"  /Fo"libs\residfp\Debug no DirectX/" /Fd"libs\residfp\Debug no DirectX/" /FD /TP /c "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\residfp\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
@@ -286,7 +286,7 @@
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\resid-fp\Release/%(Filename).obj;%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Include="..\..\resid-fp\extfilt.cc">
+    <CustomBuild Include="..\..\resid-fp\extfilt.cpp">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"residfp\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /D "_DEBUG" /Fp"libs\residfp\Debug no DirectX/residfp.pch"  /Fo"libs\residfp\Debug no DirectX/" /Fd"libs\residfp\Debug no DirectX/" /FD /TP /c "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\residfp\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
@@ -300,7 +300,7 @@
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\resid-fp\Release/%(Filename).obj;%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Include="..\..\resid-fp\filter.cc">
+    <CustomBuild Include="..\..\resid-fp\filter.cpp">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"residfp\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /D "_DEBUG" /Fp"libs\residfp\Debug no DirectX/residfp.pch"  /Fo"libs\residfp\Debug no DirectX/" /Fd"libs\residfp\Debug no DirectX/" /FD /TP /c "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\residfp\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
@@ -314,7 +314,7 @@
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\resid-fp\Release/%(Filename).obj;%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Include="..\..\resid-fp\pot.cc">
+    <CustomBuild Include="..\..\resid-fp\pot.cpp">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"residfp\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /D "_DEBUG" /Fp"libs\residfp\Debug no DirectX/residfp.pch"  /Fo"libs\residfp\Debug no DirectX/" /Fd"libs\residfp\Debug no DirectX/" /FD /TP /c "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\residfp\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
@@ -328,7 +328,7 @@
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\resid-fp\Release/%(Filename).obj;%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Include="..\..\resid-fp\sid.cc">
+    <CustomBuild Include="..\..\resid-fp\sid.cpp">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"residfp\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /D "_DEBUG" /Fp"libs\residfp\Debug no DirectX/residfp.pch"  /Fo"libs\residfp\Debug no DirectX/" /Fd"libs\residfp\Debug no DirectX/" /FD /TP /c "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\residfp\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
@@ -342,7 +342,7 @@
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\resid-fp\Release/%(Filename).obj;%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Include="..\..\resid-fp\version.cc">
+    <CustomBuild Include="..\..\resid-fp\version.cpp">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"residfp\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /D "_DEBUG" /Fp"libs\residfp\Debug no DirectX/residfp.pch"  /Fo"libs\residfp\Debug no DirectX/" /Fd"libs\residfp\Debug no DirectX/" /FD /TP /c "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\residfp\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
@@ -356,7 +356,7 @@
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\resid-fp\Release/%(Filename).obj;%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Include="..\..\resid-fp\voice.cc">
+    <CustomBuild Include="..\..\resid-fp\voice.cpp">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"residfp\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /D "_DEBUG" /Fp"libs\residfp\Debug no DirectX/residfp.pch"  /Fo"libs\residfp\Debug no DirectX/" /Fd"libs\residfp\Debug no DirectX/" /FD /TP /c "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\residfp\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
@@ -370,7 +370,7 @@
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\resid-fp\Release/%(Filename).obj;%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Include="..\..\resid-fp\wave.cc">
+    <CustomBuild Include="..\..\resid-fp\wave.cpp">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"residfp\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /D "_DEBUG" /Fp"libs\residfp\Debug no DirectX/residfp.pch"  /Fo"libs\residfp\Debug no DirectX/" /Fd"libs\residfp\Debug no DirectX/" /FD /TP /c "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\residfp\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
