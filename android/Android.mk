@@ -23,6 +23,8 @@ include $(TOP_PATH)/../src/monitor/Android.mk
 include $(TOP_PATH)/../src/parallel/Android.mk
 include $(TOP_PATH)/../src/printerdrv/Android.mk
 #include $(TOP_PATH)/../src/raster/Android.mk
+include $(TOP_PATH)/../src/resid/Android.mk
+include $(TOP_PATH)/../src/resid-fp/Android.mk
 include $(TOP_PATH)/../src/rs232drv/Android.mk
 include $(TOP_PATH)/../src/rtc/Android.mk
 include $(TOP_PATH)/../src/serial/Android.mk
@@ -77,6 +79,8 @@ LOCAL_STATIC_LIBRARIES := 		\
 	p64                         \
 	parallel                    \
 	printerdrv                  \
+	resid						\
+	residfp						\
 	rs232drv                    \
 	rtc                         \
 	serial                      \
@@ -84,8 +88,8 @@ LOCAL_STATIC_LIBRARIES := 		\
 	sounddrv					\
 	tape                        \
 	userport                    \
-	vicii						\
-	vdrive
+	vdrive						\
+	vicii
 	
 # Egyelore kiszedett libek: arch raster video
 
