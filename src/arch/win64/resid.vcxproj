@@ -245,132 +245,15 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\resid\dac.cc">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "_DEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Debug no DirectX/resid.pch" /Fo"libs\resid\Debug no DirectX/" /Fd"libs\resid\Debug no DirectX/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\resid\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "_DEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Debug/resid.pch" /Fo"libs\resid\Debug/" /Fd"libs\resid\Debug/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libs\resid\Debug/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">cl /nologo /MT /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Release no DirectX/resid.pch" /Fo"libs\resid\Release no DirectX/" /Fd"libs\resid\Release no DirectX/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">libs\resid\Release no DirectX/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl /nologo /MT /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Release/resid.pch" /Fo"libs\resid\Release/" /Fd"libs\resid\Release/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\resid\Release/%(Filename).obj;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="..\..\resid\envelope.cc">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "_DEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Debug no DirectX/resid.pch" /Fo"libs\resid\Debug no DirectX/" /Fd"libs\resid\Debug no DirectX/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\resid\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "_DEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Debug/resid.pch" /Fo"libs\resid\Debug/" /Fd"libs\resid\Debug/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libs\resid\Debug/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">cl /nologo /MT /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Release no DirectX/resid.pch" /Fo"libs\resid\Release no DirectX/" /Fd"libs\resid\Release no DirectX/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">libs\resid\Release no DirectX/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl /nologo /MT /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Release/resid.pch" /Fo"libs\resid\Release/" /Fd"libs\resid\Release/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\resid\Release/%(Filename).obj;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="..\..\resid\extfilt.cc">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "_DEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Debug no DirectX/resid.pch" /Fo"libs\resid\Debug no DirectX/" /Fd"libs\resid\Debug no DirectX/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\resid\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "_DEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Debug/resid.pch" /Fo"libs\resid\Debug/" /Fd"libs\resid\Debug/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libs\resid\Debug/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">cl /nologo /MT /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Release no DirectX/resid.pch" /Fo"libs\resid\Release no DirectX/" /Fd"libs\resid\Release no DirectX/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">libs\resid\Release no DirectX/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl /nologo /MT /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Release/resid.pch" /Fo"libs\resid\Release/" /Fd"libs\resid\Release/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\resid\Release/%(Filename).obj;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="..\..\resid\filter.cc">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "_DEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Debug no DirectX/resid.pch" /Fo"libs\resid\Debug no DirectX/" /Fd"libs\resid\Debug no DirectX/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\resid\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "_DEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Debug/resid.pch" /Fo"libs\resid\Debug/" /Fd"libs\resid\Debug/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libs\resid\Debug/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">cl /nologo /MT /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Release no DirectX/resid.pch" /Fo"libs\resid\Release no DirectX/" /Fd"libs\resid\Release no DirectX/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">libs\resid\Release no DirectX/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl /nologo /MT /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Release/resid.pch" /Fo"libs\resid\Release/" /Fd"libs\resid\Release/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\resid\Release/%(Filename).obj;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="..\..\resid\pot.cc">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "_DEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Debug no DirectX/resid.pch" /Fo"libs\resid\Debug no DirectX/" /Fd"libs\resid\Debug no DirectX/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\resid\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /D "_DEBUG" /Fp"libs\resid\Debug/resid.pch" /Fo"libs\resid\Debug/" /Fd"libs\resid\Debug/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libs\resid\Debug/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">cl /nologo /MT /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Release no DirectX/resid.pch" /Fo"libs\resid\Release no DirectX/" /Fd"libs\resid\Release no DirectX/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">libs\resid\Release no DirectX/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl /nologo /MT /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Release/resid.pch" /Fo"libs\resid\Release/" /Fd"libs\resid\Release/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\resid\Release/%(Filename).obj;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="..\..\resid\sid.cc">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "_DEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Debug no DirectX/resid.pch" /Fo"libs\resid\Debug no DirectX/" /Fd"libs\resid\Debug no DirectX/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\resid\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /D "_DEBUG" /Fp"libs\resid\Debug/resid.pch" /Fo"libs\resid\Debug/" /Fd"libs\resid\Debug/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libs\resid\Debug/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">cl /nologo /MT /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Release no DirectX/resid.pch" /Fo"libs\resid\Release no DirectX/" /Fd"libs\resid\Release no DirectX/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">libs\resid\Release no DirectX/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl /nologo /MT /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Release/resid.pch" /Fo"libs\resid\Release/" /Fd"libs\resid\Release/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\resid\Release/%(Filename).obj;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="..\..\resid\version.cc">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "_DEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Debug no DirectX/resid.pch" /Fo"libs\resid\Debug no DirectX/" /Fd"libs\resid\Debug no DirectX/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\resid\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /D "_DEBUG" /Fp"libs\resid\Debug/resid.pch" /Fo"libs\resid\Debug/" /Fd"libs\resid\Debug/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libs\resid\Debug/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">cl /nologo /MT /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Release no DirectX/resid.pch" /Fo"libs\resid\Release no DirectX/" /Fd"libs\resid\Release no DirectX/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">libs\resid\Release no DirectX/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl /nologo /MT /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Release/resid.pch" /Fo"libs\resid\Release/" /Fd"libs\resid\Release/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\resid\Release/%(Filename).obj;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="..\..\resid\voice.cc">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "_DEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Debug no DirectX/resid.pch" /Fo"libs\resid\Debug no DirectX/" /Fd"libs\resid\Debug no DirectX/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\resid\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /D "_DEBUG" /Fp"libs\resid\Debug/resid.pch" /Fo"libs\resid\Debug/" /Fd"libs\resid\Debug/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libs\resid\Debug/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">cl /nologo /MT /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Release no DirectX/resid.pch" /Fo"libs\resid\Release no DirectX/" /Fd"libs\resid\Release no DirectX/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">libs\resid\Release no DirectX/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl /nologo /MT /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Release/resid.pch" /Fo"libs\resid\Release/" /Fd"libs\resid\Release/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\resid\Release/%(Filename).obj;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="..\..\resid\wave.cc">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "_DEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Debug no DirectX/resid.pch" /Fo"libs\resid\Debug no DirectX/" /Fd"libs\resid\Debug no DirectX/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\resid\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl /nologo /MTd /W3 /EHsc /Z7 /Od /I "..\win32\msvc" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /D "_DEBUG" /Fp"libs\resid\Debug/resid.pch" /Fo"libs\resid\Debug/" /Fd"libs\resid\Debug/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libs\resid\Debug/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">cl /nologo /MT /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Release no DirectX/resid.pch" /Fo"libs\resid\Release no DirectX/" /Fd"libs\resid\Release no DirectX/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release no DirectX|x64'">libs\resid\Release no DirectX/%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl /nologo /MT /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /D PACKAGE=\"resid\" /D VERSION=\"0.7\" /D SIZEOF_INT=4 /Fp"libs\resid\Release/resid.pch" /Fo"libs\resid\Release/" /Fd"libs\resid\Release/" /FD /TP /c "%(FullPath)"
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\resid\Release/%(Filename).obj;%(Outputs)</Outputs>
-    </CustomBuild>
+    <ClCompile Include="..\..\resid\dac.cpp" />
+    <ClCompile Include="..\..\resid\envelope.cpp" />
+    <ClCompile Include="..\..\resid\extfilt.cpp" />
+    <ClCompile Include="..\..\resid\filter.cpp" />
+    <ClCompile Include="..\..\resid\pot.cpp" />
+    <ClCompile Include="..\..\resid\sid.cpp" />
+    <ClCompile Include="..\..\resid\version.cpp" />
+    <ClCompile Include="..\..\resid\voice.cpp" />
+    <ClCompile Include="..\..\resid\wave.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
