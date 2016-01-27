@@ -20,6 +20,8 @@
 #ifndef VICE__SIDDEFS_FP_H__
 #define VICE__SIDDEFS_FP_H__
 
+#include "version.h"
+
 #ifndef M_PI
 #define M_PI 3.14159265358979323846
 #endif
