@@ -83,8 +83,8 @@ int archdep_init(int *argc, char **argv)
 #ifndef __ANDROID__
     _fmode = O_BINARY;
 
-    _setmode(_fileno(stdin), O_BINARY);
-    _setmode(_fileno(stdout), O_BINARY);
+    //_setmode(_fileno(stdin), O_BINARY);
+    //_setmode(_fileno(stdout), O_BINARY);
 #endif //__ANDROID__
 
     argv0 = lib_stralloc(argv[0]);

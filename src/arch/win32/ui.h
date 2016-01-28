@@ -177,6 +177,6 @@ extern int number_of_windows;
 extern int querynewpalette;
 extern int syscolorchanged, displaychanged, querynewpalette, palettechanged;
 
-#endif
-
 #endif //__ANDROID__
+
+#endif

@@ -27,11 +27,17 @@
 #ifndef VICE_WINMAIN_H
 #define VICE_WINMAIN_H
 
+#ifdef __ANDROID__
+//TODO: ...
+#else //__ANDROID__
+
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 
 extern HINSTANCE winmain_instance;
 extern HINSTANCE winmain_prev_instance;
 extern int winmain_cmd_show;
+
+#endif //__ANDROID__
 
 #endif
