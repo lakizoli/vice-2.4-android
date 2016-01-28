@@ -28,8 +28,37 @@
 #ifndef VICE_VIDEOARCH_H
 #define VICE_VIDEOARCH_H
 
+struct palette_s;
+struct video_draw_buffer_callback_s;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Android specific video architecture
+///////////////////////////////////////////////////////////////////////////////////////////////////
 #ifdef __ANDROID__
+
+#include <unistd.h>
+
+typedef struct video_canvas_s {
+	unsigned int initialized;
+	unsigned int created;
+	char *title;
+	int mapped;
+	int depth;
+	float refreshrate; /* currently displayed refresh rate */
+	struct video_render_config_s *videoconfig;
+	struct draw_buffer_s *draw_buffer;
+	struct viewport_s *viewport;
+	struct geometry_s *geometry;
+	struct palette_s *palette;
+	uint8_t *pixels;
+	struct video_draw_buffer_callback_s *video_draw_buffer_callback;
+} video_canvas_t;
+
 //TODO: ...
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Windows specific video architecture
+///////////////////////////////////////////////////////////////////////////////////////////////////
 #else //__ANDROID__
 
 /*  Nasty patch to avoid defining BYTE, WORD, DWORD more than once.  */
@@ -48,9 +77,6 @@
 #endif
 
 #define CANVAS_USES_TRIPLE_BUFFERING(c) 0
-
-struct palette_s;
-struct video_draw_buffer_callback_s;
 
 typedef struct video_canvas_s {
     unsigned int initialized;
