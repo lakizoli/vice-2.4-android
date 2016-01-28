@@ -27,11 +27,40 @@
  */
 
 #include "vice.h"
+#include "ui.h"
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//Multiplatform functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
+#include "log.h"
+
+//Report an error to the user (one string).
+void ui_error_string (const char *text) {
+	//TCHAR *st;
+
+	log_debug (text);
+	//st = system_mbstowcs_alloc(text);
+	//ui_messagebox(st, translate_text(IDS_VICE_ERROR), MB_OK | MB_ICONSTOP);
+	//system_mbstowcs_free(st);
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//Android platform specific functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
+#ifdef __ANDROID__
+//TODO: ...
+
+#else //__ANDROID__
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//Windows platform specific functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include <assert.h>
 #include <stdio.h>
 #include <string.h>
 #include <limits.h>
+#include <windows.h>
+#include <commctrl.h>
 
 #include "attach.h"
 #include "autostart.h"
@@ -61,7 +90,6 @@
 #include "system.h"
 #include "translate.h"
 #include "types.h"
-#include "ui.h"
 #include "uiapi.h"
 #include "uicmdline.h"
 #include "util.h"
@@ -945,17 +973,6 @@ void ui_error(const char *format, ...)
     //system_mbstowcs_free(st);
     //vsync_suspend_speed_eval();
     lib_free(tmp);
-}
-
-/* Report an error to the user (one string).  */
-void ui_error_string(const char *text)
-{
-    //TCHAR *st;
-
-    log_debug(text);
-    //st = system_mbstowcs_alloc(text);
-    //ui_messagebox(st, translate_text(IDS_VICE_ERROR), MB_OK | MB_ICONSTOP);
-    //system_mbstowcs_free(st);
 }
 
 /* Report a message to the user (`printf()' style).  */
@@ -2087,3 +2104,5 @@ void ui_display_volume(int vol)
 {
     statusbar_display_volume(vol);
 }
+
+#endif //__ANDROID__
