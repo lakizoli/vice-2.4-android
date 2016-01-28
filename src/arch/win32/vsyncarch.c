@@ -27,6 +27,10 @@
 
 #include "vice.h"
 
+#ifdef __ANDROID__
+//TODO: ...
+#else //__ANDROID__
+
 #include "vsync.h"
 #include "kbdbuf.h"
 #include "lightpendrv.h"
@@ -110,3 +114,5 @@ int vsyncarch_vbl_sync_enabled(void)
     //return ui_vblank_sync_enabled();
 	return 0; //default
 }
+
+#endif //__ANDROID__
