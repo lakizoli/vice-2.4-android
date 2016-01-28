@@ -22,7 +22,7 @@ include $(TOP_PATH)/../src/lib/p64/Android.mk
 include $(TOP_PATH)/../src/monitor/Android.mk
 include $(TOP_PATH)/../src/parallel/Android.mk
 include $(TOP_PATH)/../src/printerdrv/Android.mk
-#include $(TOP_PATH)/../src/raster/Android.mk
+include $(TOP_PATH)/../src/raster/Android.mk
 include $(TOP_PATH)/../src/resid/Android.mk
 include $(TOP_PATH)/../src/resid-fp/Android.mk
 include $(TOP_PATH)/../src/rs232drv/Android.mk
@@ -80,6 +80,7 @@ LOCAL_STATIC_LIBRARIES := 		\
 	p64                         \
 	parallel                    \
 	printerdrv                  \
+	raster						\
 	resid						\
 	residfp						\
 	rs232drv                    \
@@ -92,7 +93,7 @@ LOCAL_STATIC_LIBRARIES := 		\
 	vdrive						\
 	vicii
 	
-# Egyelore kiszedett libek: raster video
+# Egyelore kiszedett libek: video
 
 include $(BUILD_SHARED_LIBRARY)
 
