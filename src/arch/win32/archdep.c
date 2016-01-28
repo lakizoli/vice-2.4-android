@@ -46,6 +46,11 @@
 #include "util.h"
 #include "ioutil.h"
 
+#ifdef __ANDROID__
+#	include <android/log.h>
+#	include <time.h>
+#endif __ANDROID__
+
 //#define STDIN_FILENO  0
 //#define STDOUT_FILENO 1
 //#define STDERR_FILENO 2
@@ -75,10 +80,12 @@ void archdep_network_shutdown(void)
 
 int archdep_init(int *argc, char **argv)
 {
+#ifndef __ANDROID__
     _fmode = O_BINARY;
 
-    //_setmode(_fileno(stdin), O_BINARY);
-    //_setmode(_fileno(stdout), O_BINARY);
+    _setmode(_fileno(stdin), O_BINARY);
+    _setmode(_fileno(stdout), O_BINARY);
+#endif //__ANDROID__
 
     argv0 = lib_stralloc(argv[0]);
 
@@ -400,13 +407,19 @@ int archdep_num_text_columns(void)
 
 int archdep_default_logger(const char *level_string, const char *txt)
 {
+	char *out = lib_msprintf ("*** %s %s\n", level_string, txt);
+
+#ifdef __ANDROID__
+	__android_log_print (ANDROID_LOG_VERBOSE, "libc64emu", "%s", out);
+#else //__ANDROID__
     TCHAR *st_out;
 
-    char *out = lib_msprintf("*** %s %s\n", level_string, txt);
     st_out = system_mbstowcs_alloc(out);
     OutputDebugString(st_out);
     system_mbstowcs_free(st_out);
-    lib_free(out);
+#endif //__ANDROID__
+
+	lib_free (out);
     return 0;
 }
 
@@ -664,8 +677,14 @@ void archdep_workaround_nop(const char *otto)
 
 int archdep_rtc_get_centisecond(void)
 {
+#ifdef __ANDROID__
+	timespec now;
+	clock_gettime (CLOCK_MONOTONIC, &now);
+	uint64_t ts = ((uint64_t) now.tv_sec * 1000000000ULL + (uint64_t) now.tv_nsec) / 10000000ULL; //centisec = 1000*1000*10 * nanosec
+#else //__ANDROID__
     SYSTEMTIME t;
 
     GetSystemTime(&t);
     return (int)(t.wMilliseconds / 10);
+#endif //__ANDROID__
 }
