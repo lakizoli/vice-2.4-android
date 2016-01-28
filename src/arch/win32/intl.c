@@ -674,8 +674,9 @@ static android_text_t android_text_en[] = {
 static char* intl_find_text_for_res_code (int en_resource)
 {
 	char* res_id = NULL;
+	int i;
 
-	for (int i = 0; idslist[i].str != NULL; ++i) {
+	for (i = 0; idslist[i].str != NULL; ++i) {
 		if (idslist[i].cmd == en_resource) {
 			res_id = idslist[i].str;
 			break;
@@ -683,7 +684,7 @@ static char* intl_find_text_for_res_code (int en_resource)
 	}
 
 	if (res_id != NULL) {
-		for (int i = 0; android_text_en[i].text_id != NULL; ++i) {
+		for (i = 0; android_text_en[i].text_id != NULL; ++i) {
 			if (strcmp (android_text_en[i].text_id, res_id) == 0) {
 				return android_text_en[i].text;
 			}
