@@ -66,7 +66,11 @@
 #define HAVE_WINIOCTL_H         1
 
 #define DWORD_IS_LONG           1
-#define HAVE_TFE                1
+#ifdef __ANDROID__
+#	undef HAVE_TFE
+#else //__ANDROID__
+#	define HAVE_TFE             1
+#endif //__ANDROID__
 #define HAVE_FFMPEG             1
 #define HAVE_FFMPEG_SWSCALE     1
 #define HAVE_FFMPEG_HEADER_SUBDIRS 1
