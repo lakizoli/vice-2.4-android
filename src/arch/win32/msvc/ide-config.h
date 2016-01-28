@@ -24,11 +24,12 @@
 #ifdef __ANDROID__
 #	undef HAVE_CATWEASELMKIII
 #	undef HAVE_HARDSID
+#	undef HAVE_RS232
 #else //__ANDROID__
 #	define HAVE_CATWEASELMKIII  1
 #	define HAVE_HARDSID         1
+#	define HAVE_RS232           1
 #endif //__ANDROID__
-#define HAVE_RS232              1
 #define HAVE_DYNLIB_SUPPORT     1
 
 #ifndef WINIA64
