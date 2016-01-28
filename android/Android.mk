@@ -59,6 +59,8 @@ LOCAL_CPP_EXTENSION := .cpp
 LOCAL_SRC_FILES +=					\
 	$(TOP_PATH)/../src/main.c		\
 	$(TOP_PATH)/../src/maincpu.c
+	
+LOCAL_LDLIBS := -llog
 
 LOCAL_SHARED_LIBRARIES :=
 LOCAL_STATIC_LIBRARIES := 		\
