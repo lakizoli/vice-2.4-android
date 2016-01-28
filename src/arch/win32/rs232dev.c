@@ -40,6 +40,8 @@
 
 #include "vice.h"
 
+#ifdef HAVE_RS232
+
 #include <errno.h>
 #include <string.h>
 #include <winsock.h>
@@ -354,3 +356,5 @@ void rs232dev_set_bps(int fd, unsigned int bps)
     /*! \todo set the physical bps rate */
     DEBUG_LOG_MESSAGE((rs232dev_log, "Setting bps to %u", bps));
 }
+
+#endif //HAVE_RS232

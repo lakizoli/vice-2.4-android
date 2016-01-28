@@ -27,6 +27,8 @@
 #ifndef VICE_RS232DEV_H
 #define VICE_RS232DEV_H
 
+#ifdef HAVE_RS232
+
 #include "types.h"
 
 /* Initializes all RS232 stuff */
@@ -58,5 +60,7 @@ extern void rs232dev_set_bps(int fd, unsigned int bps);
 extern int rs232dev_resources_init(void);
 extern void rs232dev_resources_shutdown(void);
 extern int rs232dev_cmdline_options_init(void);
+
+#endif //HAVE_RS232
 
 #endif

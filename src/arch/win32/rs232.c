@@ -37,6 +37,8 @@
 
 #include "vice.h"
 
+#ifdef HAVE_RS232
+
 #include <assert.h>
 #include <errno.h>
 #include <string.h>
@@ -191,3 +193,5 @@ void rs232_set_bps(int fd, unsigned int bps)
         rs232dev_set_bps(fd & ~RS232_IS_PHYSICAL_DEVICE, bps);
     }
 }
+
+#endif //HAVE_RS232
