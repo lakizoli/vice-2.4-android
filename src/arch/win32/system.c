@@ -34,11 +34,6 @@
 #include "lib.h"
 #include "system.h"
 
-
-void system_init_dialog(HWND hwnd)
-{
-}
-
 size_t system_wcstombs(char *mbs, const char *wcs, size_t len)
 {
     strncpy(mbs, wcs, len);

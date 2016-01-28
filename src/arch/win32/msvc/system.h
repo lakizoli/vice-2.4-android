@@ -28,16 +28,6 @@
 #ifndef VICE_SYSTEM_H
 #define VICE_SYSTEM_H
 
-#undef BYTE
-#undef WORD
-#undef DWORD
-
-#include <windows.h>
-#include <prsht.h>
-
-extern void system_init_dialog(HWND hwnd);
-extern void system_psh_settings(PROPSHEETHEADER *ppsh);
-
 extern size_t system_wcstombs(char *mbs, const char *wcs, size_t len);
 extern size_t system_mbstowcs(char *wcs, const char *mbs, size_t len);
 extern char *system_mbstowcs_alloc(const char *mbs);
