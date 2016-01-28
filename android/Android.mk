@@ -91,9 +91,8 @@ LOCAL_STATIC_LIBRARIES := 		\
 	tape                        \
 	userport                    \
 	vdrive						\
+	video						\
 	vicii
 	
-# Egyelore kiszedett libek: video
-
 include $(BUILD_SHARED_LIBRARY)
 
