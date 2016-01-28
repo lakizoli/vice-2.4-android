@@ -5,7 +5,7 @@
 TOP_PATH := $(abspath $(call my-dir))
 
 include $(TOP_PATH)/../src/Android.mk
-#include $(TOP_PATH)/../src/arch/win32/Android.mk
+include $(TOP_PATH)/../src/arch/win32/Android.mk
 include $(TOP_PATH)/../src/c64/Android.mk
 include $(TOP_PATH)/../src/c64/cart/Android.mk
 include $(TOP_PATH)/../src/core/Android.mk
@@ -62,6 +62,7 @@ LOCAL_SRC_FILES +=					\
 
 LOCAL_SHARED_LIBRARIES :=
 LOCAL_STATIC_LIBRARIES := 		\
+	arch						\
 	base                        \
 	c64                         \
 	c64cart                     \
@@ -91,7 +92,7 @@ LOCAL_STATIC_LIBRARIES := 		\
 	vdrive						\
 	vicii
 	
-# Egyelore kiszedett libek: arch raster video
+# Egyelore kiszedett libek: raster video
 
 include $(BUILD_SHARED_LIBRARY)
 
