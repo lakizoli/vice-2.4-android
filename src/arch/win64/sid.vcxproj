@@ -247,7 +247,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\sid\fastsid.c" />
-    <CustomBuild Include="..\..\sid\resid-fp.cc">
+    <CustomBuild Include="..\..\sid\resid-fp.cpp">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /I "..\win32" /I "..\..\\" /I "..\..\resid-fp" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /Fp"libs\sid\Debug no DirectX/sid.pch" /Fo"libs\sid\Debug no DirectX/" /Fd"libs\sid\Debug no DirectX/" /FD /TP /c "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\sid\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
@@ -261,7 +261,7 @@
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libs\sid\Release/%(Filename).obj;%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Include="..\..\sid\resid.cc">
+    <CustomBuild Include="..\..\sid\resid.cpp">
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">cl /nologo /MTd /W3 /EHsc /I "..\win32\msvc" /D "NDEBUG" /I "..\win32" /I "..\..\\" /I "..\..\resid" /D "WIN32" /D "IDE_COMPILE" /D "_WINDOWS" /Fp"libs\sid\Debug no DirectX/sid.pch" /Fo"libs\sid\Debug no DirectX/" /Fd"libs\sid\Debug no DirectX/" /FD /TP /c "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug no DirectX|x64'">libs\sid\Debug no DirectX/%(Filename).obj;%(Outputs)</Outputs>
