@@ -49,7 +49,7 @@
 #ifdef __ANDROID__
 #	include <android/log.h>
 #	include <time.h>
-#endif __ANDROID__
+#endif //__ANDROID__
 
 //#define STDIN_FILENO  0
 //#define STDOUT_FILENO 1
@@ -678,7 +678,7 @@ void archdep_workaround_nop(const char *otto)
 int archdep_rtc_get_centisecond(void)
 {
 #ifdef __ANDROID__
-	timespec now;
+	struct timespec now;
 	clock_gettime (CLOCK_MONOTONIC, &now);
 	uint64_t ts = ((uint64_t) now.tv_sec * 1000000000ULL + (uint64_t) now.tv_nsec) / 10000000ULL; //centisec = 1000*1000*10 * nanosec
 #else //__ANDROID__
