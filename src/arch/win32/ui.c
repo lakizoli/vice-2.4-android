@@ -34,6 +34,10 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 #include "log.h"
 
+//Update all the menus according to the current settings.
+void ui_update_menus (void) {
+}
+
 //Report an error to the user (one string).
 void ui_error_string (const char *text) {
 	//TCHAR *st;
@@ -42,6 +46,24 @@ void ui_error_string (const char *text) {
 	//st = system_mbstowcs_alloc(text);
 	//ui_messagebox(st, translate_text(IDS_VICE_ERROR), MB_OK | MB_ICONSTOP);
 	//system_mbstowcs_free(st);
+}
+
+//Report an error to the user (`printf()' style).
+void ui_error (const char *format, ...) {
+	char *tmp;
+	//TCHAR *st;
+	va_list args;
+
+	va_start (args, format);
+	tmp = lib_mvsprintf (format, args);
+	va_end (args);
+
+	log_debug (tmp);
+	//st = system_mbstowcs_alloc(tmp);
+	//ui_messagebox(st, translate_text(IDS_VICE_ERROR), MB_OK | MB_ICONSTOP);
+	//system_mbstowcs_free(st);
+	//vsync_suspend_speed_eval();
+	lib_free (tmp);
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -817,11 +839,6 @@ void ui_set_alwaysontop(int alwaysontop)
 static const ui_menu_toggle_t *machine_specific_toggles = NULL;
 static const ui_res_value_list_t *machine_specific_values = NULL;
 
-/* Update all the menus according to the current settings.  */
-void ui_update_menus(void)
-{
-}
-
 void ui_update_menu(void)
 {
     //translated_menu = LoadMenu(winmain_instance, MAKEINTRESOURCE(emu_menu));
@@ -955,25 +972,6 @@ void ui_register_machine_specific(ui_machine_specific_t func)
 }
 
 /* ------------------------------------------------------------------------- */
-
-/* Report an error to the user (`printf()' style).  */
-void ui_error(const char *format, ...)
-{
-    char *tmp;
-    //TCHAR *st;
-    va_list args;
-
-    va_start(args, format);
-    tmp = lib_mvsprintf(format, args);
-    va_end(args);
-
-    log_debug(tmp);
-    //st = system_mbstowcs_alloc(tmp);
-    //ui_messagebox(st, translate_text(IDS_VICE_ERROR), MB_OK | MB_ICONSTOP);
-    //system_mbstowcs_free(st);
-    //vsync_suspend_speed_eval();
-    lib_free(tmp);
-}
 
 /* Report a message to the user (`printf()' style).  */
 void ui_message(const char *format, ...)
