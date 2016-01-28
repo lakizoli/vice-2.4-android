@@ -27,6 +27,10 @@
 
 #include "vice.h"
 
+#ifdef __ANDROID__
+//TODO: ...
+#else //__ANDROID__
+
 #include "cmdline.h"
 #include "lib.h"
 #include "log.h"
@@ -366,3 +370,5 @@ char video_canvas_can_resize(video_canvas_t *canvas)
 {
     return !IsZoomed(canvas->hwnd);
 }
+
+#endif //__ANDROID__
