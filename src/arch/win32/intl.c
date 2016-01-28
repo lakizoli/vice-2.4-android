@@ -729,6 +729,8 @@ static windows_iso_t windows_to_iso[] = {
     { 0, NULL, 0, 0 }
 };
 
+#endif //__ANDROID__
+
 static int intl_table[][countof(language_table)] = {
 
 /* res.rc */
@@ -748,15 +750,13 @@ static int intl_table[][countof(language_table)] = {
 
 };
 
-#endif //__ANDROID__
-
 /* --------------------------------------------------------------------- */
 
 /* codepage 28591 (ISO 8859-1) to current codepage conversion tables */
 
 static char cp28591[256];
 
-static const WCHAR wcp28591[256] = {
+static const wchar_t wcp28591[256] = {
     0x0000, 0x0001, 0x0002, 0x0003, 0x0004, 0x0005, 0x0006, 0x0007,
     0x0008, 0x0009, 0x000a, 0x000b, 0x000c, 0x000d, 0x000e, 0x000f,
     0x0010, 0x0011, 0x0012, 0x0013, 0x0014, 0x0015, 0x0016, 0x0017,
@@ -796,7 +796,7 @@ static const WCHAR wcp28591[256] = {
 
 static char cp28592[256];
 
-static const WCHAR wcp28592[256] = {
+static const wchar_t wcp28592[256] = {
     0x0000, 0x0001, 0x0002, 0x0003, 0x0004, 0x0005, 0x0006, 0x0007,
     0x0008, 0x0009, 0x000a, 0x000b, 0x000c, 0x000d, 0x000e, 0x000f,
     0x0010, 0x0011, 0x0012, 0x0013, 0x0014, 0x0015, 0x0016, 0x0017,
@@ -836,7 +836,7 @@ static const WCHAR wcp28592[256] = {
 
 static char cp28595[256];
 
-static const WCHAR wcp28595[256] = {
+static const wchar_t wcp28595[256] = {
     0x0000, 0x0001, 0x0002, 0x0003, 0x0004, 0x0005, 0x0006, 0x0007,
     0x0008, 0x0009, 0x000a, 0x000b, 0x000c, 0x000d, 0x000e, 0x000f,
     0x0010, 0x0011, 0x0012, 0x0013, 0x0014, 0x0015, 0x0016, 0x0017,
@@ -876,7 +876,7 @@ static const WCHAR wcp28595[256] = {
 
 static char cp28599[256];
 
-static const WCHAR wcp28599[256] = {
+static const wchar_t wcp28599[256] = {
     0x0000, 0x0001, 0x0002, 0x0003, 0x0004, 0x0005, 0x0006, 0x0007,
     0x0008, 0x0009, 0x000a, 0x000b, 0x000c, 0x000d, 0x000e, 0x000f,
     0x0010, 0x0011, 0x0012, 0x0013, 0x0014, 0x0015, 0x0016, 0x0017,
@@ -1236,7 +1236,7 @@ static void intl_text_free(void)
 
 #ifdef __ANDROID__
 
-static char* intl_load_text(int en_resource, int res_code, int lang_table_index)
+static char* intl_load_text(int en_resource)
 {
 	unsigned int i;
 	int j, k;
@@ -1247,7 +1247,7 @@ static char* intl_load_text(int en_resource, int res_code, int lang_table_index)
 		hRes = intl_find_text_for_res_code (en_resource);
 		if (hRes) {
 			for (k = 0; k < 16; k++) {
-				intl_text_table[((j - 1) << 4) + k][i] = lib_stralloc (hres);
+				intl_text_table[((j - 1) << 4) + k][i] = lib_stralloc (hRes);
 			}
 		} else {
 			for (k = 0; k < 16; k++) {
