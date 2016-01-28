@@ -21,6 +21,8 @@ LOCAL_CPP_EXTENSION := .cpp
 
 LOCAL_SRC_FILES +=				\
 	fastsid.c                   \
+	resid.cpp					\
+	resid-fp.cpp				\
 	sid-cmdline-options.c       \
 	sid-resources.c             \
 	sid-snapshot.c              \
