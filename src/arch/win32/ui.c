@@ -33,6 +33,7 @@
 //Multiplatform functions
 //////////////////////////////////////////////////////////////////////////////////////////////////
 #include "log.h"
+#include "lib.h"
 
 //Update all the menus according to the current settings.
 void ui_update_menus (void) {
@@ -98,7 +99,6 @@ void ui_error (const char *format, ...) {
 #include "kbd.h"
 #include "kbdbuf.h"
 #include "keyboard.h"
-#include "lib.h"
 #include "log.h"
 #include "machine.h"
 #include "maincpu.h"
