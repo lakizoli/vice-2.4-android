@@ -124,7 +124,9 @@
 
 #define MSVC_RC                 1
 
-#define strcasecmp(s1, s2)      _stricmp(s1, s2)
+#ifndef __ANDROID__
+#	define strcasecmp(s1, s2)      _stricmp(s1, s2)
+#endif //__ANDROID__
 #define HAVE_STRCASECMP         1
 
 //#define snprintf _snprintf
