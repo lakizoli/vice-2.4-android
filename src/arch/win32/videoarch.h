@@ -28,6 +28,10 @@
 #ifndef VICE_VIDEOARCH_H
 #define VICE_VIDEOARCH_H
 
+#ifdef __ANDROID__
+//TODO: ...
+#else //__ANDROID__
+
 /*  Nasty patch to avoid defining BYTE, WORD, DWORD more than once.  */
 
 #undef BYTE
@@ -120,5 +124,7 @@ extern int dx_primary_surface_rendering;
 #ifdef HAVE_D3D9_H
 extern LPDIRECT3D9 d3d;
 #endif
+
+#endif //__ANDROID__
 
 #endif
