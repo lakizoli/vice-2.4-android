@@ -114,7 +114,9 @@
 #define __amd64__               1
 #endif
 
-#define inline                  _inline
+#ifndef __ANDROID__
+#	define inline                  _inline
+#endif //__ANDROID__
 
 #define _ANONYMOUS_UNION
 
