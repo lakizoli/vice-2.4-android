@@ -5,15 +5,10 @@
 TOP_PATH := $(abspath $(call my-dir))
 
 include $(TOP_PATH)/../src/Android.mk
-include $(TOP_PATH)/../src/arch/win32/Android.mk
 include $(TOP_PATH)/../src/c64/Android.mk
-include $(TOP_PATH)/../src/c64/cart/Android.mk
 include $(TOP_PATH)/../src/core/Android.mk
 include $(TOP_PATH)/../src/drive/Android.mk
-include $(TOP_PATH)/../src/drive/iec/c64exp/Android.mk
-include $(TOP_PATH)/../src/drive/iec/Android.mk
 include $(TOP_PATH)/../src/diskimage/Android.mk
-include $(TOP_PATH)/../src/fileio/Android.mk
 include $(TOP_PATH)/../src/fsdevice/Android.mk
 include $(TOP_PATH)/../src/gfxoutputdrv/Android.mk
 include $(TOP_PATH)/../src/iecbus/Android.mk
@@ -64,18 +59,13 @@ LOCAL_LDLIBS := -llog
 
 LOCAL_SHARED_LIBRARIES :=
 LOCAL_STATIC_LIBRARIES := 		\
-	arch						\
 	base                        \
 	c64                         \
-	c64cart                     \
-	c64exp                      \
 	core                        \
 	diskimage                   \
 	drive                       \
-	fileio                      \
 	fsdevice                    \
 	gfxoutputdrv                \
-	iec                         \
 	iecbus                      \
 	imagecontents               \
 	monitor                     \
