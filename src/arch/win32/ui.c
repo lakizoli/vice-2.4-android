@@ -81,6 +81,8 @@ int ui_extend_image_dialog (void) {
 //////////////////////////////////////////////////////////////////////////////////////////////////
 #ifdef __ANDROID__
 
+#include "uiapi.h"
+
 //Dispay the drive status.
 void ui_enable_drive_status (ui_drive_enable_t enable, int *drive_led_color) {
 }
