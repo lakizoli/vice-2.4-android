@@ -67,11 +67,36 @@ void ui_error (const char *format, ...) {
 	lib_free (tmp);
 }
 
+//Handle the "Do you want to extend the disk image to 40-track format"?
+int ui_extend_image_dialog (void) {
+	//int ret;
+
+	//ret = ui_messagebox(translate_text(IDS_EXTEND_TO_40_TRACKS), translate_text(IDS_VICE_QUESTION), MB_YESNO | MB_ICONQUESTION);
+	//return ret == IDYES;
+	return 0;
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //Android platform specific functions
 //////////////////////////////////////////////////////////////////////////////////////////////////
 #ifdef __ANDROID__
-//TODO: ...
+
+//Dispay the drive status.
+void ui_enable_drive_status (ui_drive_enable_t enable, int *drive_led_color) {
+}
+
+//Toggle displaying of the drive track.
+//drive_base is either 8 or 0 depending on unit or drive display. Dual drives display drive 0: and 1: instead of unit 8: and 9:
+void ui_display_drive_track (unsigned int drive_number, unsigned int drive_base, unsigned int half_track_number) {
+}
+
+//Toggle displaying of the drive LED.
+void ui_display_drive_led (int drivenum, unsigned int led_pwm1, unsigned int led_pwm2) {
+}
+
+//display the attched tape image
+void ui_display_tape_current_image (const char *image) {
+}
 
 #else //__ANDROID__
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1035,17 +1060,6 @@ ui_jam_action_t ui_jam_dialog(const char *format,...)
     //        return UI_JAM_NONE;
     //}
     return UI_JAM_NONE;
-}
-
-/* Handle the "Do you want to extend the disk image to 40-track format"?
-   dialog.  */
-int ui_extend_image_dialog(void)
-{
-    //int ret;
-
-    //ret = ui_messagebox(translate_text(IDS_EXTEND_TO_40_TRACKS), translate_text(IDS_VICE_QUESTION), MB_YESNO | MB_ICONQUESTION);
-    //return ret == IDYES;
-	return 0;
 }
 
 /* ------------------------------------------------------------------------- */
