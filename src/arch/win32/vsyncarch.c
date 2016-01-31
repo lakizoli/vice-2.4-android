@@ -26,6 +26,14 @@
 
 
 #include "vice.h"
+#include "ui.h"
+#include "lightpendrv.h"
+#include "mousedrv.h"
+#include "kbdbuf.h"
+
+#ifdef HAS_JOYSTICK
+#include "joy.h"
+#endif
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //Multiplatform functions
@@ -101,19 +109,10 @@ void vsyncarch_sleep(signed long delay)
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "vsync.h"
-#include "kbdbuf.h"
-#include "lightpendrv.h"
 #include "log.h"
 #include "machine.h"
-#include "ui.h"
 #include "uiapi.h"
-#include "mousedrv.h"
 #include "videoarch.h"
-
-#ifdef HAS_JOYSTICK
-#include "joy.h"
-#endif
-
 #include "vsyncapi.h"
 
 // -------------------------------------------------------------------------

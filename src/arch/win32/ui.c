@@ -42,9 +42,6 @@ int number_of_windows = 0;
 void ui_update_menus (void) {
 }
 
-void ui_dispatch_events(void) {
-}
-
 //Report an error to the user (one string).
 void ui_error_string (const char *text) {
 	//TCHAR *st;
@@ -297,6 +294,9 @@ int ui_init_finalize(void) {
 }
 
 void ui_exit(void) {
+}
+
+void ui_dispatch_events (void) {
 }
 
 #else //__ANDROID__

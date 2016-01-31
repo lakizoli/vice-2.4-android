@@ -30,6 +30,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "kbd.h"
 
@@ -81,7 +82,6 @@ void kbd_initialize_numpad_joykeys(int* joykeys)
 
 #include <windows.h>
 #include <tchar.h>
-#include <string.h>
 
 #include "keyboard.h"
 #include "types.h"
