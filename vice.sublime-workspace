@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"vs",
+				"vsyncarch_gettime"
+			],
+			[
 				"JUHU",
 				"JUHU2"
 			],
@@ -510,20 +514,24 @@
 			[
 				"sal",
 				"saltBytes"
-			],
-			[
-				"salt",
-				"saltBytes"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "android/Android.mk",
+			"file": "src/arch/win32/video.c",
 			"settings":
 			{
-				"buffer_size": 2897,
+				"buffer_size": 14695,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/arch/win32/videoarch.h",
+			"settings":
+			{
+				"buffer_size": 5439,
 				"line_ending": "Unix"
 			}
 		}
@@ -569,6 +577,32 @@
 	"file_history":
 	[
 		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/ui.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/video-ddraw.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/video.h",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/videoarch.h",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/palette.h",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/vicii/vicii-resources.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/maincpu.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/maincpu.h",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/kbd.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/resources.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/vsyncarch.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/joy.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/archdep.c",
+		"/Users/zoli/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/zoli/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/vicii/vicii-clock-stretch.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/msvc/ide-config.h",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/gfxoutputdrv/ffmpeglib.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/gfxoutputdrv/ffmpeglib.h",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/gfxoutputdrv/ffmpegdrv.h",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/gfxoutputdrv/ffmpegdrv.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/winmain.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/ui.h",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/statusbar.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/winmain.h",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/util.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/android/Android.mk",
 		"/Users/zoli/work/git_repos/vice-2.4-android/src/c64/c64romset.c",
 		"/Users/zoli/work/git_repos/vice-2.4-android/src/video/Android.mk",
 		"/Users/zoli/work/git_repos/vice-2.4-android/src/vicii/Android.mk",
@@ -588,12 +622,10 @@
 		"/Users/zoli/work/git_repos/vice-2.4-android/src/Android.mk",
 		"/Users/zoli/work/git_repos/vice-2.4-android/android/build.sh",
 		"/Users/zoli/work/git_repos/vice-2.4-android/android/build.out",
-		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/vsyncarch.c",
 		"/Users/zoli/work/git_repos/vice-2.4-android/src/sounddrv/sounddummy.c",
 		"/Users/zoli/work/git_repos/vice-2.4-android/src/vsyncapi.h",
 		"/Users/zoli/work/git_repos/vice-2.4-android/src/sounddrv/Android.mk",
 		"/Users/zoli/Library/Application Support/Sublime Text 2/Packages/User/ViceAndroid.sublime-build",
-		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/videoarch.h",
 		"/Users/zoli/work/!projects/clangtest/build.sh",
 		"/Users/zoli/work/!projects/clangtest/test.h",
 		"/Users/zoli/work/!projects/clangtest/test2.cpp",
@@ -671,31 +703,7 @@
 		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/elementinfo/ElementPropertyDetailsBlockData.java",
 		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/res/layout/element_properties_section_header.xml",
 		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/res/layout/gallery_item.xml",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/documentnavigation/marker/MarkerManagerController.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/messaging/ui/ForgotPasswordView.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/res/layout/forgot_password_view.xml",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/messaging/ui/ServerDetailsView.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/res/layout/server_details_view.xml",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/res/layout/message_list_view.xml",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/assets/extract/zr_reszh.xml",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/messaging/ui/NewMessageView.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/res/layout/element_property_details_controller.xml",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/documentnavigation/BookMarkAdapter.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/documentnavigation/BookMarkManagerController.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/documentnavigation/BookMarkRelevantView.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/jni/com_graphisoft_bimx_engine_Settings.h",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/jni/com_graphisoft_bimx_engine_Settings.cpp",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/jni/com_graphisoft_bimx_engine_Resources.cpp",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/preferences/SettingsAdvanced.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/documentnavigation/BookMark.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/elementinfo/ElementPropertyCell.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/engine/Settings.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/res/drawable/model_cell_background_selector.xml",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/elementinfo/ElementProperty.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/jni/elementinfo/com_graphisoft_bimx_hm_elementinfo_ElementPropertiesData.cpp",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bxengine/utility/BXGuid.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/res/layout-large/viewer.xml",
-		"/Users/zoli/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
+		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/documentnavigation/marker/MarkerManagerController.java"
 	],
 	"find":
 	{
@@ -714,6 +722,64 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"cmdline_register_options",
+			"video_init_cmdline_options",
+			"video_canvas_update",
+			"video_canvas_create_ddraw",
+			"viewport_t",
+			"palette_s",
+			"video_canvas_t",
+			"video_set_physical_colors",
+			"video_canvas_set_palette",
+			"video_canvas_cre",
+			"video_canvas",
+			"video_init",
+			"number_of_windows",
+			"cap_fullscreen_t",
+			"fullscreen_capability",
+			"c128cpu_memory_refresh_clk",
+			"maincpu_stretch",
+			"K_RIGHTCTRL",
+			"kbd_arch_init",
+			"joydev4cmdline_options",
+			"machine_class",
+			"resources_register_int",
+			"joystick_arch_init_resources",
+			"joyGetNumDevs",
+			"joy_arch_init",
+			"ui_dispatch_events",
+			"joystick_cl",
+			"joystick_update",
+			"useconds_t",
+			"clock_gettime",
+			"timeGetTime",
+			"timeBeginPeriod",
+			"vsyncarch_frequency",
+			"maincpu_clk",
+			"c128cpu_memory_refresh_clk",
+			"HAVE_FFMPEG",
+			"ffmpeglib_open",
+			"ffmpeglib_",
+			"ffmpeglib.h",
+			"ffmpeg",
+			"ff_log2_tab",
+			"//TODO:",
+			"TODO:",
+			"ui_jam_action_t",
+			"ui_update_me",
+			"ui_messagebox",
+			"ui_jam_dialog",
+			"ui_display_tape_",
+			"ui_display_",
+			"ui_display_event_time",
+			"ui_display_",
+			"number_of_windows",
+			"ui_exit",
+			"ui_init_finalize",
+			"ui_init_finish",
+			"atexit(",
+			"ui_init_finish",
+			"main_exit",
 			"ui_display_drive_current_image",
 			"LOCAL_STATIC_LIBRARIES",
 			"gar",
@@ -783,65 +849,7 @@
 			"onzone",
 			"ElementPropertiesViewListenerImp",
 			"showInfo",
-			"INFO3D_SELECTED",
-			"mZoneReceiver",
-			"ZONE_SELECTED",
-			"showZoneStampPopup",
-			"ElementPropertiesController",
-			"zr_res_1424",
-			"1424",
-			"clickBIMInfoButton",
-			"HasCustomInfoIn",
-			"HasLegacyInfoIn",
-			"showInfoButton",
-			"mInfoButton",
-			"GhostPopupView",
-			"mJumpButton",
-			"ghostview_hideghost",
-			"1406",
-			"ElementPropertiesDataSource",
-			"new ElementPropertiesDataSource",
-			"OnClickListener",
-			"removeZonePopup",
-			"removeMarkerPopup",
-			"animationFinished",
-			"THREAD_UI",
-			"THREAD_GL",
-			"animationFinished",
-			"transitionCompleted",
-			"animation finished",
-			"animateIn",
-			"openHistoryItem",
-			"hasLegacy",
-			"findElement",
-			"MessageAdapter::getView::onClick()\"",
-			"refresh3DSelection",
-			"repPoint",
-			"userItem",
-			"openHistoryItem",
-			"PurchaseAlertCause",
-			"app",
-			"a",
-			"man",
-			"openHistoryItem",
-			"purchaseAlert",
-			"addCurrentDocumentToHistory",
-			"openHistoryItem",
-			"openhistoryitem",
-			"gowith",
-			"goto3d",
-			"mostRelevant3d",
-			"adjustHeight",
-			"mMode",
-			"MODE_2D",
-			"MODE",
-			"getMode",
-			"mMode",
-			"Viewer2D",
-			"currentview",
-			"is2D",
-			"isIn2D",
-			"element_properties_list_righticon"
+			"INFO3D_SELECTED"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -866,26 +874,52 @@
 			[
 				{
 					"buffer": 0,
-					"file": "android/Android.mk",
+					"file": "src/arch/win32/video.c",
 					"settings":
 					{
-						"buffer_size": 2897,
+						"buffer_size": 14695,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1914,
-								1914
+								2014,
+								2014
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/C++/C.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 583.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/arch/win32/videoarch.h",
+					"settings":
+					{
+						"buffer_size": 5439,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2270,
+								2270
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 762.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -938,6 +972,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"videoar",
+				"src/arch/win32/videoarch.h"
+			],
+			[
+				"video.h",
+				"src/video.h"
+			],
 			[
 				"ui.c",
 				"src/arch/win32/ui.c"
