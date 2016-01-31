@@ -519,8 +519,16 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "android/Android.mk",
+			"settings":
+			{
+				"buffer_size": 2897,
+				"line_ending": "Unix"
+			}
+		}
 	],
-	"build_system": "Packages/Super Ant/SuperAnt.sublime-build",
+	"build_system": "Packages/User/ViceAndroid.sublime-build",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -543,7 +551,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 449.0
+		"width": 392.0
 	},
 	"console":
 	{
@@ -560,7 +568,31 @@
 	},
 	"file_history":
 	[
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/ui.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/c64/c64romset.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/video/Android.mk",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/vicii/Android.mk",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/userport/Android.mk",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/sid/Android.mk",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/serial/Android.mk",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/rtc/Android.mk",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/rs232drv/Android.mk",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/raster/Android.mk",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/printerdrv/Android.mk",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/monitor/Android.mk",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/iecbus/Android.mk",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/gfxoutputdrv/Android.mk",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/fsdevice/Android.mk",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/drive/Android.mk",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/c64/Android.mk",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/Android.mk",
+		"/Users/zoli/work/git_repos/vice-2.4-android/android/build.sh",
+		"/Users/zoli/work/git_repos/vice-2.4-android/android/build.out",
 		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/vsyncarch.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/sounddrv/sounddummy.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/vsyncapi.h",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/sounddrv/Android.mk",
+		"/Users/zoli/Library/Application Support/Sublime Text 2/Packages/User/ViceAndroid.sublime-build",
 		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/videoarch.h",
 		"/Users/zoli/work/!projects/clangtest/build.sh",
 		"/Users/zoli/work/!projects/clangtest/test.h",
@@ -663,31 +695,7 @@
 		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/jni/elementinfo/com_graphisoft_bimx_hm_elementinfo_ElementPropertiesData.cpp",
 		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bxengine/utility/BXGuid.java",
 		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/res/layout-large/viewer.xml",
-		"/Users/zoli/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/jni/bxengine/com_graphisoft_bxengine_utility_BXGuid.cpp",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/hyperdocument/Address3D.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/hyperdocument/Address.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/documentnavigation/marker/MarkerManager.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/documentnavigation/marker/Marker2D.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/documentnavigation/marker/ElemInfoHelper.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/documentnavigation/tileview/GSTilingViewDatasource.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/hyperdocument/PublisherItem.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/jni/hyperdocument/com_graphisoft_bimx_hm_hyperdocument_PublisherItem.h",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/documentnavigation/tileview/MarkerOverlayView.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/documentnavigation/PublisherItemPage.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/documentnavigation/marker/TextLink.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/jni/jnihelper/JavaTextLink.h",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/jni/jnihelper/JavaMarker2D.h",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/jni/jnihelper/JavaZoneStamp.h",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/local.properties",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/jni/jniload.h",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/jni/com_graphisoft_bimx_BIMInfoHeader.cpp",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/modelmanager/ModelManager.java",
-		"/Volumes/Data/BIMxSoftic/BIMxPro/Sources.android/jni/jnihelper/JavaFloat.h",
-		"/Volumes/Data/BIMxSoftic/BIMxPro/Sources.android/jni/hyperdocument/com_graphisoft_bimx_hm_hyperdocument_PublisherItem.cpp",
-		"/Volumes/Data/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/hyperdocument/Address2D.java",
-		"/Volumes/Data/BIMxSoftic/BIMxPro/Sources.android/jni/jnihelper/JavaHistoryItem.h",
-		"/Volumes/Data/BIMxSoftic/BIMxPro/Sources.android/jni/jnihelper/JavaString.h"
+		"/Users/zoli/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
 	],
 	"find":
 	{
@@ -695,7 +703,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			""
@@ -706,6 +714,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ui_display_drive_current_image",
+			"LOCAL_STATIC_LIBRARIES",
+			"gar",
+			"libbase",
+			"libbas",
+			"lib",
+			"machine_bus_status_truedrive_set",
+			"ui.c",
+			"ui_init",
+			"machine_romset_init",
+			"sound_init_dummy_device",
 			"javafloatarray (",
 			"getStoredScreenshot",
 			"onScreenshotReady",
@@ -822,18 +841,7 @@
 			"currentview",
 			"is2D",
 			"isIn2D",
-			"element_properties_list_righticon",
-			"BIMxIcons",
-			"element_properties_list_leftbutton",
-			"ICON_MESSAGING_ONEMSG",
-			"MessageIcons",
-			"getIcons2",
-			"ICON_MESSAGING_BACK",
-			"604",
-			"element_properties_item_info_icon",
-			"hdbrowser_publisher_icon_margin",
-			"hdbrowser_publisher_bimx_icon_tsize",
-			"wrap_content"
+			"element_properties_list_righticon"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -853,8 +861,35 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "android/Android.mk",
+					"settings":
+					{
+						"buffer_size": 2897,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1914,
+								1914
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -891,7 +926,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 100.0
+		"height": 25.0
 	},
 	"replace":
 	{
@@ -903,6 +938,18 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"ui.c",
+				"src/arch/win32/ui.c"
+			],
+			[
+				"vsyncap",
+				"src/vsyncapi.h"
+			],
+			[
+				"vsyn",
+				"src/arch/win32/vsyncarch.c"
+			],
 			[
 				"javaflo",
 				"jni/jnihelper/JavaFloatArray.h"
