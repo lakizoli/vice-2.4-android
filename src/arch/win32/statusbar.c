@@ -26,9 +26,7 @@
 
 #include "vice.h"
 
-#ifdef __ANDROID__
-//TODO: ...
-#else //__ANDROID__
+#ifndef __ANDROID__
 
 #	include <windows.h>
 #include <windowsx.h>

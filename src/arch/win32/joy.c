@@ -28,7 +28,26 @@
 #include "vice.h"
 
 #ifdef __ANDROID__
-//TODO: ...
+
+int joystick_init_cmdline_options(void) {
+	return 0;
+}
+
+int joystick_arch_init_resources(void) {
+    return 0;
+}
+
+int joy_arch_init(void) {
+	return 0;
+}
+
+int joystick_close(void) {
+	return 0;
+}
+
+void joystick_update(void) {
+}
+
 #else //__ANDROID__
 
 #include "cmdline.h"

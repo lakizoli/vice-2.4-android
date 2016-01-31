@@ -34,9 +34,15 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 #include "log.h"
 #include "lib.h"
+#include "uiapi.h"
+
+int number_of_windows = 0;
 
 //Update all the menus according to the current settings.
 void ui_update_menus (void) {
+}
+
+void ui_dispatch_events(void) {
 }
 
 //Report an error to the user (one string).
@@ -76,28 +82,221 @@ int ui_extend_image_dialog (void) {
 	return 0;
 }
 
+// Let the user browse for a filename 
+char *ui_get_file(const char *format,...)
+{
+    //char *tmp;
+    //char *st;
+    //va_list args;
+
+    //va_start(args, format);
+    //tmp = lib_mvsprintf(format, args);
+    //va_end(args);
+
+    //st = uilib_select_file(NULL, tmp, UILIB_FILTER_ALL, UILIB_SELECTOR_TYPE_FILE_LOAD, UILIB_SELECTOR_STYLE_DISK);
+    //lib_free(tmp);
+
+    //return st;
+	return NULL;
+}
+
+// Handle the "CPU JAM" case.  
+ui_jam_action_t ui_jam_dialog(const char *format,...)
+{
+    //char *txt, *txt2;
+    //TCHAR *st;
+    //int ret;
+
+    //va_list ap;
+    //va_start(ap, format);
+    //txt = lib_mvsprintf(format, ap);
+    //va_end(ap);
+    //txt2 = lib_msprintf(translate_text(IDS_START_MONITOR), txt);
+    //st = system_mbstowcs_alloc(txt2);
+    //ret = ui_messagebox(st, translate_text(IDS_VICE_CPU_JAM), MB_YESNOCANCEL);
+    //system_mbstowcs_free(st);
+    //lib_free(txt2);
+    //lib_free(txt);
+    //switch (ret) {
+    //    case IDYES:
+    //        return UI_JAM_MONITOR;
+    //    case IDNO:
+    //        return UI_JAM_HARD_RESET;
+    //    case IDCANCEL:
+    //        return UI_JAM_NONE;
+    //}
+    return UI_JAM_NONE;
+}
+
+void ui_update_menu(void)
+{
+    //translated_menu = LoadMenu(winmain_instance, MAKEINTRESOURCE(emu_menu));
+    //if (menu_translation_table != NULL) {
+    //    ui_translate_menu_items(translated_menu, menu_translation_table);
+    //    ui_translate_menu_popups(translated_menu, popup_translation_table);
+    //    uikeyboard_menu_shortcuts(translated_menu);
+    //}
+    //ui_show_menu();
+}
+
+// Exit.  
+void ui_exit(void);
+
+// Initialize the UI after setting all the resource values.  
+int ui_init_finish(void)
+{
+    //ui_accelerator = uikeyboard_create_accelerator_table();
+    //ui_fullscreen_init();
+    atexit(ui_exit);
+    return 0;
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //Android platform specific functions
 //////////////////////////////////////////////////////////////////////////////////////////////////
 #ifdef __ANDROID__
 
-#include "uiapi.h"
+#include <unistd.h>
 
-//Dispay the drive status.
 void ui_enable_drive_status (ui_drive_enable_t enable, int *drive_led_color) {
 }
 
-//Toggle displaying of the drive track.
-//drive_base is either 8 or 0 depending on unit or drive display. Dual drives display drive 0: and 1: instead of unit 8: and 9:
 void ui_display_drive_track (unsigned int drive_number, unsigned int drive_base, unsigned int half_track_number) {
 }
 
-//Toggle displaying of the drive LED.
 void ui_display_drive_led (int drivenum, unsigned int led_pwm1, unsigned int led_pwm2) {
 }
 
-//display the attched tape image
+void ui_display_drive_current_image(unsigned int drivenum, const char *image) {
+}
+
 void ui_display_tape_current_image (const char *image) {
+}
+
+void ui_set_tape_status(int tape_status) {
+}
+
+void ui_display_tape_motor_status(int motor) {   
+}
+
+void ui_display_tape_control_status(int control) {
+}
+
+void ui_display_tape_counter(int counter) {
+}
+
+void ui_display_joyport(uint8_t *joyport) {
+}
+
+void ui_display_recording(int recording_status) {
+}
+
+void ui_display_playback(int playback_status, char *version) {
+}
+
+void ui_display_event_time(unsigned int current, unsigned int total) {
+}
+
+void ui_display_volume(int vol) {
+}
+
+// Initialize the UI before setting all the resource values.  
+int ui_init(int *argc, char **argv)
+{
+ //    WNDCLASS window_class;
+
+ //    //switch (machine_class) {
+ //    //    case VICE_MACHINE_C64:
+ //    //    case VICE_MACHINE_C64SC:
+ //    //        emu_menu = IDR_MENUC64;
+ //    //        break;
+ //    //    case VICE_MACHINE_C64DTV:
+ //    //        emu_menu = IDR_MENUC64DTV;
+ //    //        break;
+ //    //    case VICE_MACHINE_C128:
+ //    //        emu_menu = IDR_MENUC128;
+ //    //        break;
+ //    //    case VICE_MACHINE_VIC20:
+ //    //        emu_menu = IDR_MENUVIC;
+ //    //        break;
+ //    //    case VICE_MACHINE_PET:
+ //    //        emu_menu = IDR_MENUPET;
+ //    //        break;
+ //    //    case VICE_MACHINE_PLUS4:
+ //    //        emu_menu = IDR_MENUPLUS4;
+ //    //        break;
+ //    //    case VICE_MACHINE_CBM5x0:
+ //    //        emu_menu = IDR_MENUCBM5X0;
+ //    //        break;
+ //    //    case VICE_MACHINE_CBM6x0:
+ //    //        emu_menu = IDR_MENUCBM2;
+ //    //        break;
+ //    //    default:
+ //    //        log_debug("UI: No menu entries for this machine defined!");
+ //    //        log_debug("UI: Using C64 type UI menues.");
+ //    //        emu_menu = IDR_MENUC64;
+ //    //}
+
+ //    /* Register the window class.  */
+ //    window_class.style = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
+ //    window_class.lpfnWndProc = window_proc;
+ //    window_class.cbClsExtra = 0;
+ //    window_class.cbWndExtra = 0;
+ //    window_class.hInstance = winmain_instance;
+ //    window_class.hIcon = LoadIcon(winmain_instance, MAKEINTRESOURCE(IDI_ICON1));
+ //    window_class.hCursor = LoadCursor(NULL, IDC_ARROW);
+ //    window_class.hbrBackground = (HBRUSH)CreateSolidBrush(RGB(0, 0, 0) + 1);
+	// window_class.lpszMenuName = NULL; //MAKEINTRESOURCE(emu_menu);
+ //    window_class.lpszClassName = APPLICATION_CLASS;
+ //    RegisterClass(&window_class);
+
+
+ //    window_class.style = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
+ //    window_class.lpfnWndProc = dummywindowproc;
+ //    window_class.cbClsExtra = 0;
+ //    window_class.cbWndExtra = 0;
+ //    window_class.hInstance = winmain_instance;
+ //    window_class.hIcon = LoadIcon(winmain_instance, MAKEINTRESOURCE(IDI_ICON1));
+ //    window_class.hCursor = LoadCursor(NULL, IDC_ARROW);
+ //    window_class.hbrBackground = (HBRUSH)CreateSolidBrush(RGB(0, 0, 0) + 1);
+ //    window_class.lpszMenuName = NULL;
+ //    window_class.lpszClassName = APPLICATION_CLASS_MAIN;
+ //    RegisterClass(&window_class);
+
+ //    /* Create the main window.  Notice that we are not going to
+ //       `ShowWindow()' it yet; this will be done as soon as the video module
+ //       requires us to do so.  This is needed both because the video module
+ //       needs an application window to be created to initialize itself, and
+ //       because this might allow us to support more than one emulation window
+ //       in the future.  */
+ //    main_hwnd = CreateWindow(APPLICATION_CLASS_MAIN,
+ //                             TEXT("No title"), /* (for now) */
+ //                             WS_OVERLAPPED | WS_CLIPCHILDREN | WS_BORDER | WS_DLGFRAME| WS_SYSMENU | WS_MINIMIZEBOX | WS_MAXIMIZEBOX,
+ //                             CW_USEDEFAULT,
+ //                             CW_USEDEFAULT,
+ //                             CW_USEDEFAULT,
+ //                             CW_USEDEFAULT,
+ //                             NULL,
+ //                             NULL,
+ //                             winmain_instance,
+ //                             NULL);
+ //    InitCommonControls();
+
+    number_of_windows = 0;
+
+    // statusbar_create_brushes();
+
+    return 0;
+}
+
+void ui_shutdown(void) {
+}
+
+int ui_init_finalize(void) {
+    return 0;
+}
+
+void ui_exit(void) {
 }
 
 #else //__ANDROID__
@@ -139,7 +338,6 @@ void ui_display_tape_current_image (const char *image) {
 #include "system.h"
 #include "translate.h"
 #include "types.h"
-#include "uiapi.h"
 #include "uicmdline.h"
 #include "util.h"
 #include "version.h"
@@ -160,7 +358,6 @@ static TCHAR *hwnd_titles[2];
 /* Exposure handler.  */
 HWND window_handles[2];
 HMENU translated_menu;
-int number_of_windows = 0;
 int window_padding_x[2];
 int window_padding_y[2];
 
@@ -462,15 +659,6 @@ void ui_shutdown(void)
 {
     statusbar_delete_brushes();
     //uikeyboard_shutdown();
-}
-
-/* Initialize the UI after setting all the resource values.  */
-int ui_init_finish(void)
-{
-    //ui_accelerator = uikeyboard_create_accelerator_table();
-    //ui_fullscreen_init();
-    atexit(ui_exit);
-    return 0;
 }
 
 int ui_init_finalize(void)
@@ -866,17 +1054,6 @@ void ui_set_alwaysontop(int alwaysontop)
 static const ui_menu_toggle_t *machine_specific_toggles = NULL;
 static const ui_res_value_list_t *machine_specific_values = NULL;
 
-void ui_update_menu(void)
-{
-    //translated_menu = LoadMenu(winmain_instance, MAKEINTRESOURCE(emu_menu));
-    //if (menu_translation_table != NULL) {
-    //    ui_translate_menu_items(translated_menu, menu_translation_table);
-    //    ui_translate_menu_popups(translated_menu, popup_translation_table);
-    //    uikeyboard_menu_shortcuts(translated_menu);
-    //}
-    //ui_show_menu();
-}
-
 void ui_show_menu(void)
 {
     int i;
@@ -1016,52 +1193,6 @@ void ui_message(const char *format, ...)
     //system_mbstowcs_free(st);
     //vsync_suspend_speed_eval();
     lib_free(tmp);
-}
-
-/* Let the user browse for a filename */
-char *ui_get_file(const char *format,...)
-{
-    //char *tmp;
-    //char *st;
-    //va_list args;
-
-    //va_start(args, format);
-    //tmp = lib_mvsprintf(format, args);
-    //va_end(args);
-
-    //st = uilib_select_file(NULL, tmp, UILIB_FILTER_ALL, UILIB_SELECTOR_TYPE_FILE_LOAD, UILIB_SELECTOR_STYLE_DISK);
-    //lib_free(tmp);
-
-    //return st;
-	return NULL;
-}
-
-/* Handle the "CPU JAM" case.  */
-ui_jam_action_t ui_jam_dialog(const char *format,...)
-{
-    //char *txt, *txt2;
-    //TCHAR *st;
-    //int ret;
-
-    //va_list ap;
-    //va_start(ap, format);
-    //txt = lib_mvsprintf(format, ap);
-    //va_end(ap);
-    //txt2 = lib_msprintf(translate_text(IDS_START_MONITOR), txt);
-    //st = system_mbstowcs_alloc(txt2);
-    //ret = ui_messagebox(st, translate_text(IDS_VICE_CPU_JAM), MB_YESNOCANCEL);
-    //system_mbstowcs_free(st);
-    //lib_free(txt2);
-    //lib_free(txt);
-    //switch (ret) {
-    //    case IDYES:
-    //        return UI_JAM_MONITOR;
-    //    case IDNO:
-    //        return UI_JAM_HARD_RESET;
-    //    case IDCANCEL:
-    //        return UI_JAM_NONE;
-    //}
-    return UI_JAM_NONE;
 }
 
 /* ------------------------------------------------------------------------- */

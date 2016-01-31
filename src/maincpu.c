@@ -211,6 +211,12 @@ monitor_interface_t *maincpu_monitor_interface = NULL;
 /* Global clock counter.  */
 CLOCK maincpu_clk = 0L;
 
+/* Global c128 clock counter. (Hack to build Android) */
+CLOCK c128cpu_memory_refresh_clk = 0;
+
+/* 8502 cycle stretch indicator */
+int maincpu_stretch = 0;
+
 /* This is flag is set to 1 each time a Read-Modify-Write instructions that
    accesses memory is executed.  We can emulate the RMW behaviour of the 6510
    this way.  VERY important notice: Always assign 1 for true, 0 for false!

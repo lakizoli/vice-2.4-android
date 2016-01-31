@@ -27,9 +27,78 @@
 
 #include "vice.h"
 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//Multiplatform functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
+static unsigned long frequency = 0;
+static int perf_rotate = 0;
+static int perf_inited = 0;
+enum { EXTRA_PRECISION = 10 };
+
+signed long vsyncarch_frequency(void) {
+    return 1000 << EXTRA_PRECISION;
+}
+
+void vsyncarch_presync(void)
+{
+    /* Update mouse */
+    mouse_update_mouse();
+
+    /* Update lightpen */
+    win32_lightpen_update();
+
+    /* Flush keypresses emulated through the keyboard buffer.  */
+    kbdbuf_flush();
+    joystick_update();
+}
+
+void vsyncarch_postsync(void)
+{
+    /* Dispatch all the pending UI events.  */
+    ui_dispatch_events();
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//Android platform specific functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
 #ifdef __ANDROID__
-//TODO: ...
+
+#include <unistd.h>
+
+static uint64_t vsyncarch_current_time_msec(void) {
+	struct timespec now;
+	clock_gettime (CLOCK_MONOTONIC, &now);
+	return ((uint64_t) now.tv_sec * 1000000000ULL + (uint64_t) now.tv_nsec) / 1000000ULL; //millisec = 1000*1000 * nanosec
+}
+
+unsigned long vsyncarch_gettime(void) {
+    return (unsigned long) (vsyncarch_current_time_msec() << EXTRA_PRECISION);
+}
+
+void vsyncarch_init(void) {
+}
+
+void vsyncarch_display_speed(double speed, double frame_rate, int warp_enabled) {
+}
+
+void vsyncarch_sleep(signed long delay)
+{
+    uint64_t current_time = vsyncarch_current_time_msec();
+    uint64_t target_time = (uint64_t) (current_time + (delay >> EXTRA_PRECISION));
+    while (current_time < target_time) {
+    	uint64_t sleep_duration = target_time - current_time;
+    	if (sleep_duration >= 1000000ULL)
+    		sleep_duration = 1000000ULL - 1ULL;
+    	
+        usleep(sleep_duration);
+        current_time = vsyncarch_current_time_msec();
+    }
+}
+
 #else //__ANDROID__
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//Windows platform specific functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "vsync.h"
 #include "kbdbuf.h"
@@ -48,16 +117,6 @@
 #include "vsyncapi.h"
 
 // -------------------------------------------------------------------------
-
-static unsigned long frequency = 0;
-static int perf_rotate = 0;
-static int perf_inited = 0;
-enum { EXTRA_PRECISION = 10 };
-
-signed long vsyncarch_frequency(void)
-{
-    return 1000 << EXTRA_PRECISION;
-}
 
 unsigned long vsyncarch_gettime(void)
 {
@@ -88,25 +147,6 @@ void vsyncarch_sleep(signed long delay)
         current_time = timeGetTime();
     }
     //log_debug("Sleep %d ms target reached to %d ms", delay >> EXTRA_PRECISION, current_time - target_time);
-}
-
-void vsyncarch_presync(void)
-{
-    /* Update mouse */
-    mouse_update_mouse();
-
-    /* Update lightpen */
-    win32_lightpen_update();
-
-    /* Flush keypresses emulated through the keyboard buffer.  */
-    kbdbuf_flush();
-    joystick_update();
-}
-
-void vsyncarch_postsync(void)
-{
-    /* Dispatch all the pending UI events.  */
-    ui_dispatch_events();
 }
 
 int vsyncarch_vbl_sync_enabled(void)

@@ -29,6 +29,8 @@
 
 #include "vice.h"
 
+#ifdef HAVE_FFMPEG
+
 #ifdef HAVE_FFMPEG_HEADER_SUBDIRS
 #include "libavformat/avformat.h"
 #ifdef HAVE_FFMPEG_SWSCALE
@@ -145,5 +147,7 @@ typedef struct ffmpeglib_s ffmpeglib_t;
 
 extern int ffmpeglib_open(ffmpeglib_t *lib);
 extern void ffmpeglib_close(ffmpeglib_t *lib);
+
+#endif //HAVE_FFMPEG
 
 #endif

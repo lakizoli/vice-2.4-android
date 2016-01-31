@@ -27,12 +27,44 @@
 
 #include "vice.h"
 
+#ifdef HAVE_SIGNAL_H
+#include <signal.h>
+#endif
+
+#include "log.h"
+#include "machine.h"
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//Multiplatform functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
+void main_exit(void)
+{
+#ifdef HAVE_SIGNAL_H
+    /* Disable SIGINT.  This is done to prevent the user from keeping C-c
+       pressed and thus breaking the cleanup process, which might be
+       dangerous.  */
+    signal(SIGINT, SIG_IGN);
+#endif
+
+    log_message(LOG_DEFAULT, "\nExiting...");
+
+    machine_shutdown();
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//Android platform specific functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
 #ifdef __ANDROID__
-//TODO: ...
+
+//...
+
 #else //__ANDROID__
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//Windows platform specific functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
 
 #define WIN32_LEAN_AND_MEAN
-#	include <windows.h>
+#include <windows.h>
 #include <windowsx.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -41,12 +73,7 @@
 #ifdef HAVE_CRTDBG
 #include <crtdbg.h>
 #endif
-#ifdef HAVE_SIGNAL_H
-#include <signal.h>
-#endif
 
-#include "log.h"
-#include "machine.h"
 #include "main.h"
 #include "winmain.h"
 #include "video.h"
@@ -83,20 +110,6 @@ int PASCAL WinMain(HINSTANCE instance, HINSTANCE prev_instance, TCHAR *cmd_line,
 #endif
 
     return 0;
-}
-
-void main_exit(void)
-{
-#ifdef HAVE_SIGNAL_H
-    /* Disable SIGINT.  This is done to prevent the user from keeping C-c
-       pressed and thus breaking the cleanup process, which might be
-       dangerous.  */
-    signal(SIGINT, SIG_IGN);
-#endif
-
-    log_message(LOG_DEFAULT, "\nExiting...");
-
-    machine_shutdown();
 }
 
 #endif //__ANDROID__

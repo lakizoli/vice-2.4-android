@@ -27,9 +27,7 @@
 #ifndef VICE_WINMAIN_H
 #define VICE_WINMAIN_H
 
-#ifdef __ANDROID__
-//TODO: ...
-#else //__ANDROID__
+#ifndef __ANDROID__
 
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>

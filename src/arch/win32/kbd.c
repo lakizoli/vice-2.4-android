@@ -28,17 +28,61 @@
 
 #include "vice.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "kbd.h"
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//Multiplatform functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
+void kbd_arch_init(void)
+{
+}
+
+signed long kbd_arch_keyname_to_keynum(char *keyname)
+{
+    return (signed long)atoi(keyname);
+}
+
+const char *kbd_arch_keynum_to_keyname(signed long keynum)
+{
+    static char keyname[20];
+
+    memset(keyname, 0, 20);
+
+    sprintf(keyname, "%li", keynum);
+
+    return keyname;
+}
+
+void kbd_initialize_numpad_joykeys(int* joykeys)
+{
+    joykeys[0] = K_RIGHTCTRL;
+    joykeys[1] = K_KP1;
+    joykeys[2] = K_KP2;
+    joykeys[3] = K_KP3;
+    joykeys[4] = K_KP4;
+    joykeys[5] = K_KP6;
+    joykeys[6] = K_KP7;
+    joykeys[7] = K_KP8;
+    joykeys[8] = K_KP9;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//Android platform specific functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
 #ifdef __ANDROID__
 //TODO: ...
 #else //__ANDROID__
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//Windows platform specific functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
 
-#	include <windows.h>
+#include <windows.h>
 #include <tchar.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
-#include "kbd.h"
 #include "keyboard.h"
 #include "types.h"
 #include "winkbd.h"
@@ -130,41 +174,6 @@ const TCHAR *kbd_code_to_string(kbd_code_t kcode)
     };
 
     return tab[(int)kcode];
-}
-
-/* ------------------------------------------------------------------------ */
-
-void kbd_arch_init(void)
-{
-}
-
-signed long kbd_arch_keyname_to_keynum(char *keyname)
-{
-    return (signed long)atoi(keyname);
-}
-
-const char *kbd_arch_keynum_to_keyname(signed long keynum)
-{
-    static char keyname[20];
-
-    memset(keyname, 0, 20);
-
-    sprintf(keyname, "%li", keynum);
-
-    return keyname;
-}
-
-void kbd_initialize_numpad_joykeys(int* joykeys)
-{
-    joykeys[0] = K_RIGHTCTRL;
-    joykeys[1] = K_KP1;
-    joykeys[2] = K_KP2;
-    joykeys[3] = K_KP3;
-    joykeys[4] = K_KP4;
-    joykeys[5] = K_KP6;
-    joykeys[6] = K_KP7;
-    joykeys[7] = K_KP8;
-    joykeys[8] = K_KP9;
 }
 
 #endif //__ANDROID__

@@ -27,6 +27,8 @@
 #ifndef VICE_FFMPEGDRV_H
 #define VICE_FFMPEGDRV_H
 
+#ifdef HAVE_FFMPEG
+
 #include "screenshot.h"
 #include "gfxoutput.h"
 
@@ -34,5 +36,7 @@ extern void gfxoutput_init_ffmpeg(void);
 
 /* deprecated access for UIs that do not use the gfxoutputdrv->formatlist yet: */
 extern gfxoutputdrv_format_t ffmpegdrv_formatlist[];
+
+#endif //HAVE_FFMPEG
 
 #endif

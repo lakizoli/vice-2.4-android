@@ -26,23 +26,201 @@
  */
 
 #include "vice.h"
-
-#ifdef __ANDROID__
-//TODO: ...
-#else //__ANDROID__
-
-#include "cmdline.h"
 #include "lib.h"
 #include "log.h"
 #include "palette.h"
+#include "videoarch.h"
+#include "video.h"
+#include "viewport.h"
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//Multiplatform functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
+int video_canvas_set_palette(video_canvas_t *canvas, palette_t *p)
+{
+    if (p == NULL) {
+        return 0; /* no palette, nothing to do */
+    }
+    canvas->palette = p;
+
+    video_set_physical_colors(canvas);
+    return 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//Android platform specific functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
+#ifdef __ANDROID__
+
+int video_init_cmdline_options(void) {
+	return 0;
+}
+
+int video_init(void) {
+    return 0;
+}
+
+void video_shutdown(void) {
+}
+
+int video_arch_resources_init(void) {
+	return 0;
+}
+
+void video_arch_resources_shutdown(void) {
+}
+
+video_canvas_t *video_canvas_create(video_canvas_t *canvas, unsigned int *width, unsigned int *height, int mapped)
+{
+    // video_canvas_t *canvas_temp;
+
+    // canvas->title = lib_stralloc(canvas->viewport->title);
+
+    // ui_open_canvas_window(canvas);
+    // ui_canvas_child_window(canvas, video_dx9_enabled());
+
+    // if (video_dx9_enabled()) {
+    //     canvas_temp = video_canvas_create_dx9(canvas, width, height);
+    //     if (canvas_temp == NULL) {
+    //         log_debug("video: Falling back to DirectDraw canvas!");
+    //         dx9_available = 0;
+    //         ui_canvas_child_window(canvas, 0);
+    //     } else {
+    //         return canvas_temp;
+    //     }
+    // }
+    // return video_canvas_create_ddraw(canvas);
+
+    return NULL;
+}
+
+void video_arch_canvas_init(struct video_canvas_s *canvas) {
+    // if (video_setup_dx9() < 0) {
+    //     dx9_available = 0;
+    // } else {
+    //     dx9_available = 1;
+    // }
+
+    // canvas->video_draw_buffer_callback = NULL;
+}
+
+void video_canvas_destroy(video_canvas_t *canvas)
+{
+    // if (video_dx9_enabled()) {
+    //     video_device_release_dx9(canvas);
+    // }
+
+    // if (canvas != NULL) {
+    //     if (canvas->hwnd !=0) {
+    //         DestroyWindow(canvas->hwnd);
+    //     }
+    //     lib_free(canvas->title);
+    //     lib_free(canvas->pixels);
+    //     canvas->title = NULL;
+    // }
+}
+
+int video_set_physical_colors(video_canvas_t *c) {
+    // unsigned int i;
+    // int rshift;
+    // int rbits;
+    // int gshift;
+    // int gbits;
+    // int bshift;
+    // int bbits;
+    // DWORD rmask;
+    // DWORD gmask;
+    // DWORD bmask;
+
+    // /* Use hard coded D3DFMT_X8R8G8B8 format, driver does conversion */
+    // rshift = 16;
+    // rmask = 0xff;
+    // rbits = 0;
+
+    // gshift = 8;
+    // gmask = 0xff;
+    // gbits = 0;
+
+    // bshift = 0;
+    // bmask = 0xff;
+    // bbits = 0;
+
+    // if (c->depth > 8) {
+    //     for (i = 0; i < 256; i++) {
+    //         video_render_setrawrgb(i, ((i & (rmask << rbits)) >> rbits) << rshift, ((i & (gmask << gbits)) >> gbits) << gshift, ((i & (bmask << bbits)) >> bbits) << bshift);
+    //     }
+    //     video_render_initraw(c->videoconfig);
+    // }
+
+    // if (c->palette) {
+    //     for (i = 0; i < c->palette->num_entries; i++) {
+    //         DWORD p = (((c->palette->entries[i].red&(rmask << rbits)) >> rbits) << rshift) +
+    //                 (((c->palette->entries[i].green&(gmask << gbits)) >> gbits) << gshift) +
+    //                 (((c->palette->entries[i].blue&(bmask << bbits)) >> bbits) << bshift);
+    //         video_render_setphysicalcolor(c->videoconfig, i, p, c->depth);
+    //     }
+    // }
+    return 0;
+}
+
+// Change the size of `s' to `width' * `height' pixels.  
+void video_canvas_resize(video_canvas_t *canvas, char resize_canvas) {
+    // //int device;
+    // //int fullscreen_width;
+    // //int fullscreen_height;
+    // //int bitdepth;
+    // //int refreshrate;
+
+    // //if (IsFullscreenEnabled()) {
+    // //    GetCurrentModeParameters(&device, &fullscreen_width, &fullscreen_height, &bitdepth, &refreshrate);
+    // //} else {
+    //     ui_resize_canvas_window(canvas);
+    // //}
+
+    // if (video_dx9_enabled()) {
+    //     video_canvas_reset_dx9(canvas);
+    // }
+    // else {
+    //     video_canvas_reset_ddraw(canvas);
+    // }
+}
+
+// Raster code has updated display 
+void video_canvas_refresh(video_canvas_t *canvas, unsigned int xs, unsigned int ys, unsigned int xi, unsigned int yi, unsigned int w, unsigned int h)
+{
+    // if (video_dx9_enabled()) {
+    //     video_canvas_refresh_dx9(canvas, xs, ys, xi, yi, w, h);
+    // } else {
+    //     video_canvas_refresh_ddraw(canvas, xs, ys, xi, yi, w, h);
+    // }
+}
+
+//This call need to be called from Java refresh function...
+// Window got a WM_PAINT and needs a refresh 
+// void video_canvas_update(HWND hwnd, HDC hdc, int xclient, int yclient, int w, int h)
+// {
+//     // if (video_dx9_enabled()) {
+//     //     video_canvas_update_dx9(hwnd, hdc, xclient, yclient, w, h);
+//     // } else {
+//     //     video_canvas_update_ddraw(hwnd, hdc, xclient, yclient, w, h);
+//     // }
+// }
+
+char video_canvas_can_resize(video_canvas_t *canvas) {
+    return (char) 1;
+}
+
+#else //__ANDROID__
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//Windows platform specific functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "cmdline.h"
 #include "res.h"
 #include "resources.h"
 #include "translate.h"
 #include "ui.h"
 #include "uiapi.h"
-#include "video.h"
-#include "videoarch.h"
-#include "viewport.h"
 
 static int video_number_of_canvases;
 static video_canvas_t *video_canvases[2];
@@ -265,17 +443,6 @@ void video_canvas_destroy(video_canvas_t *canvas)
         lib_free(canvas->pixels);
         canvas->title = NULL;
     }
-}
-
-int video_canvas_set_palette(video_canvas_t *canvas, palette_t *p)
-{
-    if (p == NULL) {
-        return 0; /* no palette, nothing to do */
-    }
-    canvas->palette = p;
-
-    video_set_physical_colors(canvas);
-    return 0;
 }
 
 int video_set_physical_colors(video_canvas_t *c)

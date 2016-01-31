@@ -26,16 +26,30 @@
  */
 
 #include "vice.h"
+#include "video.h"
 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//Multiplatform functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
+void fullscreen_capability(cap_fullscreen_t *cap_fullscreen) {
+    cap_fullscreen->device_num = 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//Android platform specific functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
 #ifdef __ANDROID__
 //TODO: ...
 #else //__ANDROID__
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//Windows platform specific functions
+//////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-#	include <windows.h>
+#include <windows.h>
 #include <mmsystem.h>
 
 #include "cmdline.h"
@@ -50,7 +64,6 @@
 #include "translate.h"
 #include "types.h"
 #include "ui.h"
-#include "video.h"
 #include "videoarch.h"
 #include "viewport.h"
 #include "vsyncapi.h"
@@ -316,11 +329,6 @@ void video_canvas_refresh_ddraw(video_canvas_t *canvas, unsigned int xs, unsigne
     rect.bottom = h + rect.top;
 
     InvalidateRect(canvas->hwnd, &rect, FALSE);
-}
-
-void fullscreen_capability(cap_fullscreen_t *cap_fullscreen)
-{
-    cap_fullscreen->device_num = 0;
 }
 
 #endif //__ANDROID__
