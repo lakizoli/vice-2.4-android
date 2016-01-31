@@ -78,7 +78,7 @@ LOCAL_SRC_FILES +=							\
 	iec/c64exp/supercard.c
 
 LOCAL_SHARED_LIBRARIES :=
-LOCAL_STATIC_LIBRARIES := base core diskimage
+LOCAL_STATIC_LIBRARIES :=
 LOCAL_EXPORT_LDLIBS :=
 
 include $(BUILD_STATIC_LIBRARY)

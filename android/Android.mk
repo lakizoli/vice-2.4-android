@@ -36,13 +36,13 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE    := c64emu
 
-LOCAL_C_INCLUDES :=		 					\
-	$(TOP_PATH)/../src/arch/win32/msvc 		\
-	$(TOP_PATH)/../src/arch/win32 			\
-	$(TOP_PATH)/../src						\
-	$(TOP_PATH)/../src/drive                \
-	$(TOP_PATH)/../src/vdrive               \
-	$(TOP_PATH)/../src/lib/p64              \
+LOCAL_C_INCLUDES :=		 				\
+	$(TOP_PATH)/../src/arch/win32/msvc 	\
+	$(TOP_PATH)/../src/arch/win32 		\
+	$(TOP_PATH)/../src					\
+	$(TOP_PATH)/../src/drive      		\
+	$(TOP_PATH)/../src/vdrive     		\
+	$(TOP_PATH)/../src/lib/p64    		\
 	$(TOP_PATH)/../src/monitor
 
 #LOCAL_DISABLE_FORMAT_STRING_CHECKS := true
@@ -51,39 +51,39 @@ ifeq ($(TARGET_ARCH),x86) #gcc 4.8 need this because of a configuration bug in N
 endif
 LOCAL_CPP_EXTENSION := .cpp
 
-LOCAL_SRC_FILES +=					\
-	$(TOP_PATH)/../src/main.c		\
+LOCAL_SRC_FILES +=						\
+	$(TOP_PATH)/../src/main.c			\
 	$(TOP_PATH)/../src/maincpu.c
 	
 LOCAL_LDLIBS := -llog
 
 LOCAL_SHARED_LIBRARIES :=
-LOCAL_STATIC_LIBRARIES := 		\
-	base                        \
-	c64                         \
-	core                        \
-	diskimage                   \
-	drive                       \
-	fsdevice                    \
-	gfxoutputdrv                \
-	iecbus                      \
-	imagecontents               \
-	monitor                     \
-	p64                         \
-	parallel                    \
-	printerdrv                  \
-	raster						\
-	resid						\
-	residfp						\
-	rs232drv                    \
-	rtc                         \
-	serial                      \
-	sid                         \
-	sounddrv					\
-	tape                        \
-	userport                    \
-	vdrive						\
-	video						\
+LOCAL_WHOLE_STATIC_LIBRARIES := 		\
+	base                        		\
+	c64                         		\
+	core                        		\
+	diskimage                   		\
+	drive                       		\
+	fsdevice                    		\
+	gfxoutputdrv                		\
+	iecbus                      		\
+	imagecontents               		\
+	monitor                     		\
+	p64                         		\
+	parallel                    		\
+	printerdrv                  		\
+	raster								\
+	resid								\
+	residfp								\
+	rs232drv                    		\
+	rtc                         		\
+	serial                      		\
+	sid                         		\
+	sounddrv							\
+	tape                        		\
+	userport                    		\
+	vdrive								\
+	video								\
 	vicii
 	
 include $(BUILD_SHARED_LIBRARY)
