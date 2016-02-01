@@ -37,6 +37,7 @@
 #include "video.h"
 #include "videoarch.h"
 #include "viewport.h"
+#include <time.h>
 
 #ifdef HAVE_D3D9_H
 
@@ -252,6 +253,68 @@ static HRESULT video_canvas_prepare_for_update(video_canvas_t *canvas)
     return coopresult;
 }
 
+static void video_save_screen (const char* path, int width, int height, int bit_per_pixel, const void* data)
+{
+	static time_t start_time = 0;
+	static int frame = 0;
+	FILE* file = NULL;
+	int bits_per_row = bit_per_pixel * width;
+	int bytes_per_line = (bits_per_row / 32 + (bits_per_row % 32 != 0)) * 4;
+	char full_path[1024];
+	char line[16384];
+	const char* pixels = (const char*) data;
+	int y;
+
+	BITMAPFILEHEADER header;
+	BITMAPINFOHEADER info;
+
+	if (bytes_per_line >= 16384 || bits_per_row / 8 >= 16384)
+		return;
+
+	if (start_time <= 0)
+		start_time = time (NULL);
+
+	sprintf (full_path, "%sframe_%llu_%06d.bmp", path, (unsigned long long) start_time, ++frame);
+
+	file = fopen (full_path, "wb");
+	if (file) {
+		//Write header
+		memset (&header, 0, sizeof (BITMAPFILEHEADER));
+		*((BYTE*) (&header.bfType)) = 'B';
+		*((BYTE*) (&header.bfType) + 1) = 'M';
+		header.bfSize = height * bytes_per_line;
+		header.bfOffBits = 54;
+
+		if (fwrite (&header, sizeof (BITMAPFILEHEADER), 1, file) != 1) {
+			//...
+		}
+
+		//Write info
+		memset (&info, 0, sizeof (BITMAPINFOHEADER));
+		info.biSize = sizeof (BITMAPINFOHEADER);
+		info.biWidth = width;
+		info.biHeight = height;
+		info.biPlanes = 1;
+		info.biBitCount = bit_per_pixel;
+		info.biXPelsPerMeter = 72;
+		info.biYPelsPerMeter = 72;
+
+		if (fwrite (&info, sizeof (BITMAPINFOHEADER), 1, file) != 1) {
+			//...
+		}
+
+		//Write data
+		for (y = 0; y < height; ++y) {
+			memset (line, 0, 16384);
+			memcpy (line, &pixels[(height - y - 1)*bits_per_row / 8], bits_per_row / 8);
+			if (fwrite (line, sizeof (char), bytes_per_line, file) != bytes_per_line) {
+				//...
+			}
+		}
+
+		fclose (file);
+	}
+}
 
 int video_canvas_refresh_dx9(video_canvas_t *canvas, unsigned int xs, unsigned int ys, unsigned int xi, unsigned int yi, unsigned int w, unsigned int h)
 {
@@ -282,6 +345,7 @@ int video_canvas_refresh_dx9(video_canvas_t *canvas, unsigned int xs, unsigned i
     }
 
     video_canvas_render(canvas, lockedrect.pBits, w, h, xs, ys, xi, yi, lockedrect.Pitch, 32);
+	//video_save_screen ("c:\\temp\\screens\\", w, h, 32, lockedrect.pBits);
 
     if (S_OK != IDirect3DSurface9_UnlockRect(canvas->d3dsurface)) {
         log_debug("video_dx9: Failed to unlock surface!");
