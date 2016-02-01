@@ -20,7 +20,7 @@ ndk-build \
 	NDK_DEBUG=1 \
 	"VICE_CFLAGS=-DIDE_COMPILE -D_DEBUG -g -ggdb -O0" \
 	"VICE_CPPFLAGS=-DIDE_COMPILE -D_DEBUG -g -ggdb -O0"
-	
+
 # Run build (release)
 #ndk-build \
 #	-j1 \

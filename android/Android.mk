@@ -87,4 +87,3 @@ LOCAL_WHOLE_STATIC_LIBRARIES := 		\
 	vicii
 	
 include $(BUILD_SHARED_LIBRARY)
-
