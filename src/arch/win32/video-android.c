@@ -7,7 +7,7 @@
 #include "lib.h"
 #include "../../video.h"
 
-typedef int (*t_fn_init_canvas) (uint32_t width, uint32_t height, uint32_t bpp, uint8_t** buffer, uint32_t* pitch);
+typedef int (*t_fn_init_canvas) (uint32_t width, uint32_t height, uint32_t bpp, uint32_t visible_width, uint32_t visible_height, uint8_t** buffer, uint32_t* pitch);
 typedef void (*t_fn_lock_canvas) ();
 
 t_fn_init_canvas canvas_init = NULL;
@@ -39,7 +39,12 @@ video_canvas_t* video_canvas_create_android (video_canvas_t* canvas, unsigned in
 		return NULL;
 	}
 
-	if (canvas_init (canvas->draw_buffer->draw_buffer_width, canvas->draw_buffer->draw_buffer_height, 24, &canvas_buffer, &canvas_buffer_pitch) < 0) {
+	int scaleX = canvas->videoconfig->doublesizex + 1;
+	int scaleY = canvas->videoconfig->doublesizey + 1;
+
+	if (canvas_init (canvas->draw_buffer->draw_buffer_width * scaleX, canvas->draw_buffer->draw_buffer_height * scaleY, 24
+		, canvas->draw_buffer->visible_width * scaleX, canvas->draw_buffer->visible_height * scaleY
+		, &canvas_buffer, &canvas_buffer_pitch) < 0) {
 		return NULL;
 	}
 
@@ -59,6 +64,16 @@ void video_canvas_resize_android (video_canvas_t *canvas) {
 }
 
 void video_canvas_refresh_android (video_canvas_t *canvas, unsigned int xs, unsigned int ys, unsigned int xi, unsigned int yi, unsigned int w, unsigned int h) {
+	if (canvas->videoconfig->doublesizex) {
+		xi *= (canvas->videoconfig->doublesizex + 1);
+		w *= (canvas->videoconfig->doublesizex + 1);
+	}
+
+	if (canvas->videoconfig->doublesizey) {
+		yi *= (canvas->videoconfig->doublesizey + 1);
+		h *= (canvas->videoconfig->doublesizey + 1);
+	}
+
 	canvas_lock ();
 	video_canvas_render(canvas, canvas_buffer, w, h, xs, ys, xi, yi, canvas_buffer_pitch, 24);
 	canvas_unlock ();
