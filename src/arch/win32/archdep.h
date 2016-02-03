@@ -31,8 +31,8 @@
 
 /* Filesystem dependant operators.  */
 #define FSDEVICE_DEFAULT_DIR "."
-#define FSDEV_DIR_SEP_STR    "\\"
-#define FSDEV_DIR_SEP_CHR    '\\'
+#define FSDEV_DIR_SEP_STR    "/"
+#define FSDEV_DIR_SEP_CHR    '/'
 #define FSDEV_EXT_SEP_STR    "."
 #define FSDEV_EXT_SEP_CHR    '.'
 

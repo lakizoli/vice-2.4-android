@@ -102,7 +102,7 @@ char *archdep_program_name(void)
         char *s, *e;
         int len;
 
-        s = strrchr(argv0, '\\');
+        s = strrchr(argv0, '/');
         if (s == NULL) {
             s = argv0;
         } else {
@@ -342,9 +342,9 @@ char *archdep_default_sysfile_pathlist(const char *emu_id)
     if (default_path == NULL) {
         const char *boot_path = archdep_boot_path();
 
-        default_path = util_concat(boot_path, "\\", emu_id, ARCHDEP_FINDPATH_SEPARATOR_STRING,
-                                   boot_path, "\\DRIVES", ARCHDEP_FINDPATH_SEPARATOR_STRING,
-                                   boot_path, "\\PRINTER", NULL);
+        default_path = util_concat(boot_path, "/", emu_id, ARCHDEP_FINDPATH_SEPARATOR_STRING,
+                                   boot_path, "/DRIVES", ARCHDEP_FINDPATH_SEPARATOR_STRING,
+                                   boot_path, "/PRINTER", NULL);
     }
 
     return default_path;
@@ -367,12 +367,12 @@ char *archdep_default_save_resource_file_name(void)
 
 char *archdep_default_resource_file_name(void)
 {
-    return util_concat(archdep_boot_path(), "\\vice.ini", NULL);
+    return util_concat(archdep_boot_path(), "/vice.ini", NULL);
 }
 
 char *archdep_default_fliplist_file_name(void)
 {
-    return util_concat(archdep_boot_path(), "\\fliplist-", machine_get_name(), ".vfl", NULL);
+    return util_concat(archdep_boot_path(), "/fliplist-", machine_get_name(), ".vfl", NULL);
 }
 
 char *archdep_default_autostart_disk_image_file_name(void)
@@ -380,7 +380,7 @@ char *archdep_default_autostart_disk_image_file_name(void)
     const char *home;
 
     home = archdep_boot_path();
-    return util_concat(home, "\\autostart-", machine_get_name(), ".d64", NULL);
+    return util_concat(home, "/autostart-", machine_get_name(), ".d64", NULL);
 }
 
 FILE *archdep_open_default_log_file(void)
@@ -388,7 +388,7 @@ FILE *archdep_open_default_log_file(void)
     char *fname;
     FILE *f;
 
-    fname = util_concat(archdep_boot_path(), "\\vice.log", NULL);
+    fname = util_concat(archdep_boot_path(), "/vice.log", NULL);
     f = fopen(fname, "wt");
     lib_free(fname);
 
@@ -529,7 +529,7 @@ int archdep_spawn(const char *name, char **argv, char **pstdout_redir, const cha
 	return 0;
 }
 
-/* return malloc´d version of full pathname of orig_name */
+/* return mallocï¿½d version of full pathname of orig_name */
 int archdep_expand_path(char **return_path, const char *orig_name)
 {
     /*  Win32 version   */
