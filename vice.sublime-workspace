@@ -702,8 +702,7 @@
 		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/elementinfo/ElementPropertyDetailsCellData.java",
 		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/elementinfo/ElementPropertyDetailsBlockData.java",
 		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/res/layout/element_properties_section_header.xml",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/res/layout/gallery_item.xml",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/documentnavigation/marker/MarkerManagerController.java"
+		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/res/layout/gallery_item.xml"
 	],
 	"find":
 	{
@@ -711,7 +710,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			""
@@ -869,7 +868,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -884,8 +883,8 @@
 						"selection":
 						[
 							[
-								2014,
-								2014
+								1499,
+								1499
 							]
 						],
 						"settings":
@@ -919,7 +918,7 @@
 							"syntax": "Packages/C++/C++.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 762.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -972,6 +971,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"archdep.c",
+				"src/arch/win32/archdep.c"
+			],
 			[
 				"videoar",
 				"src/arch/win32/videoarch.h"
