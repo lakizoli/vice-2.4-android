@@ -73,6 +73,12 @@ void vsyncarch_postsync(void)
 
 #include <unistd.h>
 
+void (*vsyncarch_fn_speed_callback) (double speed, double frame_rate, int warp_enabled) = NULL;
+
+void vsyncarch_android_set_speed_callback (void (*fn_speed_callback) (double speed, double frame_rate, int warp_enabled)) {
+	vsyncarch_fn_speed_callback = fn_speed_callback;
+}
+
 static uint64_t vsyncarch_current_time_msec(void) {
 	struct timespec now;
 	clock_gettime (CLOCK_MONOTONIC, &now);
@@ -87,6 +93,8 @@ void vsyncarch_init(void) {
 }
 
 void vsyncarch_display_speed(double speed, double frame_rate, int warp_enabled) {
+	if (vsyncarch_fn_speed_callback)
+		vsyncarch_fn_speed_callback (speed, frame_rate, warp_enabled);
 }
 
 void vsyncarch_sleep(signed long delay)

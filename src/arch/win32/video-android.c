@@ -27,7 +27,7 @@ void video_android_set_locking_callbacks (t_fn_lock_canvas lock_canvas, t_fn_loc
 }
 
 video_canvas_t* video_canvas_create_android (video_canvas_t* canvas, unsigned int* width, unsigned int* height) {
-	canvas->depth = 24;
+	canvas->depth = 32;
 
 	if (video_set_physical_colors (canvas) < 0) {
 		return NULL;
@@ -42,7 +42,7 @@ video_canvas_t* video_canvas_create_android (video_canvas_t* canvas, unsigned in
 	int scaleX = canvas->videoconfig->doublesizex + 1;
 	int scaleY = canvas->videoconfig->doublesizey + 1;
 
-	if (canvas_init (canvas->draw_buffer->draw_buffer_width * scaleX, canvas->draw_buffer->draw_buffer_height * scaleY, 24
+	if (canvas_init (canvas->draw_buffer->draw_buffer_width * scaleX, canvas->draw_buffer->draw_buffer_height * scaleY, 32
 		, canvas->draw_buffer->visible_width * scaleX, canvas->draw_buffer->visible_height * scaleY
 		, &canvas_buffer, &canvas_buffer_pitch) < 0) {
 		return NULL;
@@ -75,7 +75,7 @@ void video_canvas_refresh_android (video_canvas_t *canvas, unsigned int xs, unsi
 	}
 
 	canvas_lock ();
-	video_canvas_render(canvas, canvas_buffer, w, h, xs, ys, xi, yi, canvas_buffer_pitch, 24);
+	video_canvas_render(canvas, canvas_buffer, w, h, xs, ys, xi, yi, canvas_buffer_pitch, 32);
 	canvas_unlock ();
 }
 
