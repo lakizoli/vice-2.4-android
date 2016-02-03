@@ -5,8 +5,9 @@
 #include "videoarch.h"
 #include "video.h"
 #include "lib.h"
+#include "../../video.h"
 
-typedef int (*t_fn_init_canvas) (uint32_t width, uint32_t height, uint32_t bpp, uint8_t** buffer, uint32_t* size, uint32_t* pitch);
+typedef int (*t_fn_init_canvas) (uint32_t width, uint32_t height, uint32_t bpp, uint8_t** buffer, uint32_t* pitch);
 typedef void (*t_fn_lock_canvas) ();
 
 t_fn_init_canvas canvas_init = NULL;
@@ -14,7 +15,6 @@ t_fn_lock_canvas canvas_lock = NULL;
 t_fn_lock_canvas canvas_unlock = NULL;
 
 uint8_t *canvas_buffer = NULL;
-uint32_t canvas_buffer_size = 0;
 uint32_t canvas_buffer_pitch = 0;
 
 void video_android_set_init_callback (t_fn_init_canvas init_canvas) {
@@ -27,7 +27,7 @@ void video_android_set_locking_callbacks (t_fn_lock_canvas lock_canvas, t_fn_loc
 }
 
 video_canvas_t* video_canvas_create_android (video_canvas_t* canvas, unsigned int* width, unsigned int* height) {
-	canvas->depth = 32;
+	canvas->depth = 24;
 
 	if (video_set_physical_colors (canvas) < 0) {
 		return NULL;
@@ -39,7 +39,7 @@ video_canvas_t* video_canvas_create_android (video_canvas_t* canvas, unsigned in
 		return NULL;
 	}
 
-	if (canvas_init (canvas->draw_buffer->visible_width, canvas->draw_buffer->visible_height, 32, &canvas_buffer, &canvas_buffer_size, &canvas_buffer_pitch) < 0) {
+	if (canvas_init (canvas->draw_buffer->draw_buffer_width, canvas->draw_buffer->draw_buffer_height, 24, &canvas_buffer, &canvas_buffer_pitch) < 0) {
 		return NULL;
 	}
 
@@ -48,7 +48,6 @@ video_canvas_t* video_canvas_create_android (video_canvas_t* canvas, unsigned in
 
 void video_canvas_destroy_android (video_canvas_t *canvas) {
 	canvas_buffer = NULL;
-	canvas_buffer_size = 0;
 	canvas_buffer_pitch = 0;
 
 	canvas_init = NULL;
@@ -61,7 +60,7 @@ void video_canvas_resize_android (video_canvas_t *canvas) {
 
 void video_canvas_refresh_android (video_canvas_t *canvas, unsigned int xs, unsigned int ys, unsigned int xi, unsigned int yi, unsigned int w, unsigned int h) {
 	canvas_lock ();
-	video_canvas_render(canvas, canvas_buffer, w, h, xs, ys, xi, yi, canvas_buffer_pitch, 32);
+	video_canvas_render(canvas, canvas_buffer, w, h, xs, ys, xi, yi, canvas_buffer_pitch, 24);
 	canvas_unlock ();
 }
 
