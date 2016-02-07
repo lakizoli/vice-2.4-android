@@ -4,8 +4,12 @@
 		"selected_items":
 		[
 			[
+				"fra",
+				"frame_rate"
+			],
+			[
 				"vs",
-				"vsyncarch_gettime"
+				"vsyncarch"
 			],
 			[
 				"JUHU",
@@ -510,28 +514,66 @@
 			[
 				"encryp",
 				"encryptRSA"
-			],
-			[
-				"sal",
-				"saltBytes"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "src/arch/win32/video.c",
+			"file": "src/arch/win32/video-android.c",
 			"settings":
 			{
-				"buffer_size": 14695,
+				"buffer_size": 2344,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/arch/win32/videoarch.h",
+			"file": "src/arch/win32/vsyncarch.c",
 			"settings":
 			{
-				"buffer_size": 5439,
+				"buffer_size": 5034,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/vsync.c",
+			"settings":
+			{
+				"buffer_size": 17462,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 1255 files for \"kbd_handle_keydown\"\n\n/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/kbd.c:\n  105     need it nevertheless.  */\n  106  \n  107: int kbd_handle_keydown(DWORD virtual_key, DWORD key_data)\n  108  {\n  109      long kcode = (key_data >> 16) & 0xff;\n\n/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/kbd.h:\n   91  \n   92  extern int kbd_init(int num, ...);\n   93: extern int kbd_handle_keydown(DWORD virtual_key, DWORD key_data);\n   94  extern int kbd_handle_keyup(DWORD virtual_key, DWORD key_data);\n   95  \n\n/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/ui.c:\n 2082          case WM_SYSKEYDOWN:\n 2083              if (wparam == VK_F10) {\n 2084:                 kbd_handle_keydown((DWORD)wparam, (DWORD)lparam);\n 2085                  return 0;\n 2086              }\n 2087              break;\n 2088          case WM_KEYDOWN:\n 2089:             kbd_handle_keydown((DWORD)wparam, (DWORD)lparam);\n 2090              return 0;\n 2091          case WM_SYSKEYUP:\n\n4 matches across 3 files\n\n\nSearching 1255 files for \"keyboard_key_pressed\"\n\n/Users/zoli/work/git_repos/vice-2.4-android/src/keyboard.c:\n  310  }\n  311  \n  312: static int keyboard_key_pressed_matrix(int row, int column, int shift)\n  313  {\n  314      if (row >= 0) {\n  ...\n  403  }\n  404  \n  405: void keyboard_key_pressed(signed long key)\n  406  {\n  407      int i, latch;\n  ...\n  453              }\n  454  \n  455:             if (keyboard_key_pressed_matrix(keyconvmap[i].row,\n  456                                              keyconvmap[i].column,\n  457                                              keyconvmap[i].shift)) {\n  ...\n  637  \n  638          if (value) {\n  639:             keyboard_key_pressed(sym);\n  640          } else {\n  641              keyboard_key_released(sym);\n\n/Users/zoli/work/git_repos/vice-2.4-android/src/keyboard.h:\n   63  extern int keyboard_keymap_dump(const char *filename);\n   64  \n   65: extern void keyboard_key_pressed(signed long key);\n   66  extern void keyboard_key_released(signed long key);\n   67  extern void keyboard_key_clear(void);\n\n/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/kbd.c:\n  120  \n  121      if ( ! repeated ) {\n  122:         keyboard_key_pressed(kcode);\n  123      }\n  124  \n\n6 matches across 3 files\n\n\nSearching 1255 files for \"0x40000000\"\n\n/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/kbd.c:\n  108  {\n  109      long kcode = (key_data >> 16) & 0xff;\n  110:     int repeated = key_data & 0x40000000 ? 1 : 0;\n  111  \n  112      if (virtual_key == 0xff) {\n  ...\n  129  {\n  130      long kcode = (key_data >> 16) & 0xff;\n  131:     int repeated = key_data & 0x40000000 ? 0 : 1;\n  132  \n  133      if (virtual_key == 0xff) {\n\n/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/rescommon.h:\n    5  #define SUBLANG_ENGLISH_US   0x01\n    6  #define WS_POPUP             0x80000000L\n    7: #define WS_CHILD             0x40000000L\n    8  #define WS_VISIBLE           0x10000000L\n    9  #define WS_DISABLED          0x08000000L\n\n/Users/zoli/work/git_repos/vice-2.4-android/src/lib/libffmpeg/libavcodec/avcodec.h:\n  371  #define CH_TOP_BACK_RIGHT         0x00020000\n  372  #define CH_STEREO_LEFT            0x20000000  ///< Stereo downmix.\n  373: #define CH_STEREO_RIGHT           0x40000000  ///< See CH_STEREO_LEFT.\n  374  \n  375  /* Audio channel convenience macros */\n  ...\n  482  #define CODEC_FLAG_H263P_SLICE_STRUCT 0x10000000\n  483  #define CODEC_FLAG_INTERLACED_ME  0x20000000 ///< interlaced motion estimation\n  484: #define CODEC_FLAG_SVCD_SCAN_OFFSET 0x40000000 ///< Will reserve space for SVCD scan offset user data.\n  485  #define CODEC_FLAG_CLOSED_GOP     0x80000000\n  486  #define CODEC_FLAG2_FAST          0x00000001 ///< Allow non spec compliant speedup tricks.\n\n/Users/zoli/work/git_repos/vice-2.4-android/src/lib/libffmpeg/libswscale/swscale.h:\n   80  #define SWS_CPU_CAPS_MMX      0x80000000\n   81  #define SWS_CPU_CAPS_MMX2     0x20000000\n   82: #define SWS_CPU_CAPS_3DNOW    0x40000000\n   83  #define SWS_CPU_CAPS_ALTIVEC  0x10000000\n   84  #define SWS_CPU_CAPS_BFIN     0x01000000\n\n6 matches across 4 files\n\n\nSearching 1255 files for \"kbd_handle_keydown\"\n\n/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/kbd.c:\n  105     need it nevertheless.  */\n  106  \n  107: int kbd_handle_keydown(DWORD virtual_key, DWORD key_data)\n  108  {\n  109      long kcode = (key_data >> 16) & 0xff;\n\n/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/kbd.h:\n   91  \n   92  extern int kbd_init(int num, ...);\n   93: extern int kbd_handle_keydown(DWORD virtual_key, DWORD key_data);\n   94  extern int kbd_handle_keyup(DWORD virtual_key, DWORD key_data);\n   95  \n\n/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/ui.c:\n 2082          case WM_SYSKEYDOWN:\n 2083              if (wparam == VK_F10) {\n 2084:                 kbd_handle_keydown((DWORD)wparam, (DWORD)lparam);\n 2085                  return 0;\n 2086              }\n 2087              break;\n 2088          case WM_KEYDOWN:\n 2089:             kbd_handle_keydown((DWORD)wparam, (DWORD)lparam);\n 2090              return 0;\n 2091          case WM_SYSKEYUP:\n\n4 matches across 3 files\n\n\nSearching 1255 files for \"key_ctrl_column4080\"\n\n/Users/zoli/work/git_repos/vice-2.4-android/src/keyboard.c:\n  261  \n  262  /* 40/80 column key.  */\n  263: static signed long key_ctrl_column4080 = -1;\n  264: static key_ctrl_column4080_func_t key_ctrl_column4080_func = NULL;\n  265  \n  266  /* CAPS (ASCII/DIN) key.  */\n  ...\n  419      }\n  420  \n  421:     if (key == key_ctrl_column4080) {\n  422:         if (key_ctrl_column4080_func != NULL)\n  423:             key_ctrl_column4080_func();\n  424          return;\n  425      }\n  ...\n  629              sym = key_ctrl_restore2;\n  630          } else if (row == -4 && col == 0) {\n  631:             sym = key_ctrl_column4080;\n  632          } else if (row == -4 && col == 1) {\n  633              sym = key_ctrl_caps;\n  ...\n  742      key_ctrl_restore2 = -1;\n  743      key_ctrl_caps = -1;\n  744:     key_ctrl_column4080 = -1;\n  745      vshift = KEY_NONE;\n  746      shiftl = KEY_NONE;\n  ...\n  848      } else\n  849      if (row == -4 && col == 0) {\n  850:         key_ctrl_column4080 = sym;\n  851      } else\n  852      if (row == -4 && col == 1) {\n  ...\n 1071      }\n 1072  \n 1073:     if (key_ctrl_column4080 != -1) {\n 1074          fprintf(fp, \"#\\n\"\n 1075                  \"# 40/80 column key mapping\\n\"\n ....\n 1148  /*-----------------------------------------------------------------------*/\n 1149  \n 1150: void keyboard_register_column4080_key(key_ctrl_column4080_func_t func)\n 1151  {\n 1152:     key_ctrl_column4080_func = func;\n 1153  }\n 1154  \n\n/Users/zoli/work/git_repos/vice-2.4-android/src/keyboard.h:\n   67  extern void keyboard_key_clear(void);\n   68  \n   69: typedef void (*key_ctrl_column4080_func_t)(void);\n   70: extern void keyboard_register_column4080_key(key_ctrl_column4080_func_t func);\n   71  \n   72  typedef void (*key_ctrl_caps_func_t)(void);\n\n14 matches across 2 files\n",
+			"settings":
+			{
+				"buffer_size": 7011,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "src/arch/win32/ui.c",
+			"settings":
+			{
+				"buffer_size": 69602,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/keyboard.c",
+			"settings":
+			{
+				"buffer_size": 32579,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/arch/win32/kbd.c",
+			"settings":
+			{
+				"buffer_size": 5925,
 				"line_ending": "Unix"
 			}
 		}
@@ -576,10 +618,13 @@
 	},
 	"file_history":
 	[
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/vsyncapi.h",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/video.c",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/videoarch.h",
+		"/Users/zoli/work/git_repos/vice-2.4-android/src/vsync.c",
 		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/ui.c",
 		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/video-ddraw.c",
 		"/Users/zoli/work/git_repos/vice-2.4-android/src/video.h",
-		"/Users/zoli/work/git_repos/vice-2.4-android/src/arch/win32/videoarch.h",
 		"/Users/zoli/work/git_repos/vice-2.4-android/src/palette.h",
 		"/Users/zoli/work/git_repos/vice-2.4-android/src/vicii/vicii-resources.c",
 		"/Users/zoli/work/git_repos/vice-2.4-android/src/maincpu.c",
@@ -623,7 +668,6 @@
 		"/Users/zoli/work/git_repos/vice-2.4-android/android/build.sh",
 		"/Users/zoli/work/git_repos/vice-2.4-android/android/build.out",
 		"/Users/zoli/work/git_repos/vice-2.4-android/src/sounddrv/sounddummy.c",
-		"/Users/zoli/work/git_repos/vice-2.4-android/src/vsyncapi.h",
 		"/Users/zoli/work/git_repos/vice-2.4-android/src/sounddrv/Android.mk",
 		"/Users/zoli/Library/Application Support/Sublime Text 2/Packages/User/ViceAndroid.sublime-build",
 		"/Users/zoli/work/!projects/clangtest/build.sh",
@@ -701,8 +745,7 @@
 		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/messaging/ui/ConversationListView.java",
 		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/elementinfo/ElementPropertyDetailsCellData.java",
 		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/src/com/graphisoft/bimx/hm/elementinfo/ElementPropertyDetailsBlockData.java",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/res/layout/element_properties_section_header.xml",
-		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/res/layout/gallery_item.xml"
+		"/Users/zoli/work/BIMxSoftic/BIMxPro/Sources.android/res/layout/element_properties_section_header.xml"
 	],
 	"find":
 	{
@@ -710,7 +753,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			""
@@ -721,6 +764,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"kbd_arch_keyname_to_keynum",
+			"keyboard_parse_entry",
+			"keyboard_parse_keymap",
+			"INCLUDE",
+			"keyarr",
+			"key_ctrl_column4080",
+			"kbd_handle_keydown",
+			"0x40000000",
+			"keyboard_key_pressed",
+			"kbd_handle_keydown",
+			"vsyncarch_init",
+			"vsyncarch_display_speed",
+			"24",
 			"cmdline_register_options",
 			"video_init_cmdline_options",
 			"video_canvas_update",
@@ -835,20 +891,7 @@
 			"objectRect",
 			"showZoneStampPopup",
 			"mBimElementButton",
-			"getmeas",
-			"mBimElementButton",
-			"showBimElementButton",
-			"mBimElementButton",
-			"showZoneStampPopup",
-			"mZoneStamp",
-			"ElementPropertiesViewListenerImp",
-			"mMostRelevant3d.GuidString()",
-			"zone",
-			"onZoneStampSelected",
-			"onzone",
-			"ElementPropertiesViewListenerImp",
-			"showInfo",
-			"INFO3D_SELECTED"
+			"getmeas"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -856,6 +899,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"vsyncarch_init",
 			"a",
 			"app"
 		],
@@ -868,23 +912,23 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/arch/win32/video.c",
+					"file": "src/arch/win32/video-android.c",
 					"settings":
 					{
-						"buffer_size": 14695,
+						"buffer_size": 2344,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1499,
-								1499
+								978,
+								978
 							]
 						],
 						"settings":
@@ -892,33 +936,312 @@
 							"syntax": "Packages/C++/C.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 583.0,
+						"translation.y": 396.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/arch/win32/videoarch.h",
+					"file": "src/arch/win32/vsyncarch.c",
 					"settings":
 					{
-						"buffer_size": 5439,
+						"buffer_size": 5034,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2270,
-								2270
+								2386,
+								2265
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.tmLanguage"
+							"syntax": "Packages/C++/C.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1001.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/vsync.c",
+					"settings":
+					{
+						"buffer_size": 17462,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7129,
+								7129
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3371.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"settings":
+					{
+						"buffer_size": 7011,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										168,
+										186
+									],
+									[
+										415,
+										433
+									],
+									[
+										716,
+										734
+									],
+									[
+										897,
+										915
+									],
+									[
+										1181,
+										1201
+									],
+									[
+										1312,
+										1332
+									],
+									[
+										1442,
+										1462
+									],
+									[
+										1698,
+										1718
+									],
+									[
+										1946,
+										1966
+									],
+									[
+										2210,
+										2230
+									],
+									[
+										2488,
+										2498
+									],
+									[
+										2655,
+										2665
+									],
+									[
+										2919,
+										2929
+									],
+									[
+										3279,
+										3289
+									],
+									[
+										3561,
+										3571
+									],
+									[
+										3996,
+										4006
+									],
+									[
+										4299,
+										4317
+									],
+									[
+										4546,
+										4564
+									],
+									[
+										4847,
+										4865
+									],
+									[
+										5028,
+										5046
+									],
+									[
+										5342,
+										5361
+									],
+									[
+										5382,
+										5401
+									],
+									[
+										5409,
+										5428
+									],
+									[
+										5535,
+										5554
+									],
+									[
+										5577,
+										5596
+									],
+									[
+										5630,
+										5649
+									],
+									[
+										5820,
+										5839
+									],
+									[
+										6015,
+										6034
+									],
+									[
+										6180,
+										6199
+									],
+									[
+										6307,
+										6326
+									],
+									[
+										6565,
+										6584
+									],
+									[
+										6618,
+										6637
+									],
+									[
+										6804,
+										6823
+									],
+									[
+										6891,
+										6910
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								5351,
+								5351
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"output_tag": 5,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2250.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/arch/win32/ui.c",
+					"settings":
+					{
+						"buffer_size": 69602,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								64881,
+								64881
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 30881.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/keyboard.c",
+					"settings":
+					{
+						"buffer_size": 32579,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22854,
+								22854
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 12800.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/arch/win32/kbd.c",
+					"settings":
+					{
+						"buffer_size": 5925,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1454,
+								1454
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 539.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -971,6 +1294,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"vsyncar",
+				"src/arch/win32/vsyncarch.c"
+			],
+			[
+				"vsync",
+				"src/vsync.c"
+			],
 			[
 				"archdep.c",
 				"src/arch/win32/archdep.c"
