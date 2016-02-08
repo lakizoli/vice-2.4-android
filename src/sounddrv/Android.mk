@@ -27,6 +27,7 @@ LOCAL_SRC_FILES +=				\
 	soundiff.c                  \
 	soundmovie.c                \
 	soundvoc.c                  \
+	soundpcm.c					\
 	soundwav.c                  \
 	soundwmm.c
 

@@ -1434,6 +1434,7 @@ void sound_init(unsigned int clock_rate, unsigned int ticks_per_frame)
     sound_init_fs_device();
     sound_init_dump_device();
     sound_init_wav_device();
+    sound_init_pcm_device();
     sound_init_voc_device();
     sound_init_iff_device();
     sound_init_aiff_device();
