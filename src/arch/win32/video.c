@@ -33,6 +33,30 @@
 #include "video.h"
 #include "viewport.h"
 
+#ifndef __ANDROID__
+
+#include "cmdline.h"
+#include "res.h"
+#include "resources.h"
+#include "translate.h"
+#include "ui.h"
+#include "uiapi.h"
+#include <stdint.h>
+
+static int video_number_of_canvases;
+static video_canvas_t *video_canvases[2];
+static int dx9_available;
+
+/* ------------------------------------------------------------------------ */
+/* Video-related resources.  */
+
+/* Flag: are we in fullscreen mode?  */
+int fullscreen_enabled;
+int dx_primary_surface_rendering;
+int dx9_disable;
+
+#endif // !__ANDROID__
+
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //Multiplatform functions
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -238,25 +262,6 @@ void video_canvas_add(video_canvas_t *canvas)
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //Windows platform specific functions
 //////////////////////////////////////////////////////////////////////////////////////////////////
-
-#include "cmdline.h"
-#include "res.h"
-#include "resources.h"
-#include "translate.h"
-#include "ui.h"
-#include "uiapi.h"
-
-static int video_number_of_canvases;
-static video_canvas_t *video_canvases[2];
-static int dx9_available;
-
-/* ------------------------------------------------------------------------ */
-/* Video-related resources.  */
-
-/* Flag: are we in fullscreen mode?  */
-int fullscreen_enabled;
-int dx_primary_surface_rendering;
-int dx9_disable;
 
 static int set_dx_primary_surface_rendering(int val, void *param)
 {
