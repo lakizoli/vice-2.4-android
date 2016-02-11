@@ -54,7 +54,7 @@ static int pcm_init(const char *param, int *speed, int *fragsize, int *fragnr, i
 	if (sound_android_init) {
 		int sampleRate = *speed;
 		int bytesPerSample = *speed * *channels * 2;
-		int numChannels = *channels * 2;
+		int numChannels = *channels;
 
 		sound_android_init (numChannels, sampleRate, bytesPerSample);
 	}
