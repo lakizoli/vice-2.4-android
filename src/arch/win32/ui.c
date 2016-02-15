@@ -154,6 +154,8 @@ int ui_init_finish(void)
 #ifdef __ANDROID__
 
 #include <unistd.h>
+#include <interrupt.h>
+#include "vsync.h"
 
 void ui_enable_drive_status (ui_drive_enable_t enable, int *drive_led_color) {
 }
@@ -297,6 +299,35 @@ void ui_exit(void) {
 }
 
 void ui_dispatch_events (void) {
+}
+
+/* ------------------------------------------------------------------------- */
+static volatile int is_paused = 0;
+
+static void pause_trap(uint16_t addr, void *data)
+{
+//    ui_display_paused(1);
+    vsync_suspend_speed_eval();
+    while (is_paused) {
+        usleep(10000); //10 msec sleep
+//        ui_dispatch_next_event();
+    }
+}
+
+void ui_pause_emulation(void) {
+	if (is_paused)
+		return;
+
+    is_paused = 1;
+	interrupt_maincpu_trigger_trap(pause_trap, 0);
+}
+
+void ui_continue_emulation(void) {
+	is_paused = 0;
+}
+
+int ui_emulation_is_paused(void) {
+    return is_paused;
 }
 
 #else //__ANDROID__
