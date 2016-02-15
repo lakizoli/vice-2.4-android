@@ -253,6 +253,7 @@
     <ClCompile Include="..\..\sounddrv\soundfs.c" />
     <ClCompile Include="..\..\sounddrv\soundiff.c" />
     <ClCompile Include="..\..\sounddrv\soundmovie.c" />
+    <ClCompile Include="..\..\sounddrv\soundpcm.c" />
     <ClCompile Include="..\..\sounddrv\soundvoc.c" />
     <ClCompile Include="..\..\sounddrv\soundwav.c" />
     <ClCompile Include="..\..\sounddrv\soundwmm.c" />
