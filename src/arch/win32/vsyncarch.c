@@ -72,6 +72,7 @@ void vsyncarch_postsync(void)
 #ifdef __ANDROID__
 
 #include <unistd.h>
+#include <time.h>
 
 void (*vsyncarch_fn_speed_callback) (double speed, double frame_rate, int warp_enabled) = NULL;
 
@@ -81,7 +82,7 @@ void vsyncarch_android_set_speed_callback (void (*fn_speed_callback) (double spe
 
 static uint64_t vsyncarch_current_time_msec(void) {
 	struct timespec now;
-	clock_gettime (CLOCK_MONOTONIC, &now);
+	clock_gettime (CLOCK_MONOTONIC_RAW, &now);
 	return ((uint64_t) now.tv_sec * 1000000000ULL + (uint64_t) now.tv_nsec) / 1000000ULL; //millisec = 1000*1000 * nanosec
 }
 
