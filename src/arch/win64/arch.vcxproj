@@ -272,6 +272,7 @@
     <ClCompile Include="..\win32\system.c" />
     <ClCompile Include="..\win32\ui.c" />
     <ClCompile Include="..\win32\uimon.c" />
+    <ClCompile Include="..\win32\uiquicksnapshot.c" />
     <ClCompile Include="..\win32\video-ddraw.c" />
     <ClCompile Include="..\win32\video-dx9.c" />
     <ClCompile Include="..\win32\video.c" />
