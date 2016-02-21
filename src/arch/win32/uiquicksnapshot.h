@@ -28,7 +28,16 @@
 #ifndef VICE_UIQUICKSNAPSHOT_H
 #define VICE_UIQUICKSNAPSHOT_H
 
+#ifdef __ANDROID__
+
+extern int ui_quicksnapshot_load(void);
+extern void ui_quicksnapshot_save(void);
+
+#else //__ANDROID__
+
 extern void ui_quicksnapshot_load(HWND hwnd);
 extern void ui_quicksnapshot_save(HWND hwnd);
+
+#endif //__ANDROID__
 
 #endif

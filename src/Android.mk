@@ -121,6 +121,7 @@ LOCAL_SRC_FILES +=					\
 	arch/win32/statusbar.c         	\
 	arch/win32/system.c            	\
 	arch/win32/ui.c                	\
+	arch/win32/uiquicksnapshot.c   	\
 	arch/win32/uimon.c             	\
 	arch/win32/video-android.c		\
 	arch/win32/video-ddraw.c       	\

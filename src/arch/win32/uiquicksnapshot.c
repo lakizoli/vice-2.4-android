@@ -36,6 +36,161 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 #ifdef __ANDROID__
 
+#include <unistd.h>
+#include "archdep.h"
+#include "interrupt.h"
+#include "lib.h"
+#include "machine.h"
+#include "util.h"
+
+static int g_snapshot_found = 0;
+static volatile int g_snapshot_loaded = 0;
+static volatile int g_snapshot_saved = 0;
+
+inline static char* snapshot_path () {
+    return util_concat (archdep_boot_path (), "/", "quicksnap.vsf", NULL);
+}
+
+static void save_quicksnapshot_trap (uint16_t unused_addr, void* unused_data) {
+//    int i, j;
+//    char *fullname, *fullname2;
+//    TCHAR *st_fullname, *st_fullname2;
+//
+//    if (lastindex == -1) {
+//        lastindex = 0;
+//        strcpy(files[lastindex].name, "quicksnap0.vsf");
+//    } else {
+//        if (lastindex == 9) {
+//            if (snapcounter == 10) {
+//                fullname = util_concat(archdep_boot_path(), "\\", machine_name, "\\", files[0].name, NULL);
+//                st_fullname = system_mbstowcs_alloc(fullname);
+//                DeleteFile(st_fullname);
+//                system_mbstowcs_free(st_fullname);
+//                lib_free(fullname);
+//                for (i = 1; i < 10; i++) {
+//                    fullname = util_concat(archdep_boot_path(), "\\", machine_name, "\\", files[i].name, NULL);
+//                    fullname2 = util_concat(archdep_boot_path(), "\\", machine_name, "\\", files[i - 1].name, NULL);
+//                    st_fullname = system_mbstowcs_alloc(fullname);
+//                    st_fullname2 = system_mbstowcs_alloc(fullname2);
+//                    MoveFile(st_fullname, st_fullname2);
+//                    system_mbstowcs_free(st_fullname);
+//                    system_mbstowcs_free(st_fullname2);
+//                    lib_free(fullname);
+//                    lib_free(fullname2);
+//                }
+//            } else {
+//                for (i = 0; i < 10; i++) {
+//                    if (files[i].valid == 0) {
+//                        break;
+//                    }
+//                }
+//                for (j = i + 1; j < 10; j++) {
+//                    if (files[j].valid) {
+//                        strcpy(files[i].name,files[j].name);
+//                        files[i].name[strlen(files[i].name) - 5] = '0' + i;
+//                        fullname = util_concat(archdep_boot_path(), "\\", machine_name, "\\", files[j].name, NULL);
+//                        fullname2 = util_concat(archdep_boot_path(), "\\", machine_name, "\\", files[i].name, NULL);
+//                        st_fullname = system_mbstowcs_alloc(fullname);
+//                        st_fullname2 = system_mbstowcs_alloc(fullname2);
+//                        MoveFile(st_fullname, st_fullname2);
+//                        system_mbstowcs_free(st_fullname);
+//                        system_mbstowcs_free(st_fullname2);
+//                        lib_free(fullname);
+//                        lib_free(fullname2);
+//                        i++;
+//                    }
+//                }
+//                strcpy(files[i].name,files[0].name);
+//                files[i].name[strlen(files[i].name) - 5] = '0' + i;
+//                lastindex = i;
+//            }
+//        } else {
+//            strcpy(files[lastindex + 1].name,files[lastindex].name);
+//            lastindex++;
+//            files[lastindex].name[strlen(files[lastindex].name) - 5] = '0' + lastindex;
+//        }
+//    }
+
+    char* path = NULL;
+
+    path = snapshot_path ();
+    if (machine_write_snapshot (path, 0, 0, 0) < 0) {
+        //ui_error(translate_text(IDS_CANT_WRITE_SNAPSHOT_FILE));
+    }
+    lib_free(path);
+
+    g_snapshot_saved = 1;
+}
+
+static void load_quicksnapshot_trap (uint16_t unused_addr, void* unused_data) {
+    char* path = NULL;
+
+    path = snapshot_path ();
+    if (machine_read_snapshot (path, 0) < 0) {
+        //ui_error(translate_text(IDS_CANNOT_READ_SNAPSHOT_IMG));
+    }
+    lib_free(path);
+
+    g_snapshot_loaded = 1;
+}
+
+int ui_quicksnapshot_load (void) {
+    char* path = NULL;
+    FILE* snapshot = NULL;
+    int loaded = 0;
+
+    //Check if file exists
+    path = snapshot_path ();
+    snapshot = fopen (path, "rb");
+    if (snapshot) { //snapshot found
+        g_snapshot_found = 1;
+        fclose (snapshot);
+    } else {
+        g_snapshot_found = 0;
+    }
+    lib_free (path);
+
+    //Load snapshot file
+    if (g_snapshot_found) {
+        g_snapshot_loaded = 0;
+        interrupt_maincpu_trigger_trap (load_quicksnapshot_trap, (void*) 0);
+
+        while (!g_snapshot_loaded) {
+            usleep (10000);
+        }
+
+        loaded = 1;
+    }
+
+    return loaded;
+}
+
+void ui_quicksnapshot_remove (void) {
+    char* path = NULL;
+
+    path = snapshot_path ();
+    if (path) {
+        remove (path); //Don't care the return value
+    }
+    lib_free (path);
+}
+
+void ui_quicksnapshot_save (void) {
+    char* path = NULL;
+
+    //Remove before snapshot if exists
+    ui_quicksnapshot_remove ();
+
+    //Save snapshot file
+    g_snapshot_saved = 0;
+    interrupt_maincpu_trigger_trap (save_quicksnapshot_trap, (void*) 0);
+
+    //Wait snapshot
+    while (!g_snapshot_saved) {
+        usleep (10000);
+    }
+}
+
 #else //__ANDROID__
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //Windows platform specific functions
