@@ -157,6 +157,13 @@ int ui_init_finish(void)
 #include <interrupt.h>
 #include "vsync.h"
 
+typedef void (*t_fn_ui_event_callback)(void);
+static t_fn_ui_event_callback g_ui_event_callback = NULL;
+
+void ui_android_init_callbacks (t_fn_ui_event_callback eventCallback) {
+    g_ui_event_callback = eventCallback;
+}
+
 void ui_enable_drive_status (ui_drive_enable_t enable, int *drive_led_color) {
 }
 
@@ -217,6 +224,9 @@ void ui_exit(void) {
 }
 
 void ui_dispatch_events (void) {
+    if (g_ui_event_callback) {
+        g_ui_event_callback ();
+    }
 }
 
 /* ------------------------------------------------------------------------- */
