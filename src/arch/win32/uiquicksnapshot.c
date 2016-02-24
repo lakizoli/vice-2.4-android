@@ -155,9 +155,9 @@ int ui_quicksnapshot_load (void) {
         g_snapshot_loaded = 0;
         interrupt_maincpu_trigger_trap (load_quicksnapshot_trap, (void*) 0);
 
-        while (!g_snapshot_loaded) {
-            usleep (10000);
-        }
+//        while (!g_snapshot_loaded) {
+//            usleep (10000);
+//        }
 
         loaded = 1;
     }
