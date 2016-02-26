@@ -35,15 +35,18 @@
 #include "archdep.h"
 #include "log.h"
 
+typedef int (*t_fn_get_sample_rate) ();
 typedef void (*t_fn_sound_init) (int numChannels, int sampleRate, int bytesPerSample);
 typedef void (*t_fn_sound_close) ();
 typedef void (*t_fn_sound_write) (const uint8_t* buffer, size_t size);
 
+t_fn_get_sample_rate sound_android_get_sample_rate = NULL;
 t_fn_sound_init sound_android_init = NULL;
 t_fn_sound_close sound_android_close = NULL;
 t_fn_sound_write sound_android_write = NULL;
 
-void sound_android_set_pcm_callbacks (t_fn_sound_init sound_init, t_fn_sound_close sound_close, t_fn_sound_write sound_write) {
+void sound_android_set_pcm_callbacks (t_fn_get_sample_rate get_sample_rate, t_fn_sound_init sound_init, t_fn_sound_close sound_close, t_fn_sound_write sound_write) {
+    sound_android_get_sample_rate = get_sample_rate;
 	sound_android_init = sound_init;
 	sound_android_close = sound_close;
 	sound_android_write = sound_write;
@@ -95,6 +98,11 @@ static sound_device_t pcm_device =
 int sound_init_pcm_device(void)
 {
 #ifdef __ANDROID__
+    if (sound_android_get_sample_rate) {
+        int sampleRate = sound_android_get_sample_rate ();
+        resources_set_int ("SoundSampleRate", sampleRate);
+    }
+
     return sound_register_device(&pcm_device);
 #else //__ANDROID__
     return 0;
