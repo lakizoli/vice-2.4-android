@@ -100,7 +100,9 @@ int sound_init_pcm_device(void)
 #ifdef __ANDROID__
     if (sound_android_get_sample_rate) {
         int sampleRate = sound_android_get_sample_rate ();
-        resources_set_int ("SoundSampleRate", sampleRate);
+        if (sampleRate > 0) {
+            resources_set_int ("SoundSampleRate", sampleRate);
+        }
     }
 
     return sound_register_device(&pcm_device);
