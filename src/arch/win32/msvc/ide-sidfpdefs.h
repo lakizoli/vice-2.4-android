@@ -61,7 +61,7 @@ const char* resid_version_string = VERSION;
 // Inlining on/off.
 #define RESID_INLINE inline
 
-#if defined(__SSE__) || (defined(_MSC_VER) && (_MSC_VER >= 1300) && !defined(WINIA64))
+#if (defined(__SSE__) || (defined(_MSC_VER) && (_MSC_VER >= 1300) && !defined(WINIA64))) && !defined(__ANDROID__)
 #define RESID_USE_SSE 1
 #else
 #define RESID_USE_SSE 0
