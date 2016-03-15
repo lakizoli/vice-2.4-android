@@ -46,7 +46,7 @@ void ui_update_menus (void) {
 void ui_error_string (const char *text) {
 	//TCHAR *st;
 
-	log_debug (text);
+	log_debug ("%s", text);
 	//st = system_mbstowcs_alloc(text);
 	//ui_messagebox(st, translate_text(IDS_VICE_ERROR), MB_OK | MB_ICONSTOP);
 	//system_mbstowcs_free(st);
@@ -62,7 +62,7 @@ void ui_error (const char *format, ...) {
 	tmp = lib_mvsprintf (format, args);
 	va_end (args);
 
-	log_debug (tmp);
+	log_debug ("%s", tmp);
 	//st = system_mbstowcs_alloc(tmp);
 	//ui_messagebox(st, translate_text(IDS_VICE_ERROR), MB_OK | MB_ICONSTOP);
 	//system_mbstowcs_free(st);
