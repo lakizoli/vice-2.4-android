@@ -36,7 +36,7 @@
 #include "log.h"
 
 typedef int (*t_fn_get_sample_rate) ();
-typedef void (*t_fn_sound_init) (int numChannels, int sampleRate, int bytesPerSample);
+typedef void (*t_fn_sound_init) (int numChannels, int sampleRate, int bytesPerSec);
 typedef void (*t_fn_sound_close) ();
 typedef void (*t_fn_sound_write) (const uint8_t* buffer, size_t size);
 
@@ -56,10 +56,10 @@ static int pcm_init(const char *param, int *speed, int *fragsize, int *fragnr, i
 {
 	if (sound_android_init) {
 		int sampleRate = *speed;
-		int bytesPerSample = *speed * *channels * 2;
+		int bytesPerSec = *speed * *channels * 2;
 		int numChannels = *channels;
 
-		sound_android_init (numChannels, sampleRate, bytesPerSample);
+		sound_android_init (numChannels, sampleRate, bytesPerSec);
 	}
 
     return 0;
